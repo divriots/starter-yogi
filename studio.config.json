@@ -1,0 +1,19 @@
+{
+  "packages": {
+    "menu": [
+      "Introduction",
+      [
+        "Tokens",
+        [
+          "typography"
+        ]
+      ],
+      [
+        "Infrastructure",
+        [
+          "theme"
+        ]
+      ]
+    ]
+  }
+}
