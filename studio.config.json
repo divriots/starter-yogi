@@ -1,15 +1,23 @@
 {
   "packages": {
+    "dir": "",
     "menu": [
-      "Introduction",
+      "introduction",
       [
-        "Tokens",
+        "Theme",
         [
-          "typography"
+          "typography",
+          "colors",
+          "space",
+          "sizes",
+          "shadows",
+          "radii",
+          "border",
+          "z-index"
         ]
       ],
       [
-        "Infrastructure",
+        "infrastructure",
         [
           "theme"
         ]
