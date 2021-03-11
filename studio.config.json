@@ -2,9 +2,9 @@
   "packages": {
     "dir": "",
     "menu": [
-      "introduction",
+      "Introduction",
       [
-        "Theme",
+        "Tokens",
         [
           "typography",
           "colors",
@@ -17,9 +17,22 @@
         ]
       ],
       [
-        "infrastructure",
+        "Layouts",
         [
-          "theme"
+          "box"
+        ]
+      ],
+      [
+        "Forms",
+        [
+          "button"
+        ]
+      ],
+      [
+        "Infrastructure",
+        [
+          "theme",
+          "doc-layout"
         ]
       ]
     ]

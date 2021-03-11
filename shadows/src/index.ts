@@ -1,14 +1,17 @@
-export const shadows = {
-  shadows: {
-    small: '0 1px 0 rgba(149, 157, 165, 0.1)',
-    medium: '0 3px 6px rgba(149, 157, 165, 0.15)',
-    large: '0 8px 24px rgba(149, 157, 165, 0.2)',
-    'extra-large': '0 12px 48px rgba(149, 157, 165, 0.3)',
-    control: 'inset 0px 2px 0px rgba(225, 228, 232, 0.2)',
-    controlDisabled: 'inset 0px 2px 0px rgba(220, 227, 237, 0.3)',
-    controlFocus: 'rgba(3, 102, 214, 0.3) 0px 0px 0px 0.2em',
-    primaryShadow:
-      '0px 1px 0px rgba(20, 70, 32, 0.1), inset 0px 2px 0px rgba(255, 255, 255, 0.03)',
-    activeShadow: 'inset 0px 1px 0px rgba(20, 70, 32, 0.2)',
-  },
+const shadows = {
+  xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
+  sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+  base: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+  md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+  lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+  xl:
+    '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+  '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+  outline: '0 0 0 3px rgba(66, 153, 225, 0.6)',
+  inner: 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
+  none: 'none',
+  'dark-lg':
+    'rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.4) 0px 15px 40px',
 };
+
+export default shadows;

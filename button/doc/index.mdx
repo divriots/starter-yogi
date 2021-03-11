@@ -1,0 +1,67 @@
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+import { Button } from '../src/index.js';
+import { EmailIcon, ArrowForwardIcon } from '@chakra-ui/icons';
+import { Playground } from '@divriots/dockit-react/playground';
+import Layout from '~/doc-layout';
+export default Layout;
+
+# Button
+
+The Button component is used to trigger an action or event,
+such as submitting a form, opening a dialog, canceling an
+action, or performing a delete operation.
+
+## Import
+
+```js
+import { Button, ButtonGroup } from '@divriots/starter-chakra-ui/button';
+```
+
+- **Button**: The button component with support for custom icons, spinners, etc.
+- **ButtonGroup**: Used to group buttons whose actions are related, with an option to flush them together.
+
+## Usage
+
+<Playground
+  scope={{ Button }}
+  code={`<Button colorScheme="blue">Button</Button>`}
+/>
+
+### Button Variants
+
+<Playground
+  scope={{ Button }}
+  code={`
+<Button colorScheme="teal" variant="solid">
+  Button
+</Button>
+<Button colorScheme="teal" variant="outline">
+  Button
+</Button>
+<Button colorScheme="teal" variant="ghost">
+  Button
+</Button>
+<Button colorScheme="teal" variant="link">
+  Button
+</Button>
+  `}
+/>
+
+### Button with Icons
+
+<Playground
+  scope={{ Button, EmailIcon, ArrowForwardIcon }}
+  code={`
+<Button leftIcon={<EmailIcon />} colorScheme="teal" variant="solid">
+  Email
+</Button>
+<Button rightIcon={<ArrowForwardIcon />} colorScheme="teal" variant="outline">
+  Call us
+</Button>
+  `}
+/>
+
+## Props
+
+TODO
