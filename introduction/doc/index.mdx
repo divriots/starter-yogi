@@ -1,0 +1,66 @@
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+import { Box } from '~/box';
+import { Badge } from '~/badge';
+import { Image } from '@chakra-ui/react';
+import { StarIcon } from '@chakra-ui/icons';
+import { Playground } from '@divriots/dockit-react/playground';
+import Layout from '~/doc-layout';
+export default Layout;
+
+# Design System based on Chakra-UI
+
+## Demo
+
+<Playground
+  scope={{ Box, Image, Badge, StarIcon }}
+  code={`
+  <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+      <Image src="https://bit.ly/2Z4KKcF" alt="todo" />
+      <Box p="6">
+        <Box d="flex" alignItems="baseline">
+          <Badge borderRadius="full" px="2" colorScheme="teal">
+            New
+          </Badge>
+          <Box
+            color="gray.500"
+            fontWeight="semibold"
+            letterSpacing="wide"
+            fontSize="xs"
+            textTransform="uppercase"
+            ml="2"
+          >
+           3 beds &bull; 2 baths
+          </Box>
+        </Box>
+        <Box
+          mt="1"
+          fontWeight="semibold"
+          as="h4"
+          lineHeight="tight"
+          isTruncated
+        >
+          Modern home in city center in the heart of historic Los Angeles
+        </Box>
+        <Box>
+          $1,900.00
+          <Box as="span" color="gray.600" fontSize="sm">
+            / wk
+          </Box>
+        </Box>
+        <Box d="flex" mt="2" alignItems="center">
+          {Array(5)
+            .fill("")
+            .map((_, i) => (
+              <StarIcon
+                key={i}
+                color={i < 4 ? "teal.500" : "gray.300"}
+              />
+            ))}
+          <Box as="span" ml="2" color="gray.600" fontSize="sm">
+          30 reviews
+          </Box>
+        </Box>
+      </Box>
+    </Box>`}
+/>
