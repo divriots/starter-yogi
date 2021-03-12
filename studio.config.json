@@ -29,6 +29,12 @@
         ]
       ],
       [
+        "Data Display",
+        [
+          "badge"
+        ]
+      ],
+      [
         "Infrastructure",
         [
           "theme",

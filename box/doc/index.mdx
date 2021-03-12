@@ -1,0 +1,40 @@
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+import { Box } from '../src/index.js';
+import { Image, Badge } from '@chakra-ui/react';
+import { StarIcon } from '@chakra-ui/icons';
+import { Playground } from '@divriots/dockit-react/playground';
+import Layout from '~/doc-layout';
+export default Layout;
+
+# Box
+
+The Button component is used to trigger an action or event,
+such as submitting a form, opening a dialog, canceling an
+action, or performing a delete operation.
+
+## Import
+
+```js
+import { Box } from '@divriots/starter-chakra-ui/box';
+```
+
+## Usage
+
+<Playground
+  scope={{ Box }}
+  code={`<Box bg="tomato" w="100%" p={4} color="white">
+  This is the Box
+</Box>`}
+/>
+
+### as prop
+
+You can use the `as` prop to change the element render, just like styled-components.
+
+<Playground
+  scope={{ Box }}
+  code={`<Box as="button" borderRadius="md" bg="tomato" color="white" px={4} h={8}>
+  Button
+</Box>`}
+/>
