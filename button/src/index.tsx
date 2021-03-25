@@ -1,3 +1,1 @@
-import { Button } from '@chakra-ui/react';
-
-export { Button };
+export { Button } from '@chakra-ui/react';
