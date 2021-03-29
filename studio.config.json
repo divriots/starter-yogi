@@ -29,6 +29,12 @@
         ]
       ],
       [
+        "Feedback",
+        [
+          "alert"
+        ]
+      ],
+      [
         "Data Display",
         [
           "badge"
