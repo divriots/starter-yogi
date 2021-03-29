@@ -1,4 +1,11 @@
 {
- "name": "@divriots/starter-chakra-ui",
- "version": "0.0.0"
+  "name": "@divriots/starter-chakra-ui",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "dsd-cli serve sNbJipmRTmslL3f8RZaO --open"
+  },
+  "devDependencies": {
+    "dsd-cli": "latest",
+    "prettier": "latest"
+  }
 }

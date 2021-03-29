@@ -1,20 +1,120 @@
+import { Badge, Stack, Flex, Avatar, Box, Text } from "@chakra-ui/react";
+
 import React from 'react';
 import { mdx } from '@mdx-js/react';
-import { Badge } from '../src/index.js';
 import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-# Badge
+---
+title: Badge
+package: "@chakra-ui/layout"
+image: "components/badge.svg"
+description:
+  Badges are used to highlight an item's status for quick recognition.
+---
 
 Badges are used to highlight an item's status for quick recognition.
+
+<ComponentLinks
+  theme={{ componentName: "badge" }}
+  github={{ package: "layout" }}
+  npm={{ package: "@chakra-ui/layout" }}
+/>
+
+<carbon-ad></carbon-ad>
 
 ## Import
 
 ```js
-import { Badge } from '@divriots/starter-chakra-ui/badge';
+import { Badge } from "@chakra-ui/react"
 ```
 
 ## Usage
 
-<Playground scope={{ Badge }} code={`<Badge>Default</Badge>`} />
+<Playground
+scope={{ Badge }}
+code={`
+<Badge>Default</Badge>
+`}
+/>
+
+### Badge Color
+
+Pass the `colorScheme` prop to customize the color of the Badge. `colorScheme`
+can be any **color key** that exists in `theme.colors`.
+[Learn more about theming](/docs/theming/theme).
+
+<Playground
+scope={{ Stack, Badge }}
+code={`
+<Stack direction="row">
+  <Badge>Default</Badge>
+  <Badge colorScheme="green">Success</Badge>
+  <Badge colorScheme="red">Removed</Badge>
+  <Badge colorScheme="purple">New</Badge>
+</Stack>
+`}
+/>
+
+### Badge Variants
+
+Pass the `variant` prop and set it to either `subtle`, `solid`, or `outline` to
+get a different style.
+
+<Playground
+scope={{ Stack, Badge }}
+code={`
+<Stack direction="row">
+  <Badge variant="outline" colorScheme="green">
+    Default
+  </Badge>
+  <Badge variant="solid" colorScheme="green">
+    Success
+  </Badge>
+  <Badge variant="subtle" colorScheme="green">
+    Removed
+  </Badge>
+</Stack>
+`}
+/>
+
+## Composition
+
+<Playground
+scope={{ Flex, Avatar, Box, Text, Badge }}
+code={`
+<Flex>
+  <Avatar src="https://bit.ly/sage-adebayo" />
+  <Box ml="3">
+    <Text fontWeight="bold">
+      Segun Adebayo
+      <Badge ml="1" colorScheme="green">
+        New
+      </Badge>
+    </Text>
+    <Text fontSize="sm">UI Engineer</Text>
+  </Box>
+</Flex>
+`}
+/>
+
+You can also change the size of the badge by passing the `fontSize` prop.
+
+<Playground
+scope={{ Text, Badge }}
+code={`
+<Text fontSize="xl" fontWeight="bold">
+  Segun Adebayo
+  <Badge ml="1" fontSize="0.8em" colorScheme="green">
+    New
+  </Badge>
+</Text>
+`}
+/>
+
+## Props
+
+The `Badge` component composes `Box` component so you can pass props for `Box`.
+
+<PropsTable of="Badge" />
