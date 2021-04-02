@@ -1,0 +1,74 @@
+import { Spinner, Stack } from "@chakra-ui/react";
+
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+import { Playground } from '@divriots/dockit-react/playground';
+import Layout from '~/doc-layout';
+export default Layout;
+
+#  Spinner
+
+Spinners provide a visual cue that an action is either processing, awaiting a
+course of change or a result.
+
+
+
+
+
+## Import
+
+```js
+import { Spinner } from "@chakra-ui/react"
+```
+
+## Usage
+
+<Playground
+scope={{ Spinner }}
+code={`
+<Spinner />
+`}
+/>
+
+### Spinner with Color
+
+<Playground
+scope={{ Spinner }}
+code={`
+<Spinner color="red.500" />
+`}
+/>
+
+### Spinner with different size
+
+<Playground
+scope={{ Stack, Spinner }}
+code={`
+<Stack direction="row" spacing={4}>
+  <Spinner size="xs" />
+  <Spinner size="sm" />
+  <Spinner size="md" />
+  <Spinner size="lg" />
+  <Spinner size="xl" />
+</Stack>
+`}
+/>
+
+### Spinner with empty area color
+
+<Playground
+scope={{ Spinner }}
+code={`
+<Spinner
+  thickness="4px"
+  speed="0.65s"
+  emptyColor="gray.200"
+  color="blue.500"
+  size="xl"
+/>
+`}
+/>
+
+## Props
+
+<PropsTable of="Spinner" />

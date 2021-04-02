@@ -1,0 +1,72 @@
+import { Divider, Center, Stack, Text } from "@chakra-ui/react";
+
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+import { Playground } from '@divriots/dockit-react/playground';
+import Layout from '~/doc-layout';
+export default Layout;
+
+#  Divider
+
+Dividers are used to visually separate content in a list or group.
+
+
+
+
+
+## Import
+
+```js
+import { Divider } from "@chakra-ui/react"
+```
+
+## Usage
+
+The `Divider` displays a thin horizontal or vertical line, and renders a `hr`
+tag.
+
+<Playground
+scope={{ Divider }}
+code={`
+<Divider />
+`}
+/>
+
+### Divider Orientation
+
+Pass the `orientation` prop and set it to either `horizontal` or `vertical`.
+
+<Playground
+scope={{ Divider }}
+code={`
+<Divider orientation="horizontal" />
+`}
+/>
+
+If the vertical orientation is used, make sure that the parent element is
+assigned a height.
+
+<Playground
+scope={{ Center, Divider }}
+code={`
+<Center height="50px">
+  <Divider orientation="vertical" />
+</Center>
+`}
+/>
+
+## Composition
+
+<Playground
+scope={{ Stack, Divider, Text }}
+code={`
+<Stack direction="row" h="100px" p={4}>
+  <Divider orientation="vertical" />
+  <Text>Chakra UI</Text>
+</Stack>
+`}
+/>
+
+## Props
+
+<PropsTable of="Divider" />

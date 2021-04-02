@@ -1,0 +1,72 @@
+import { CheckIcon } from "@chakra-ui/icons";
+import { Button, VisuallyHidden, Box, Heading } from "@chakra-ui/react";
+
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+import { Playground } from '@divriots/dockit-react/playground';
+import Layout from '~/doc-layout';
+export default Layout;
+
+#  VisuallyHidden
+
+VisuallyHidden is a common techinique used in web accessibility to hide content
+from the visual client, but keep it readable for screen readers.
+
+
+
+
+
+## Import
+
+```js
+import { VisuallyHidden } from "@chakra-ui/react"
+```
+
+## Usage
+
+<Playground
+scope={{ Button, VisuallyHidden, CheckIcon }}
+code={`
+function Example() {
+  return (
+    <Button>
+      <VisuallyHidden>Checkmark</VisuallyHidden>
+      <CheckIcon />
+    </Button>
+  )
+}
+`}
+/>
+
+Another Example
+
+<Playground
+scope={{ Box, Heading, VisuallyHidden }}
+code={`
+function Example() {
+  return (
+    <Box>
+      <Heading>Title and description</Heading>
+      <VisuallyHidden>This will be hidden</VisuallyHidden>
+    </Box>
+  )
+}
+`}
+/>
+
+---
+
+## Accessibility
+
+VisuallyHidden has all the styles necessary to hide it from visual clients, but
+keep it for screen readers.
+
+---
+
+## Props
+
+This component doesn't have any custom props.
+
+| Name       | Type              | Description                       |
+| ---------- | ----------------- | --------------------------------- |
+| `children` | `React.ReactNode` | The content to be hidden visually |

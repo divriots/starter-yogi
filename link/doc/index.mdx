@@ -1,0 +1,79 @@
+import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { Link, Text } from "@chakra-ui/react";
+
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+import { Playground } from '@divriots/dockit-react/playground';
+import Layout from '~/doc-layout';
+export default Layout;
+
+#  Link
+
+Links are accessible elements used primarily for navigation. This component is
+styled to resemble a hyperlink and semantically renders an `<a>`.
+
+
+
+
+
+## Imports
+
+```js
+import { Link } from "@chakra-ui/react"
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+```
+
+## Usage
+
+<Playground
+scope={{ Link }}
+code={`
+<Link>Chakra UI</Link>
+`}
+/>
+
+### External Link
+
+<Playground
+scope={{ Link, ExternalLinkIcon }}
+code={`
+<Link href="https://chakra-ui.com" isExternal>
+  Chakra Design system <ExternalLinkIcon mx="2px" />
+</Link>
+`}
+/>
+
+### Link inline with text
+
+<Playground
+scope={{ Text, Link }}
+code={`
+<Text>
+  Did you know that{" "}
+  <Link color="teal.500" href="#">
+    links can live inline with text
+  </Link>
+</Text>
+`}
+/>
+
+## Usage with Routing Library
+
+To use the `Link` with a routing library like Reach Router or React Router, all
+you need to do is pass the `as` prop. It'll replace the rendered `a` tag with
+Reach's `Link`.
+
+```jsx live=false
+// 1. import { Link as ReachLink } from "@reach/router"
+
+// 2. Then use it like this
+<Link as={ReachLink} to="/home">
+  Home
+</Link>
+```
+
+## Props
+
+The Link component composes the `Box` component.
+
+<PropsTable of="Link" />
