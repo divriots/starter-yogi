@@ -1,4 +1,4 @@
-import { Tabs, TabList, Tab, TabPanels, TabPanel, Image, Box, StyledTab, CustomTab, DataTabs } from "@chakra-ui/react";
+import { Tabs, TabList, Tab, TabPanels, TabPanel,  useColorModeValue, Image, Box,  useTab,  useStyles, StyledTab, CustomTab, DataTabs } from "@chakra-ui/react";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -218,7 +218,7 @@ tabs. If you intend to control the tabs programmatically, use this with the
 `index` prop.
 
 <Playground
-scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
+scope={{  useColorModeValue, Tabs, TabList, Tab, TabPanels, TabPanel }}
 code={`
 function Example() {
   const colors = useColorModeValue(
@@ -427,7 +427,7 @@ to pass state internally. Your custom `Tab` component must use
 `React.forwardRef`.
 
 <Playground
-scope={{ StyledTab, Box, Tabs, TabList, CustomTab, TabPanels, TabPanel }}
+scope={{  useTab,  useStyles, StyledTab, Box, Tabs, TabList, CustomTab, TabPanels, TabPanel }}
 code={`
 function CustomTabs() {
   // 1. Reuse the styles for the Tab
