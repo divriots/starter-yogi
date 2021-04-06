@@ -1,0 +1,74 @@
+import { FormControl, FormLabel, Switch, Stack } from "@chakra-ui/react";
+
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+import { Playground } from '@divriots/dockit-react/playground';
+import Layout from '~/doc-layout';
+export default Layout;
+
+#  Switch
+
+The `Switch` component is used as an alternative for the
+[Checkbox](/docs/form/checkbox) component. You can switch between enabled or
+disabled states.
+
+
+
+
+
+`Switch` must always be accompanied by a label, and follows the same keyboard
+workflow as a `Checkbox`.
+
+## Import
+
+```js
+import { Switch } from "@chakra-ui/react"
+```
+
+## Usage
+
+<Playground
+scope={{ FormControl, FormLabel, Switch }}
+code={`
+<FormControl display="flex" alignItems="center">
+  <FormLabel htmlFor="email-alerts" mb="0">
+    Enable email alerts?
+  </FormLabel>
+  <Switch id="email-alerts" />
+</FormControl>
+`}
+/>
+
+## Sizes
+
+Pass the `size` prop to change the size of the `Switch`.
+
+<Playground
+scope={{ Stack, Switch }}
+code={`
+<Stack align="center" direction="row">
+  <Switch size="sm" />
+  <Switch size="md" />
+  <Switch size="lg" />
+</Stack>
+`}
+/>
+
+## Switch background color
+
+You can change the checked background color of the `Switch` by passing the
+`color` prop.
+
+<Playground
+scope={{ Stack, Switch }}
+code={`
+<Stack direction="row">
+  <Switch colorScheme="red" />
+  <Switch colorScheme="teal" size="lg" />
+</Stack>
+`}
+/>
+
+## Props
+
+<PropsTable of="Switch" />

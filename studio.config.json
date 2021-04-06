@@ -19,25 +19,58 @@
       [
         "Layouts",
         [
-          "box"
+          "box",
+          "aspect-ratio",
+          "center",
+          "container",
+          "flex",
+          "grid",
+          "simple-grid",
+          "stack",
+          "wrap"
         ]
       ],
       [
         "Forms",
         [
-          "button"
+          "button",
+          "checkbox",
+          "editable",
+          "form-control",
+          "icon-button",
+          "input",
+          "number-input",
+          "pin-input",
+          "radio",
+          "select",
+          "slider",
+          "switch",
+          "textarea"
         ]
       ],
       [
         "Feedback",
         [
-          "alert"
+          "alert",
+          "circular-progress",
+          "progress",
+          "skeleton",
+          "spinner",
+          "toast"
         ]
       ],
       [
         "Data Display",
         [
-          "badge"
+          "badge",
+          "close-button",
+          "code",
+          "divider",
+          "kbd",
+          "list",
+          "stat",
+          "table",
+          "tag"
         ]
       ],
       [
@@ -45,6 +78,41 @@
         [
           "theme",
           "doc-layout"
+        ]
+      ],
+      [
+        "Media and Icons",
+        [
+          "avatar",
+          "icon",
+          "image"
+        ]
+      ],
+      [
+        "Navigation",
+        [
+          "breadcrumb",
+          "link",
+          "link-overlay"
+        ]
+      ],
+      [
+        "Disclosure",
+        [
+          "accordion",
+          "tabs",
+          "visually-hidden"
+        ]
+      ],
+      [
+        "Overlay",
+        [
+          "alert-dialog",
+          "drawer",
+          "menu",
+          "modal",
+          "popover",
+          "tooltip"
         ]
       ]
     ]

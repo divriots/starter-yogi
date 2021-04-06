@@ -1,0 +1,76 @@
+import { Stat, StatLabel, StatNumber, StatHelpText, StatGroup, StatArrow } from "@chakra-ui/react";
+
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+import { Playground } from '@divriots/dockit-react/playground';
+import Layout from '~/doc-layout';
+export default Layout;
+
+#  Stat
+
+As the name implies, the `Stat` component is used to display some statistics.
+
+
+
+
+
+## Import
+
+```js
+import {
+  Stat,
+  StatLabel,
+  StatNumber,
+  StatHelpText,
+  StatArrow,
+  StatGroup,
+} from "@chakra-ui/react"
+```
+
+## Basic Usage
+
+<Playground
+scope={{ Stat, StatLabel, StatNumber, StatHelpText }}
+code={`
+<Stat>
+  <StatLabel>Collected Fees</StatLabel>
+  <StatNumber>£0.00</StatNumber>
+  <StatHelpText>Feb 12 - Feb 28</StatHelpText>
+</Stat>
+`}
+/>
+
+### Stat with Indicator
+
+<Playground
+scope={{ StatGroup, Stat, StatLabel, StatNumber, StatHelpText, StatArrow }}
+code={`
+<StatGroup>
+  <Stat>
+    <StatLabel>Sent</StatLabel>
+    <StatNumber>345,670</StatNumber>
+    <StatHelpText>
+      <StatArrow type="increase" />
+      23.36%
+    </StatHelpText>
+  </Stat>
+  <Stat>
+    <StatLabel>Clicked</StatLabel>
+    <StatNumber>45</StatNumber>
+    <StatHelpText>
+      <StatArrow type="decrease" />
+      9.05%
+    </StatHelpText>
+  </Stat>
+</StatGroup>
+`}
+/>
+
+## Props
+
+- `StatLabel`, `StatHelpText`, `StatNumber` composes
+  [Text](/docs/typography/text) component.
+- `StatArrow` composes [Icon](/docs/components/icon) component.
+- `Stat` and `StatGroup` composes [Box](/docs/layout/box) component.
+
+<PropsTable of="Stat" />
