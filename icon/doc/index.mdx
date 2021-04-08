@@ -1,5 +1,7 @@
-import { Icon, CircleIcon } from "@chakra-ui/icons";
-import { HStack } from "@chakra-ui/react";
+import { MdSettings, MdReceipt, MdGroupWork } from "react-icons/md";
+  
+import { CircleIcon } from "@chakra-ui/icons";
+import { HStack, Icon } from "@chakra-ui/react";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -82,14 +84,14 @@ function Example() {
 ### Some examples
 
 <Playground
-scope={{ HStack, Icon }}
+scope={{ HStack, Icon, MdSettings, MdReceipt, MdGroupWork }}
 code={`
 <HStack>
   {/* The default icon size is 1em (16px) */}
   <Icon as={MdSettings} />
-  {/* Use the `boxSize` prop to change the icon size */}
+  {/* Use the \`boxSize\` prop to change the icon size */}
   <Icon as={MdReceipt} w={6} h={6} />
-  {/* Use the `color` prop to change the icon color */}
+  {/* Use the \`color\` prop to change the icon color */}
   <Icon as={MdGroupWork} w={8} h={8} color="red.500" />
 </HStack>
 `}
@@ -148,9 +150,9 @@ code={`
 <HStack>
   {/* The default icon size is 1em (16px) */}
   <CircleIcon />
-  {/* Use the `boxSize` prop to change the icon size */}
+  {/* Use the \`boxSize\` prop to change the icon size */}
   <CircleIcon boxSize={6} />
-  {/* Use the `color` prop to change the icon color */}
+  {/* Use the \`color\` prop to change the icon color */}
   <CircleIcon boxSize={8} color="red.500" />
 </HStack>
 `}

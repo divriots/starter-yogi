@@ -1,4 +1,4 @@
-import { NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper, Stack, Flex, Slider, SliderTrack, SliderFilledTrack, SliderThumb,  useNumberInput, HStack, Button, Input } from "@chakra-ui/react";
+import { NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper, Stack, Flex, Slider, SliderTrack, SliderFilledTrack, SliderThumb, useNumberInput, HStack, Button, Input } from "@chakra-ui/react";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -172,10 +172,7 @@ code={`
 scope={{ NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper }}
 code={`
 function Example() {
-  const format = (val) => `<Playground
-scope={{ $scope }}
-code={`
- + val
+  const format = (val) => \`$\` + val
   const parse = (val) => val.replace(/^\$/, "")
   const [value, setValue] = React.useState("1.53")
   return (
@@ -304,7 +301,7 @@ Sometimes, you might need to create a mobile version of the number input. Here's
 how you can leverage the `useNumberInput` hook to build one.
 
 <Playground
-scope={{  useNumberInput, HStack, Button, Input }}
+scope={{ useNumberInput, HStack, Button, Input }}
 code={`
 function HookUsage() {
   const {

@@ -1,4 +1,4 @@
-import {  useToast, Button, Box, Stack, Wrap, WrapItem } from "@chakra-ui/react";
+import { useToast, Button, Box, Stack, Wrap, WrapItem } from "@chakra-ui/react";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -30,7 +30,7 @@ import { useToast } from "@chakra-ui/react"
 ## Usage
 
 <Playground
-scope={{  useToast, Button }}
+scope={{ useToast, Button }}
 code={`
 function ToastExample() {
   const toast = useToast()
@@ -58,7 +58,7 @@ function ToastExample() {
 Display a custom component instead of the default Toast UI.
 
 <Playground
-scope={{  useToast, Button, Box }}
+scope={{ useToast, Button, Box }}
 code={`
 function CustomToastExample() {
   const toast = useToast()
@@ -88,7 +88,7 @@ Toasts can be closed imperatively, individually (via the `close` instance
 method) or all together (via the `closeAll` instance method).
 
 <Playground
-scope={{  useToast, Stack, Button }}
+scope={{ useToast, Stack, Button }}
 code={`
 function ClosingToastExample() {
   const toast = useToast()
@@ -101,7 +101,7 @@ function ClosingToastExample() {
   function closeAll() {
     // you may optionally pass an object of positions to exclusively close
     // keeping other positions opened
-    // e.g. `{ positions: ['bottom'] }`
+    // e.g. \`{ positions: ['bottom'] }\`
     toast.closeAll()
   }
   function addToast() {
@@ -129,7 +129,7 @@ function ClosingToastExample() {
 You can use `status` to change the color of your toasts.
 
 <Playground
-scope={{  useToast, Wrap, WrapItem, Button }}
+scope={{ useToast, Wrap, WrapItem, Button }}
 code={`
 function ToastStatusExample() {
   const toast = useToast()
@@ -141,7 +141,7 @@ function ToastStatusExample() {
           <Button
             onClick={() =>
               toast({
-                title: `${status} toast`,
+                title: '' + status + ' toast',
                 status: status,
                 isClosable: true,
               })
@@ -163,7 +163,7 @@ function ToastStatusExample() {
 [`Alert`](https://chakra-ui.com/docs/feedback/alert) component.
 
 <Playground
-scope={{  useToast, Wrap, WrapItem, Button }}
+scope={{ useToast, Wrap, WrapItem, Button }}
 code={`
 function ToastVariantsExample() {
   const toast = useToast()
@@ -175,7 +175,7 @@ function ToastVariantsExample() {
           <Button
             onClick={() =>
               toast({
-                title: `${variant} toast`,
+                title: '' + variant + ' toast',
                 variant: variant,
                 isClosable: true,
               })
@@ -196,7 +196,7 @@ function ToastVariantsExample() {
 Using the `position` prop you can adjust where your toast will be popup from.
 
 <Playground
-scope={{  useToast, Wrap, WrapItem, Button }}
+scope={{ useToast, Wrap, WrapItem, Button }}
 code={`
 function PositionExample() {
   const toast = useToast()
@@ -215,7 +215,7 @@ function PositionExample() {
           <Button
             onClick={() =>
               toast({
-                title: `${position} toast`,
+                title: '' + position + ' toast',
                 position: position,
                 isClosable: true,
               })
