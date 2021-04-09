@@ -1,6 +1,6 @@
 import { MdSettings, MdReceipt, MdGroupWork } from "react-icons/md";
   
-import { CircleIcon } from "@chakra-ui/icons";
+
 import { HStack, Icon } from "@chakra-ui/react";
 
 import React from 'react';
@@ -9,7 +9,7 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  "Icon"
+#  Icon
 
 Chakra provides multiple ways to use icons in your project:
 
@@ -112,51 +112,6 @@ import { Icon, createIcon } from "@chakra-ui/react"
 
 Both `Icon` and `createIcon` enable you to style the icon using
 [style props](/docs/features/style-props).
-
-### Using the `Icon` component
-
-The `Icon` component renders as an `svg` element.
-
-<Playground
-scope={{ Icon }}
-code={`
-<Icon viewBox="0 0 200 200" color="red.500">
-  <path
-    fill="currentColor"
-    d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"
-  />
-</Icon>
-`}
-/>
-
-This enables you to define your own custom icon components:
-
-```jsx live=false
-const CircleIcon = (props) => (
-  <Icon viewBox="0 0 200 200" {...props}>
-    <path
-      fill="currentColor"
-      d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"
-    />
-  </Icon>
-)
-```
-
-And style them with style props:
-
-<Playground
-scope={{ HStack, CircleIcon }}
-code={`
-<HStack>
-  {/* The default icon size is 1em (16px) */}
-  <CircleIcon />
-  {/* Use the \`boxSize\` prop to change the icon size */}
-  <CircleIcon boxSize={6} />
-  {/* Use the \`color\` prop to change the icon color */}
-  <CircleIcon boxSize={8} color="red.500" />
-</HStack>
-`}
-/>
 
 ### Using the `createIcon` function
 

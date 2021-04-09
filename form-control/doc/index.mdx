@@ -1,4 +1,4 @@
-import { FormControl, FormLabel, Input, FormHelperText, RadioGroup, HStack, Radio, Select, NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper, Formik, Form, Field, FormErrorMessage, Button } from "@chakra-ui/react";
+import { FormControl, FormLabel, Input, FormHelperText, RadioGroup, HStack, Radio, Select, NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper } from "@chakra-ui/react";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -109,79 +109,3 @@ code={`
 </FormControl>
 `}
 />
-
-### Usage with Form Libraries
-
-Form Libraries like [Formik](https://jaredpalmer.com/formik/) make it soooo easy
-to manage form state and validation. I 💖 Formik
-
-<Playground
-scope={{ Formik, Form, Field, FormControl, FormLabel, Input, FormErrorMessage, Button }}
-code={`
-function FormikExample() {
-  function validateName(value) {
-    let error
-    if (!value) {
-      error = "Name is required"
-    } else if (value.toLowerCase() !== "naruto") {
-      error = "Jeez! You're not a fan 😱"
-    }
-    return error
-  }
-  return (
-    <Formik
-      initialValues={{ name: "Sasuke" }}
-      onSubmit={(values, actions) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2))
-          actions.setSubmitting(false)
-        }, 1000)
-      }}
-    >
-      {(props) => (
-        <Form>
-          <Field name="name" validate={validateName}>
-            {({ field, form }) => (
-              <FormControl isInvalid={form.errors.name && form.touched.name}>
-                <FormLabel htmlFor="name">First name</FormLabel>
-                <Input {...field} id="name" placeholder="name" />
-                <FormErrorMessage>{form.errors.name}</FormErrorMessage>
-              </FormControl>
-            )}
-          </Field>
-          <Button
-            mt={4}
-            colorScheme="teal"
-            isLoading={props.isSubmitting}
-            type="submit"
-          >
-            Submit
-          </Button>
-        </Form>
-      )}
-    </Formik>
-  )
-}
-`}
-/>
-
-## Improvements from v1
-
-- We've improved the accessibility of the `FormControl` component. Here are the
-  changes:
-
-  - `id` passed to the form control will be passed to the form input directly.
-  - `FormLabel` will have `htmlFor` that points to the `id` of the form input.
-  - `FormErrorMessage` adds `aria-describedby` and `aria-invalid` pointing to
-    the form input.
-  - `FormHelperText` adds/extends `aria-describedby` pointing to the form input.
-  - `isDisabled`, `isRequired`, `isReadOnly` props passed to `FormControl` will
-    cascade across all related components.
-
-- `FormLabel` is now aware of the `disabled`, `focused` and `error` state of the
-  form input. This helps you style the label accordingly using the `_disabled`,
-  `_focus`, and `_invalid` style props.
-
-- If you render `FormErrorMessage` and `isInvalid` is `false` or `undefined`,
-  `FormErrorMessage` won't be visible. The only way to make it visible is by
-  passing `isInvalid` and setting it to `true`.

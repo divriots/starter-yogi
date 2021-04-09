@@ -1,4 +1,4 @@
-import { Tabs, TabList, Tab, TabPanels, TabPanel, useColorModeValue, Image, Box, useTab, useStyles, StyledTab, CustomTab, DataTabs } from "@chakra-ui/react";
+import { Tabs, TabList, Tab, TabPanels, TabPanel, useColorModeValue, Image, Box, DataTabs } from "@chakra-ui/react";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -415,49 +415,6 @@ function ControlledExample() {
         </TabPanels>
       </Tabs>
     </Box>
-  )
-}
-`}
-/>
-
-### Creating custom tab components
-
-Because `TabList` needs to know the order of the children, we use `cloneElement`
-to pass state internally. Your custom `Tab` component must use
-`React.forwardRef`.
-
-<Playground
-scope={{ useTab, useStyles, StyledTab, Box, Tabs, TabList, CustomTab, TabPanels, TabPanel }}
-code={`
-function CustomTabs() {
-  // 1. Reuse the styles for the Tab
-  const StyledTab = chakra("button", { themeKey: "Tabs.Tab" })
-  const CustomTab = React.forwardRef((props, ref) => {
-    // 2. Reuse the \`useTab\` hook
-    const tabProps = useTab(props)
-    const isSelected = !!tabProps["aria-selected"]
-    // 3. Hook into the Tabs \`size\`, \`variant\`, props
-    const styles = useStyles()
-    return (
-      <StyledTab __css={styles.tab} {...tabProps}>
-        <Box as="span" mr="2">
-          {isSelected ? "😎" : "😐"}
-        </Box>
-        {tabProps.children}
-      </StyledTab>
-    )
-  })
-  return (
-    <Tabs>
-      <TabList>
-        <CustomTab>One</CustomTab>
-        <CustomTab>Two</CustomTab>
-      </TabList>
-      <TabPanels>
-        <TabPanel>1</TabPanel>
-        <TabPanel>2</TabPanel>
-      </TabPanels>
-    </Tabs>
   )
 }
 `}
