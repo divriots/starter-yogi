@@ -133,14 +133,17 @@ Dragging the slider can trigger lots of updates and the user might only be
 interested in the final result after sliding is complete. You can use
 `onChangeEnd` for this.
 
-```jsx live=false
+<Playground
+scope={{ Slider, SliderTrack, SliderFilledTrack, SliderThumb }}
+code={`
 <Slider aria-label="slider-ex-5" onChangeEnd={(val) => console.log(val)}>
   <SliderTrack>
     <SliderFilledTrack />
   </SliderTrack>
   <SliderThumb />
 </Slider>
-```
+`}
+/>
 
 ### Configure thumb focus with `focusThumbOnChange`
 
@@ -148,14 +151,17 @@ By default `SliderThumb` will receive focus whenever `value` changes. You can
 opt-out of this behavior by setting the value of `focusThumbOnChange` to
 `false`. This is normally used with a "controlled" slider value.
 
-```jsx live=false
+<Playground
+scope={{ Slider, SliderTrack, SliderFilledTrack, SliderThumb }}
+code={`
 <Slider aria-label="slider-ex-5" value={value} focusThumbOnChange={false}>
   <SliderTrack>
     <SliderFilledTrack />
   </SliderTrack>
   <SliderThumb />
 </Slider>
-```
+`}
+/>
 
 ### useSlider
 

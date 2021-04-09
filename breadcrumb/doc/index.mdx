@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Link } from "@chakra-ui/react";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -130,9 +130,10 @@ all you need to do is to pass the `as` prop to the `BreadcrumbLink` component.
 
 It'll replace the rendered `a` tag with Reach's Link.
 
-```jsx live=false
+<Playground
+scope={{ Breadcrumb, BreadcrumbItem, BreadcrumbLink, Link }}
+code={`
 // import { Link } from "@reach/router"
-
 <Breadcrumb>
   <BreadcrumbItem>
     <BreadcrumbLink as={Link} to="#">
@@ -148,7 +149,8 @@ It'll replace the rendered `a` tag with Reach's Link.
     <BreadcrumbLink>Contact</BreadcrumbLink>
   </BreadcrumbItem>
 </Breadcrumb>
-```
+`}
+/>
 
 ## Accessibility
 

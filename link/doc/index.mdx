@@ -1,5 +1,5 @@
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { Link, Text } from "@chakra-ui/react";
+import { Link, Text, ReachLink } from "@chakra-ui/react";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -63,11 +63,13 @@ To use the `Link` with a routing library like Reach Router or React Router, all
 you need to do is pass the `as` prop. It'll replace the rendered `a` tag with
 Reach's `Link`.
 
-```jsx live=false
+<Playground
+scope={{ Link, ReachLink }}
+code={`
 // 1. import { Link as ReachLink } from "@reach/router"
-
 // 2. Then use it like this
 <Link as={ReachLink} to="/home">
   Home
 </Link>
-```
+`}
+/>

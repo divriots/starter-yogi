@@ -249,7 +249,9 @@ way to do it:
 > Because the button is located outside the form, you can leverage its native
 > HTML `form` attrbute and refer to the `id` of the `form`.
 
-```jsx live=false
+<Playground
+scope={{ useDisclosure, Button, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Input, DrawerFooter }}
+code={`
 export const App = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
@@ -260,7 +262,6 @@ export const App = () => {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>Create your account</DrawerHeader>
-
           <DrawerBody>
             <form
               id="my-form"
@@ -272,7 +273,6 @@ export const App = () => {
               <Input name="nickname" placeholder="Type here..." />
             </form>
           </DrawerBody>
-
           <DrawerFooter>
             <Button type="submit" form="my-form">
               Save
@@ -283,7 +283,8 @@ export const App = () => {
     </>
   )
 }
-```
+`}
+/>
 
 ## Accessibility
 
