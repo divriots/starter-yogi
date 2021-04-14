@@ -1,5 +1,6 @@
-import { CustomIcon } from "@chakra-ui/icons";
-import { Checkbox, Stack, HStack, Icon, CustomCheckbox, CheckboxGroup } from "@chakra-ui/react";
+import { HStack, CheckboxGroup } from "@chakra-ui/react";
+import { Checkbox } from "~/checkbox";
+import { Stack } from "~/stack";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -106,26 +107,20 @@ code={`
 We added the `spacing` prop to customize the spacing between the `Checkbox` and
 label text.
 
-<Playground
-scope={{ Checkbox }}
-code={`
+```jsx live=false
 <Checkbox spacing="1rem">Option</Checkbox>
-`}
-/>
+```
 
 ### Changing the icon color and size
 
 You can customize the color and size of the check icon by passing the
 `iconColor` and `iconSize` prop.
 
-<Playground
-scope={{ Checkbox }}
-code={`
+```jsx live=false
 <Checkbox iconColor="blue.400" iconSize="1rem">
   Option
 </Checkbox>
-`}
-/>
+```
 
 ### Indeterminate
 
@@ -167,23 +162,24 @@ function IndeterminateExample() {
 
 ### Icon
 
-<Playground
-scope={{ Icon, Checkbox, CustomIcon, CustomCheckbox }}
-code={`
+```jsx manual=true
 /**
- * 1. Create a custom icon that accepts 2 props: \`isIndeterminate\` and \`isChecked\`
+ * 1. Create a custom icon that accepts 2 props: `isIndeterminate` and `isChecked`
  */
 function CustomIcon(props) {
   const { isIndeterminate, isChecked, ...rest } = props
+
   const d = isIndeterminate
     ? "M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,19a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,12,19Zm1.6-6.08a1,1,0,0,0-.6.917,1,1,0,1,1-2,0,3,3,0,0,1,1.8-2.75A2,2,0,1,0,10,9.255a1,1,0,1,1-2,0,4,4,0,1,1,5.6,3.666Z"
     : "M0,12a1.5,1.5,0,0,0,1.5,1.5h8.75a.25.25,0,0,1,.25.25V22.5a1.5,1.5,0,0,0,3,0V13.75a.25.25,0,0,1,.25-.25H22.5a1.5,1.5,0,0,0,0-3H13.75a.25.25,0,0,1-.25-.25V1.5a1.5,1.5,0,0,0-3,0v8.75a.25.25,0,0,1-.25.25H1.5A1.5,1.5,0,0,0,0,12Z"
+
   return (
     <Icon viewBox="0 0 24 24" {...rest}>
       <path fill="currentColor" d={d} />
     </Icon>
   )
 }
+
 function CustomCheckbox() {
   return (
     <Checkbox icon={<CustomIcon />} colorScheme="cyan">
@@ -191,9 +187,9 @@ function CustomCheckbox() {
     </Checkbox>
   )
 }
+
 render(<CustomCheckbox />)
-`}
-/>
+```
 
 ### CheckboxGroup
 

@@ -1,0 +1,1 @@
+export { TextArea } from '@chakra-ui/react';

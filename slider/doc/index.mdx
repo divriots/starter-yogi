@@ -1,7 +1,9 @@
 import { MdGraphicEq } from "react-icons/md";
   
 
-import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, Box } from "@chakra-ui/react";
+import { SliderTrack, SliderFilledTrack, SliderThumb } from "@chakra-ui/react";
+import { Slider } from "~/slider";
+import { Box } from "~/box";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -133,17 +135,14 @@ Dragging the slider can trigger lots of updates and the user might only be
 interested in the final result after sliding is complete. You can use
 `onChangeEnd` for this.
 
-<Playground
-scope={{ Slider, SliderTrack, SliderFilledTrack, SliderThumb }}
-code={`
+```jsx live=false
 <Slider aria-label="slider-ex-5" onChangeEnd={(val) => console.log(val)}>
   <SliderTrack>
     <SliderFilledTrack />
   </SliderTrack>
   <SliderThumb />
 </Slider>
-`}
-/>
+```
 
 ### Configure thumb focus with `focusThumbOnChange`
 
@@ -151,17 +150,14 @@ By default `SliderThumb` will receive focus whenever `value` changes. You can
 opt-out of this behavior by setting the value of `focusThumbOnChange` to
 `false`. This is normally used with a "controlled" slider value.
 
-<Playground
-scope={{ Slider, SliderTrack, SliderFilledTrack, SliderThumb }}
-code={`
+```jsx live=false
 <Slider aria-label="slider-ex-5" value={value} focusThumbOnChange={false}>
   <SliderTrack>
     <SliderFilledTrack />
   </SliderTrack>
   <SliderThumb />
 </Slider>
-`}
-/>
+```
 
 ### useSlider
 

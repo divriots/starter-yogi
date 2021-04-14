@@ -1,4 +1,6 @@
-import { RadioGroup, Stack, Radio, useRadio, Box, useRadioGroup, HStack, RadioCard, Example } from "@chakra-ui/react";
+import { RadioGroup } from "@chakra-ui/react";
+import { Stack } from "~/stack";
+import { Radio } from "~/radio";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -138,14 +140,14 @@ help with this scenario. Here's what you need to do:
 1. Create a component that consumes the `useRadio` hook.
 2. Use the `useRadioGroup` hook to control a group of custom radios.
 
-<Playground
-scope={{ useRadio, Box, useRadioGroup, HStack, RadioCard, Example }}
-code={`
-// 1. Create a component that consumes the \`useRadio\` hook
+```jsx manual=true
+// 1. Create a component that consumes the `useRadio` hook
 function RadioCard(props) {
   const { getInputProps, getCheckboxProps } = useRadio(props)
+
   const input = getInputProps()
   const checkbox = getCheckboxProps()
+
   return (
     <Box as="label">
       <input {...input} />
@@ -171,15 +173,19 @@ function RadioCard(props) {
     </Box>
   )
 }
-// Step 2: Use the \`useRadioGroup\` hook to control a group of custom radios.
+
+// Step 2: Use the `useRadioGroup` hook to control a group of custom radios.
 function Example() {
   const options = ["react", "vue", "svelte"]
+
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "framework",
     defaultValue: "react",
     onChange: console.log,
   })
+
   const group = getRootProps()
+
   return (
     <HStack {...group}>
       {options.map((value) => {
@@ -193,9 +199,9 @@ function Example() {
     </HStack>
   )
 }
+
 render(<Example />)
-`}
-/>
+```
 
 ### Note about `name` prop
 
@@ -203,18 +209,16 @@ We recommend passing the `name` prop to the `RadioGroup` component, instead of
 passing it to each `Radio` component. By default, the `name` prop of the
 RadioGroup takes precedence.
 
-<Playground
-scope={{ RadioGroup, Radio }}
-code={`
+```jsx live=false
 // Do this ✅
 <RadioGroup name="form-name">
   <Radio>Radio 1</Radio>
   <Radio>Radio 2</Radio>
 </RadioGroup>
+
 // Don't do this ❌
 <RadioGroup >
   <Radio name="form-name">Radio 1</Radio>
   <Radio name="form-name">Radio 2</Radio>
 </RadioGroup>
-`}
-/>
+```

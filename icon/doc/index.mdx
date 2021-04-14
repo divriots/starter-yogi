@@ -1,7 +1,8 @@
 import { MdSettings, MdReceipt, MdGroupWork } from "react-icons/md";
   
-import { PhoneIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
-import { Icon, HStack } from "@chakra-ui/react";
+
+import { HStack } from "@chakra-ui/react";
+import { Icon } from "~/icon";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -40,18 +41,18 @@ yarn add @chakra-ui/icons
 
 ### Usage
 
-<Playground
-scope={{ PhoneIcon, AddIcon, WarningIcon }}
-code={`
+```jsx live=false
 import { PhoneIcon, AddIcon, WarningIcon } from '@chakra-ui/icons'
+
 // The default icon size is 1em (16px)
 <PhoneIcon />
-// Use the \`boxSize\` prop to change the icon size
+
+// Use the `boxSize` prop to change the icon size
 <AddIcon w={6} h={6} />
-// Use the \`color\` prop to change the icon color
+
+// Use the `color` prop to change the icon color
 <WarningIcon w={8} h={8} color="red.500" />
-`}
-/>
+```
 
 ### All icons
 
@@ -70,18 +71,16 @@ To use third-party icon libraries like
 1. Import the `Icon` component from `@chakra-ui/react`
 2. Pass the desired third party icon into the `as` prop
 
-<Playground
-scope={{ Icon, MdSettings }}
-code={`
+```jsx live=false
 // 1. Import
 import { Icon } from "@chakra-ui/react"
 import { MdSettings } from "react-icons/md"
-// 2. Use the \`as\` prop
+
+// 2. Use the `as` prop
 function Example() {
   return <Icon as={MdSettings} />
 }
-`}
-/>
+```
 
 ### Some examples
 
@@ -108,12 +107,9 @@ Chakra provides two methods for creating your custom icons:
 
 They can be imported from `@chakra-ui/react`:
 
-<Playground
-scope={{  }}
-code={`
+```jsx live=false
 import { Icon, createIcon } from "@chakra-ui/react"
-`}
-/>
+```
 
 Both `Icon` and `createIcon` enable you to style the icon using
 [style props](/docs/features/style-props).
@@ -124,11 +120,10 @@ The `createIcon` function is a convenience wrapper around the process of
 generating icons with `Icon`, allowing you to achieve the same functionality
 with less effort.
 
-<Playground
-scope={{  }}
-code={`
+```jsx live=false
 import { createIcon } from "@chakra-ui/icons"
-// using \`path\`
+
+// using `path`
 export const UpDownIcon = createIcon({
   displayName: "UpDownIcon",
   viewBox: "0 0 200 200",
@@ -140,14 +135,14 @@ export const UpDownIcon = createIcon({
     />
   ),
 })
-// OR using the \`d\` value of a path (the path definition) directly
+
+// OR using the `d` value of a path (the path definition) directly
 export const UpDownIcon = createIcon({
   displayName: "UpDownIcon",
   viewBox: "0 0 200 200",
   d: "M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0",
 })
-`}
-/>
+```
 
 ### Tips for generating your own icons
 

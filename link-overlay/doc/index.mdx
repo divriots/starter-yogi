@@ -1,4 +1,6 @@
-import { LinkBox, Box, Heading, LinkOverlay, Text, NextLink } from "@chakra-ui/react";
+import { LinkBox, Heading, Text } from "@chakra-ui/react";
+import { Box } from "~/box";
+import { LinkOverlay } from "~/link-overlay";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -94,10 +96,9 @@ To add support for external libraries like Next.js' or gatsby `Link`, you can
 wrap them around the `LinkOverlay` or use the `as` prop (for reach and react
 router)
 
-<Playground
-scope={{ LinkBox, NextLink, LinkOverlay }}
-code={`
+```jsx live=false
 import NextLink from "next/link"
+
 function Example() {
   return (
     <LinkBox as="article">
@@ -114,8 +115,7 @@ function Example() {
     </LinkBox>
   )
 }
-`}
-/>
+```
 
 ## Caveat
 
