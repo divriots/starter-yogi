@@ -1,1 +1,1 @@
-export { NumberInput } from '@chakra-ui/react';
+export { Numberinput } from '@chakra-ui/react';

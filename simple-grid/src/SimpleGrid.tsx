@@ -1,1 +1,1 @@
-export { SimpleGrid } from '@chakra-ui/react';
+export { Simplegrid } from '@chakra-ui/react';

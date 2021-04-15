@@ -1,1 +1,1 @@
-export { FormControl } from '@chakra-ui/react';
+export { Formcontrol } from '@chakra-ui/react';

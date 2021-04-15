@@ -1,1 +1,1 @@
-export { AspectRatio } from '@chakra-ui/react';
+export { Aspectratio } from '@chakra-ui/react';

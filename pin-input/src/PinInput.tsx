@@ -1,1 +1,1 @@
-export { PinInput } from '@chakra-ui/react';
+export { Pininput } from '@chakra-ui/react';

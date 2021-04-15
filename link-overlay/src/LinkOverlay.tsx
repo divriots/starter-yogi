@@ -1,1 +1,1 @@
-export { LinkOverlay } from '@chakra-ui/react';
+export { Linkoverlay } from '@chakra-ui/react';

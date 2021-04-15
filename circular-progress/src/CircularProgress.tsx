@@ -1,1 +1,1 @@
-export { CircularProgress } from '@chakra-ui/react';
+export { Circularprogress } from '@chakra-ui/react';

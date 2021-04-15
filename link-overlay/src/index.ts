@@ -1,1 +1,1 @@
-export * from './LinkOverlay';
+export * from './Linkoverlay';

@@ -1,1 +1,1 @@
-export { VisuallyHidden } from '@chakra-ui/react';
+export { Visuallyhidden } from '@chakra-ui/react';

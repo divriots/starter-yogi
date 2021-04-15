@@ -1,1 +1,1 @@
-export * from './PinInput';
+export * from './Pininput';
