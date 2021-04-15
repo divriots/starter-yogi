@@ -1,1 +1,1 @@
-export * from './Chakrafactory';
+export * from './chakra';

@@ -1,1 +1,1 @@
-export * from './Aspectratio';
+export * from './AspectRatio';

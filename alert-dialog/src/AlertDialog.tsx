@@ -1,1 +1,1 @@
-export { Alertdialog } from '@chakra-ui/react';
+export { AlertDialog } from '@chakra-ui/react';

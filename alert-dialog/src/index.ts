@@ -1,1 +1,1 @@
-export * from './Alertdialog';
+export * from './AlertDialog';

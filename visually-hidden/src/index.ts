@@ -1,1 +1,1 @@
-export * from './Visuallyhidden';
+export * from './VisuallyHidden';
