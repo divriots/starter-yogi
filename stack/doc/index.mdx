@@ -1,4 +1,4 @@
-import { HStack, VStack, StackDivider } from "@chakra-ui/react";
+import { HStack, VStack, StackDivider, Heading, Text, Feature, StackEx } from "@chakra-ui/react";
 import { Box } from "~/box";
 import { Stack } from "~/stack";
 
@@ -106,7 +106,10 @@ code={`
 
 ### Example
 
-```jsx manual=true
+<Playground
+scope={{ Box, Heading, Text, Stack, Feature, StackEx }}
+noInline={true}
+code={`
 function Feature({ title, desc, ...rest }) {
   return (
     <Box p={5} shadow="md" borderWidth="1px" {...rest}>
@@ -115,7 +118,6 @@ function Feature({ title, desc, ...rest }) {
     </Box>
   )
 }
-
 function StackEx() {
   return (
     <Stack spacing={8}>
@@ -130,16 +132,19 @@ function StackEx() {
     </Stack>
   )
 }
-
 render(<StackEx />)
-```
+`}
+/>
 
 ### Stack items horizontally
 
 Pass the `direction` and set it to `row`. Optionally, you can use `align` and
 `justify` to adjust the alignment and distribution of the items.
 
-```jsx manual=true
+<Playground
+scope={{ Box, Heading, Text, HStack, Feature, StackEx }}
+noInline={true}
+code={`
 function Feature({ title, desc, ...rest }) {
   return (
     <Box
@@ -155,7 +160,6 @@ function Feature({ title, desc, ...rest }) {
     </Box>
   )
 }
-
 function StackEx() {
   return (
     <HStack spacing={8}>
@@ -170,9 +174,9 @@ function StackEx() {
     </HStack>
   )
 }
-
 render(<StackEx />)
-```
+`}
+/>
 
 ### Notes on Stack vs Flex
 

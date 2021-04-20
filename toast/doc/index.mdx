@@ -244,7 +244,9 @@ In some cases you might need to prevent duplicate of specific toasts. To achieve
 you need to pass an `id` and use the `toast.isActive` method to determine when
 to call `toast(...)`.
 
-```jsx live=false
+<Playground
+scope={{ useToast, Button }}
+code={`
 function PreventDuplicateExample() {
   const toast = useToast()
   const id = "test-toast"
@@ -263,7 +265,8 @@ function PreventDuplicateExample() {
     </Button>
   )
 }
-```
+`}
+/>
 
 ## Standalone Toasts
 
