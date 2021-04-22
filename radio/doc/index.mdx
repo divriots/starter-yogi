@@ -207,18 +207,16 @@ We recommend passing the `name` prop to the `RadioGroup` component, instead of
 passing it to each `Radio` component. By default, the `name` prop of the
 RadioGroup takes precedence.
 
-<Playground
-scope={{ RadioGroup, Radio }}
-code={`
+```jsx live=false
 // Do this ✅
 <RadioGroup name="form-name">
   <Radio>Radio 1</Radio>
   <Radio>Radio 2</Radio>
 </RadioGroup>
+
 // Don't do this ❌
 <RadioGroup >
   <Radio name="form-name">Radio 1</Radio>
   <Radio name="form-name">Radio 2</Radio>
 </RadioGroup>
-`}
-/>
+```

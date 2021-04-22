@@ -1,7 +1,12 @@
-import { PopoverTrigger, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverHeader, PopoverBody, Portal, PopoverFooter, ButtonGroup } from "@chakra-ui/react";
+import { EditIcon } from "@chakra-ui/icons";
+import { PopoverTrigger, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverHeader, PopoverBody, Portal, PopoverFooter, ButtonGroup, FormLabel, TextInput, useDisclosure, FocusLock, Form, PopoverForm } from "@chakra-ui/react";
 import { Popover } from "~/popover";
 import { Button } from "~/button";
 import { Box } from "~/box";
+import { FormControl } from "~/form-control";
+import { Input } from "~/input";
+import { Stack } from "~/stack";
+import { IconButton } from "~/icon-button";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -161,9 +166,11 @@ You can leverage
 [react-focus-lock](https://github.com/theKashey/react-focus-lock) to trap focus
 within the `PopoverContent`.
 
-```jsx manual=true
+<Playground
+scope={{ FormControl, FormLabel, Input, Stack, TextInput, ButtonGroup, Button, useDisclosure, Box, Popover, PopoverTrigger, IconButton, EditIcon, PopoverContent, FocusLock, PopoverArrow, PopoverCloseButton, Form, PopoverForm }}
+noInline={true}
+code={`
 // import  FocusLock from "react-focus-lock"
-
 // 1. Create a text input component
 const TextInput = React.forwardRef((props, ref) => {
   return (
@@ -173,7 +180,6 @@ const TextInput = React.forwardRef((props, ref) => {
     </FormControl>
   )
 })
-
 // 2. Create the form
 const Form = ({ firstFieldRef, onCancel }) => {
   return (
@@ -196,13 +202,11 @@ const Form = ({ firstFieldRef, onCancel }) => {
     </Stack>
   )
 }
-
 // 3. Create the Popover
-// Ensure you set `closeOnBlur` prop to false so it doesn't close on outside click
+// Ensure you set \`closeOnBlur\` prop to false so it doesn't close on outside click
 const PopoverForm = () => {
   const { onOpen, onClose, isOpen } = useDisclosure()
   const firstFieldRef = React.useRef(null)
-
   return (
     <>
       <Box d="inline-block" mr={3}>
@@ -230,9 +234,9 @@ const PopoverForm = () => {
     </>
   )
 }
-
 render(<PopoverForm />)
-```
+`}
+/>
 
 ## Controlled Usage
 

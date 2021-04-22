@@ -1,6 +1,5 @@
 import { VStack } from "@chakra-ui/react";
 import { Container } from "~/container";
-import { Box } from "~/box";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -64,14 +63,11 @@ code={`
 In some cases, the width of the content can be smaller than the container's
 width, you can use the `centerContent` prop to center the content.
 
-<Playground
-scope={{ Container, Box }}
-code={`
+```jsx live=false
 <Container maxW="xl" centerContent>
   <Box padding="4" bg="gray.100" maxW="3xl">
     There are many benefits to a joint design and development system. Not only
     does it bring benefits to the design team.
   </Box>
 </Container>
-`}
-/>
+```
