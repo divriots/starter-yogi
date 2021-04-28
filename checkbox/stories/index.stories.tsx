@@ -2,7 +2,9 @@
 import { Icon } from "@chakra-ui/icon"
 import { Container, Divider, Heading, Stack } from "@chakra-ui/layout"
 import * as React from "react"
-import { Checkbox, CheckboxGroup, useCheckbox } from "../src"
+import { Checkbox } from "../src/index"
+import { CheckboxGroup, useCheckbox } from "@chakra-ui/react"
+
 
 export default {
   title: "Checkbox",
