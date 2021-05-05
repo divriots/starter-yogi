@@ -1,10 +1,11 @@
 import * as React from "react"
 import { PinInput } from "../src/index"
 import { PinInputField, usePinInput, usePinInputField, PinInputProvider, PinInputDescendantsProvider } from "@chakra-ui/react"
-
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
   title: "PinInput",
+decorators: [themeDecorator],
 }
 
 const style: React.CSSProperties = {

@@ -2,17 +2,11 @@ import { chakra, PropsOf, useMultiStyleConfig } from "@chakra-ui/system"
 import * as React from "react"
 import { FormControl } from "../src/index"
 import { FormControlOptions, FormErrorIcon, FormErrorMessage, FormHelperText, FormLabel, useFormControl } from "@chakra-ui/react"
-
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
   title: "FormControl",
-  decorators: [
-    (story: Function) => (
-      <chakra.div mx="auto" mt="40px" maxW="400px">
-        {story()}
-      </chakra.div>
-    ),
-  ],
+  decorators: [themeDecorator],
 }
 
 type OmittedTypes = "disabled" | "required" | "readOnly" | "size"

@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa"
 import { Menu } from "../src/index"
 import { MenuButton, MenuDivider, MenuGroup, MenuItem, MenuItemOption, MenuList, MenuOptionGroup, useMenuItem } from "@chakra-ui/react"
-
+import { themeDecorator } from "../../story-layout/src/index";
 
 const words = [
   "About Visual Studio Code",

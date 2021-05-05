@@ -2,20 +2,14 @@ import { AddIcon } from "@chakra-ui/icons"
 import * as React from "react"
 import { Tag } from "../src/index"
 import { TagLeftIcon, TagLabel, TagRightIcon, TagCloseButton } from "@chakra-ui/react"
-
+import { themeDecorator } from "../../story-layout/src/index";
 import { chakra } from "@chakra-ui/system"
 import { Avatar } from "@chakra-ui/avatar"
 import { MdSettings } from "react-icons/md"
 
 export default {
   title: "Tag",
-  decorators: [
-    (story: Function) => (
-      <chakra.div maxW="600px" mx="auto" mt="40px">
-        {story()}
-      </chakra.div>
-    ),
-  ],
+  decorators: [themeDecorator],
 }
 
 export const basic = () => <Tag>Gray</Tag>

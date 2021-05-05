@@ -2,22 +2,23 @@ import { chakra } from "@chakra-ui/system"
 import * as React from "react"
 import { Slider } from "../src/index"
 import { SliderMark, SliderThumb, SliderTrack, SliderFilledTrack } from "@chakra-ui/react"
-
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
   title: "Slider",
-  decorators: [
-    (story: Function) => (
-      <chakra.div maxWidth="400px" height="300px" mx="auto" mt="40px">
-        {story()}
-      </chakra.div>
-    ),
-  ],
+  decorators: [themeDecorator],
 }
 
 export const SliderBug = () => {
   return (
-    <Slider defaultValue={10} min={0} max={20} step={5}>
+    <Slider
+      defaultValue={10}
+      min={0}
+      max={20}
+      step={5}
+      onChangeStart={console.log}
+      onChangeEnd={console.log}
+    >
       <SliderTrack bg="red.100">
         <SliderFilledTrack bg="tomato" />
       </SliderTrack>
@@ -55,7 +56,7 @@ export const SliderOnChangeBug = () => {
 
 export function HorizontalSlider() {
   return (
-    <Slider colorScheme="red" onChange={console.log}>
+    <Slider colorScheme="red" onChangeEnd={console.log}>
       <SliderTrack>
         <SliderFilledTrack />
       </SliderTrack>

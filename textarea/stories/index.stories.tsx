@@ -1,17 +1,11 @@
 import { chakra } from "@chakra-ui/system"
 import * as React from "react"
 import { Textarea } from "../src/index"
-
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
   title: "Textarea",
-  decorators: [
-    (story: Function) => (
-      <chakra.div maxW="500px" mt="40px" mx="auto">
-        {story()}
-      </chakra.div>
-    ),
-  ],
+  decorators: [themeDecorator],
 }
 
 export const basic = () => <Textarea defaultValue="This is a textarea" />

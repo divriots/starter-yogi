@@ -5,17 +5,11 @@ import { AnimatePresence, motion } from "framer-motion"
 import * as React from "react"
 import { Tooltip } from "../src/index"
 import { useTooltip } from "@chakra-ui/react"
-
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
   title: "Tooltip",
-  decorators: [
-    (story: Function) => (
-      <chakra.div maxWidth="400px" mx="auto" mt="200px">
-        {story()}
-      </chakra.div>
-    ),
-  ],
+  decorators: [themeDecorator],
 }
 
 const HookTooltip = ({ children }: any) => {

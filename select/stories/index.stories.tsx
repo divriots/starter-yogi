@@ -1,17 +1,11 @@
 import { Container, Stack } from "@chakra-ui/layout"
 import * as React from "react"
 import { Select } from "../src/index"
-
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
   title: "Select",
-  decorators: [
-    (story: Function) => (
-      <Container maxWidth="400px" mt="40px">
-        {story()}
-      </Container>
-    ),
-  ],
+  decorators: [themeDecorator],
 }
 
 export const BasicUsage = () => (

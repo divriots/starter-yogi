@@ -1,19 +1,13 @@
 import * as React from "react"
 import { Avatar } from "../src/index"
 import { AvatarBadge, AvatarGroup } from "@chakra-ui/react"
-
+import { themeDecorator } from "../../story-layout/src/index";
 import { Stack, Box } from "@chakra-ui/layout"
 import { PropsOf } from "@chakra-ui/system"
 
 export default {
   title: "Avatar",
-  decorators: [
-    (Story: any) => (
-      <Box mx="auto" maxW="500px" mt="40px">
-        <Story />
-      </Box>
-    ),
-  ],
+  decorators: [themeDecorator],
 }
 
 export const Basic = () => (

@@ -3,17 +3,11 @@ import { chakra } from "@chakra-ui/system"
 import * as React from "react"
 import { useForm } from "react-hook-form"
 import { Switch } from "../src/index"
-
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
   title: "Switch",
-  decorators: [
-    (story: Function) => (
-      <chakra.div maxWidth="lg" mx="auto" mt={6} p={6}>
-        {story()}
-      </chakra.div>
-    ),
-  ],
+  decorators: [themeDecorator],
 }
 
 export const Base = () => <Switch colorScheme="green" />

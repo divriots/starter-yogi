@@ -61,21 +61,20 @@ function DrawerExample() {
         onClose={onClose}
         finalFocusRef={btnRef}
       >
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
-            <DrawerBody>
-              <Input placeholder="Type here..." />
-            </DrawerBody>
-            <DrawerFooter>
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme="blue">Save</Button>
-            </DrawerFooter>
-          </DrawerContent>
-        </DrawerOverlay>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Create your account</DrawerHeader>
+          <DrawerBody>
+            <Input placeholder="Type here..." />
+          </DrawerBody>
+          <DrawerFooter>
+            <Button variant="outline" mr={3} onClick={onClose}>
+              Cancel
+            </Button>
+            <Button colorScheme="blue">Save</Button>
+          </DrawerFooter>
+        </DrawerContent>
       </Drawer>
     </>
   )
@@ -108,16 +107,15 @@ function PlacementExample() {
         Open
       </Button>
       <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
-            <DrawerBody>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-            </DrawerBody>
-          </DrawerContent>
-        </DrawerOverlay>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
+          <DrawerBody>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+          </DrawerBody>
+        </DrawerContent>>
       </Drawer>
     </>
   )
@@ -150,55 +148,54 @@ function DrawerExample() {
         initialFocusRef={firstField}
         onClose={onClose}
       >
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader borderBottomWidth="1px">
-              Create a new account
-            </DrawerHeader>
-            <DrawerBody>
-              <Stack spacing="24px">
-                <Box>
-                  <FormLabel htmlFor="username">Name</FormLabel>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader borderBottomWidth="1px">
+            Create a new account
+          </DrawerHeader>
+          <DrawerBody>
+            <Stack spacing="24px">
+              <Box>
+                <FormLabel htmlFor="username">Name</FormLabel>
+                <Input
+                  ref={firstField}
+                  id="username"
+                  placeholder="Please enter user name"
+                />
+              </Box>
+              <Box>
+                <FormLabel htmlFor="url">Url</FormLabel>
+                <InputGroup>
+                  <InputLeftAddon>http://</InputLeftAddon>
                   <Input
-                    ref={firstField}
-                    id="username"
-                    placeholder="Please enter user name"
+                    type="url"
+                    id="url"
+                    placeholder="Please enter domain"
                   />
-                </Box>
-                <Box>
-                  <FormLabel htmlFor="url">Url</FormLabel>
-                  <InputGroup>
-                    <InputLeftAddon>http://</InputLeftAddon>
-                    <Input
-                      type="url"
-                      id="url"
-                      placeholder="Please enter domain"
-                    />
-                    <InputRightAddon>.com</InputRightAddon>
-                  </InputGroup>
-                </Box>
-                <Box>
-                  <FormLabel htmlFor="owner">Select Owner</FormLabel>
-                  <Select id="owner" defaultValue="segun">
-                    <option value="segun">Segun Adebayo</option>
-                    <option value="kola">Kola Tioluwani</option>
-                  </Select>
-                </Box>
-                <Box>
-                  <FormLabel htmlFor="desc">Description</FormLabel>
-                  <Textarea id="desc" />
-                </Box>
-              </Stack>
-            </DrawerBody>
-            <DrawerFooter borderTopWidth="1px">
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme="blue">Submit</Button>
-            </DrawerFooter>
-          </DrawerContent>
-        </DrawerOverlay>
+                  <InputRightAddon>.com</InputRightAddon>
+                </InputGroup>
+              </Box>
+              <Box>
+                <FormLabel htmlFor="owner">Select Owner</FormLabel>
+                <Select id="owner" defaultValue="segun">
+                  <option value="segun">Segun Adebayo</option>
+                  <option value="kola">Kola Tioluwani</option>
+                </Select>
+              </Box>
+              <Box>
+                <FormLabel htmlFor="desc">Description</FormLabel>
+                <Textarea id="desc" />
+              </Box>
+            </Stack>
+          </DrawerBody>
+          <DrawerFooter borderTopWidth="1px">
+            <Button variant="outline" mr={3} onClick={onClose}>
+              Cancel
+            </Button>
+            <Button colorScheme="blue">Submit</Button>
+          </DrawerFooter>
+        </DrawerContent>
       </Drawer>
     </>
   )
@@ -232,16 +229,15 @@ function SizeExample() {
         >{'Open ' + size + ' Drawer'}</Button>
       ))}
       <Drawer onClose={onClose} isOpen={isOpen} size={size}>
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerHeader>{'' + size + ' drawer contents'}</DrawerHeader>
-            <DrawerBody>
-              {size === "full"
-                ? \`You're trapped 😆 , refresh the page to leave or press 'Esc' key.\`
-                : null}
-            </DrawerBody>
-          </DrawerContent>
-        </DrawerOverlay>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader>{'' + size + ' drawer contents'}</DrawerHeader>
+          <DrawerBody>
+            {size === "full"
+              ? \`You're trapped 😆 , refresh the page to leave or press 'Esc' key.\`
+              : null}
+          </DrawerBody>
+        </DrawerContent>
       </Drawer>
     </>
   )

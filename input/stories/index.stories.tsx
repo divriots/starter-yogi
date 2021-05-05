@@ -11,17 +11,11 @@ import { chakra } from "@chakra-ui/system"
 import * as React from "react"
 import { Input } from "../src/index"
 import { InputGroup, InputLeftAddon, InputLeftElement, InputRightAddon, InputRightElement } from "@chakra-ui/react"
-
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
   title: "Input",
-  decorators: [
-    (story: Function) => (
-      <chakra.div maxW="560px" mx="auto" mt="40px">
-        {story()}
-      </chakra.div>
-    ),
-  ],
+  decorators: [themeDecorator],
 }
 
 export const Basic = () => <Input placeholder="Basic input" />

@@ -2,12 +2,12 @@ import { chakra } from "@chakra-ui/system"
 import * as React from "react"
 import { Alert } from "../src/index"
 import { AlertDescription, AlertIcon, AlertTitle } from "@chakra-ui/react"
-
+import { themeDecorator } from "../../story-layout/src/index";
 import { Container } from "@chakra-ui/layout"
 
 export default {
   title: "Alert",
-  decorators: [(story: Function) => <Container mt={4}>{story()}</Container>],
+  decorators: [themeDecorator],
 }
 
 export const Basic = () => (

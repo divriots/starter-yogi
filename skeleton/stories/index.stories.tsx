@@ -1,19 +1,13 @@
 import * as React from "react"
 import { Skeleton } from "../src/index"
 import { SkeletonText, SkeletonCircle } from "@chakra-ui/react"
-
+import { themeDecorator } from "../../story-layout/src/index";
 import { chakra, DarkMode } from "@chakra-ui/system"
 import { Stack } from "@chakra-ui/layout"
 
 export default {
   title: "Skeleton",
-  decorators: [
-    (story: Function) => (
-      <chakra.div maxW="md" mt="40px" mx="auto">
-        {story()}
-      </chakra.div>
-    ),
-  ],
+  decorators: [themeDecorator],
 }
 
 // Get more examples from here:

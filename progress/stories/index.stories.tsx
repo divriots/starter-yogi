@@ -3,17 +3,11 @@ import { extendTheme, useTheme, ThemeProvider } from "@chakra-ui/react"
 import * as React from "react"
 import { Progress } from "../src/index"
 import { ProgressLabel } from "@chakra-ui/react"
-
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
   title: "Linear Progress",
-  decorators: [
-    (story: Function) => (
-      <chakra.div maxW="500px" mt="40px" mx="auto">
-        {story()}
-      </chakra.div>
-    ),
-  ],
+  decorators: [themeDecorator],
 }
 
 export const basic = () => <Progress value={50} />

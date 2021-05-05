@@ -2,10 +2,11 @@ import { ThemeProvider, useTheme } from "@chakra-ui/system"
 import { mergeWith } from "@chakra-ui/utils"
 import * as React from "react"
 import { Spinner } from "../src/index"
-
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
   title: "Spinner",
+decorators: [themeDecorator],
 }
 
 export const basic = () => <Spinner />

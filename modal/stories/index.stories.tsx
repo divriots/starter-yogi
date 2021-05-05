@@ -4,7 +4,7 @@ import * as React from "react"
 import Lorem from "react-lorem-component"
 import { Modal } from "../src/index"
 import { ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from "@chakra-ui/react"
-
+import { themeDecorator } from "../../story-layout/src/index";
 
 const Button = chakra("button", {
   baseStyle: {
