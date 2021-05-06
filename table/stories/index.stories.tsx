@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Table } from "../src/index"
 import { TableCaption, TableContainer, TableProps, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
+
 import { themeDecorator } from "../../story-layout/src/index";
 
 export default {

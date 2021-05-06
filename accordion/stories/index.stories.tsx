@@ -15,6 +15,7 @@ import { chakra } from "@chakra-ui/system"
 import * as React from "react"
 import { Accordion } from "../src/index"
 import { AccordionButton, AccordionIcon, AccordionItem, AccordionPanel } from "@chakra-ui/react"
+
 import { themeDecorator } from "../../story-layout/src/index";
 
 export default {

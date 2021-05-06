@@ -4,7 +4,6 @@ import { chakra } from "@chakra-ui/system"
 import * as React from "react"
 import { Popover } from "../src/index"
 import { PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverFooter, PopoverHeader, PopoverTrigger, usePopover } from "@chakra-ui/react"
-import { themeDecorator } from "../../story-layout/src/index";
 
 export function PopoverExample() {
   const { getTriggerProps, getPopoverProps, onClose } = usePopover()

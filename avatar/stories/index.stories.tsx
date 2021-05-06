@@ -1,9 +1,10 @@
 import * as React from "react"
 import { Avatar } from "../src/index"
 import { AvatarBadge, AvatarGroup } from "@chakra-ui/react"
-import { themeDecorator } from "../../story-layout/src/index";
 import { Stack, Box } from "@chakra-ui/layout"
 import { PropsOf } from "@chakra-ui/system"
+
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
   title: "Avatar",

@@ -11,6 +11,7 @@ import { chakra } from "@chakra-ui/system"
 import * as React from "react"
 import { Input } from "../src/index"
 import { InputGroup, InputLeftAddon, InputLeftElement, InputRightAddon, InputRightElement } from "@chakra-ui/react"
+
 import { themeDecorator } from "../../story-layout/src/index";
 
 export default {

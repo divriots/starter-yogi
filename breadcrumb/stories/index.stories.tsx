@@ -2,9 +2,10 @@ import * as React from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import { Breadcrumb } from "../src/index"
 import { BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react"
-import { themeDecorator } from "../../story-layout/src/index";
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import { extendTheme, useTheme, ThemeProvider } from "@chakra-ui/react"
+
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
   title: "Breadcrumb",

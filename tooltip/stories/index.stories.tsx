@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import * as React from "react"
 import { Tooltip } from "../src/index"
 import { useTooltip } from "@chakra-ui/react"
+
 import { themeDecorator } from "../../story-layout/src/index";
 
 export default {

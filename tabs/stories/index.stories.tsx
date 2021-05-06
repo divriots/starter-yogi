@@ -3,6 +3,7 @@ import { useInterval } from "@chakra-ui/hooks"
 import * as React from "react"
 import { Tabs } from "../src/index"
 import { Tab, TabIndicator, TabList, TabPanel, TabPanels } from "@chakra-ui/react"
+
 import { themeDecorator } from "../../story-layout/src/index";
 
 export default {

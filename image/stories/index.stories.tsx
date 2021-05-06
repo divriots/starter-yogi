@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Image } from "../src/index"
+
+
 import { themeDecorator } from "../../story-layout/src/index";
 
 export default {

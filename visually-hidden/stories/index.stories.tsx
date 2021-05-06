@@ -1,6 +1,7 @@
 import * as React from "react"
 import { VisuallyHidden } from "../src/index"
 import { VisuallyHiddenInput } from "@chakra-ui/react"
+
 import { themeDecorator } from "../../story-layout/src/index";
 
 export default {

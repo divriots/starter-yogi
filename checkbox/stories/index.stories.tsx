@@ -4,6 +4,7 @@ import { Container, Divider, Heading, Stack } from "@chakra-ui/layout"
 import * as React from "react"
 import { Checkbox } from "../src/index"
 import { CheckboxGroup, useCheckbox } from "@chakra-ui/react"
+
 import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
