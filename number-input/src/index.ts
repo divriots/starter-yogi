@@ -1,1 +1,2 @@
 export * from './NumberInput';
+export { NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper, SliderTrack, SliderFilledTrack, SliderThumb, useNumberInput, HStack } from '@chakra-ui/react';
