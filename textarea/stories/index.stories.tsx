@@ -1,4 +1,4 @@
-import { chakra } from "@chakra-ui/system"
+import { chakra } from "../src/index"
 import * as React from "react"
 import { Textarea } from "../src/index"
 

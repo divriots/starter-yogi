@@ -1,10 +1,10 @@
-import { Modal, ModalContent, ModalOverlay } from "@chakra-ui/modal"
-import { Portal } from "@chakra-ui/portal"
-import { chakra } from "@chakra-ui/system"
+import { Modal, ModalContent, ModalOverlay } from "../src/index"
+import { Portal } from "../src/index"
+import { chakra } from "../src/index"
 import { AnimatePresence, motion } from "framer-motion"
 import * as React from "react"
 import { Tooltip } from "../src/index"
-import { useTooltip } from "@chakra-ui/react"
+import { useTooltip } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

@@ -1,9 +1,9 @@
-import { Button, ButtonGroup } from "@chakra-ui/button"
-import { useInterval } from "@chakra-ui/hooks"
-import { chakra } from "@chakra-ui/system"
+import { Button, ButtonGroup } from "../src/index"
+import { useInterval } from "../src/index"
+import { chakra } from "../src/index"
 import * as React from "react"
 import { Popover } from "../src/index"
-import { PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverFooter, PopoverHeader, PopoverTrigger, usePopover } from "@chakra-ui/react"
+import { PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverFooter, PopoverHeader, PopoverTrigger, usePopover } from "../src/index"
 
 export function PopoverExample() {
   const { getTriggerProps, getPopoverProps, onClose } = usePopover()

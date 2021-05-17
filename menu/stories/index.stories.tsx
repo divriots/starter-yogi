@@ -1,7 +1,7 @@
-import { Button } from "@chakra-ui/button"
-import { Image } from "@chakra-ui/image"
-import { Portal } from "@chakra-ui/portal"
-import { chakra } from "@chakra-ui/system"
+import { Button } from "../src/index"
+import { Image } from "../src/index"
+import { Portal } from "../src/index"
+import { chakra } from "../src/index"
 import * as React from "react"
 import {
   FaChevronDown,
@@ -11,7 +11,7 @@ import {
   FaUnlink,
 } from "react-icons/fa"
 import { Menu } from "../src/index"
-import { MenuButton, MenuDivider, MenuGroup, MenuItem, MenuItemOption, MenuList, MenuOptionGroup, useMenuItem } from "@chakra-ui/react"
+import { MenuButton, MenuDivider, MenuGroup, MenuItem, MenuItemOption, MenuList, MenuOptionGroup, useMenuItem } from "../src/index"
 
 const words = [
   "About Visual Studio Code",
@@ -51,6 +51,19 @@ export const Basic = () => (
       </MenuList>
     </Menu>
   </div>
+)
+
+export const LazyMenu = () => (
+  <Menu isLazy>
+    <MenuButton as={Button}>Open Wakanda menu</MenuButton>
+    <MenuList>
+      {words.map((word) => (
+        <MenuItem key={word} onClick={logEvents}>
+          {word}
+        </MenuItem>
+      ))}
+    </MenuList>
+  </Menu>
 )
 
 export const WithDisabledItem = () => (

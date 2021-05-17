@@ -1,8 +1,8 @@
-import { chakra } from "@chakra-ui/system"
-import { extendTheme, useTheme, ThemeProvider } from "@chakra-ui/react"
+import { chakra } from "../src/index"
+import { extendTheme, useTheme, ThemeProvider } from "../src/index"
 import * as React from "react"
 import { Progress } from "../src/index"
-import { ProgressLabel } from "@chakra-ui/react"
+import { ProgressLabel } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

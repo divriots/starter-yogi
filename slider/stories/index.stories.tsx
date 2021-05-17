@@ -1,7 +1,7 @@
-import { chakra } from "@chakra-ui/system"
+import { chakra } from "../src/index"
 import * as React from "react"
 import { Slider } from "../src/index"
-import { SliderMark, SliderThumb, SliderTrack, SliderFilledTrack } from "@chakra-ui/react"
+import { SliderMark, SliderThumb, SliderTrack, SliderFilledTrack } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

@@ -1,9 +1,9 @@
 import * as React from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import { Breadcrumb } from "../src/index"
-import { BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react"
-import { ChevronRightIcon } from "@chakra-ui/icons"
-import { extendTheme, useTheme, ThemeProvider } from "@chakra-ui/react"
+import { BreadcrumbItem, BreadcrumbLink } from "../src/index"
+import { ChevronRightIcon } from "../src/index"
+import { extendTheme, useTheme, ThemeProvider } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

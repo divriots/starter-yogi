@@ -1,9 +1,9 @@
-import { AddIcon } from "@chakra-ui/icons"
+import { AddIcon } from "../src/index"
 import * as React from "react"
 import { Tag } from "../src/index"
-import { TagLeftIcon, TagLabel, TagRightIcon, TagCloseButton } from "@chakra-ui/react"
-import { chakra } from "@chakra-ui/system"
-import { Avatar } from "@chakra-ui/avatar"
+import { TagLeftIcon, TagLabel, TagRightIcon, TagCloseButton } from "../src/index"
+import { chakra } from "../src/index"
+import { Avatar } from "../src/index"
 import { MdSettings } from "react-icons/md"
 
 import { themeDecorator } from "../../story-layout/src/index";

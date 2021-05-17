@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Stat } from "../src/index"
-import { StatArrow, StatGroup, StatHelpText, StatLabel, StatNumber } from "@chakra-ui/react"
+import { StatArrow, StatGroup, StatHelpText, StatLabel, StatNumber } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

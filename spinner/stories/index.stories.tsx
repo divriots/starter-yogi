@@ -1,5 +1,5 @@
-import { ThemeProvider, useTheme } from "@chakra-ui/system"
-import { mergeWith } from "@chakra-ui/utils"
+import { ThemeProvider, useTheme } from "../src/index"
+import { mergeWith } from "../src/index"
 import * as React from "react"
 import { Spinner } from "../src/index"
 

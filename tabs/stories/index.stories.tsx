@@ -1,8 +1,8 @@
-import { chakra } from "@chakra-ui/system"
-import { useInterval } from "@chakra-ui/hooks"
+import { chakra } from "../src/index"
+import { useInterval } from "../src/index"
 import * as React from "react"
 import { Tabs } from "../src/index"
-import { Tab, TabIndicator, TabList, TabPanel, TabPanels } from "@chakra-ui/react"
+import { Tab, TabIndicator, TabList, TabPanel, TabPanels } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 
