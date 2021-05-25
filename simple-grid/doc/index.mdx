@@ -1,4 +1,5 @@
-import { SimpleGrid, Box } from "@chakra-ui/react";
+import { SimpleGrid } from "~/simple-grid";
+import { Box } from "~/box";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -48,7 +49,7 @@ You can also make it responsive by passing array or object values into the
 <Playground
 scope={{ SimpleGrid, Box }}
 code={`
-// Passing `columns={[2, null, 3]}` and `columns={{sm: 2, md: 3}}`
+// Passing \`columns={[2, null, 3]}\` and \`columns={{sm: 2, md: 3}}\`
 // will have the same effect.
 <SimpleGrid columns={[2, null, 3]} spacing="40px">
   <Box bg="tomato" height="80px"></Box>
@@ -100,10 +101,3 @@ code={`
 </SimpleGrid>
 `}
 />
-
-## Props
-
-SimpleGrid composes `Box` so you can pass all the `Box` props and css grid props
-with addition of these:
-
-<PropsTable of="SimpleGrid" />

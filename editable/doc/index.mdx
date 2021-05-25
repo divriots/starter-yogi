@@ -1,5 +1,8 @@
 import { CheckIcon, CloseIcon, EditIcon } from "@chakra-ui/icons";
-import { Editable, EditablePreview, EditableInput,  useEditableControls, ButtonGroup, IconButton, Flex, EditableControls } from "@chakra-ui/react";
+import { EditablePreview, EditableInput, useEditableControls, ButtonGroup, EditableControls } from "@chakra-ui/react";
+import { Editable } from "~/editable";
+import { IconButton } from "~/icon-button";
+import { Flex } from "~/flex";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -53,7 +56,7 @@ mode. We use the render prop pattern to provide access to the internal state of
 the component.
 
 <Playground
-scope={{  useEditableControls, ButtonGroup, IconButton, CheckIcon, CloseIcon, Flex, EditIcon, Editable, EditablePreview, EditableInput, EditableControls }}
+scope={{ useEditableControls, ButtonGroup, IconButton, CheckIcon, CloseIcon, Flex, EditIcon, Editable, EditablePreview, EditableInput, EditableControls }}
 code={`
 function CustomControlsExample() {
   /* Here's a custom control */
@@ -90,8 +93,6 @@ function CustomControlsExample() {
 }
 `}
 />
-
-## Props
 
 ### Editable Props
 

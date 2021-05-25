@@ -1,7 +1,12 @@
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { MdBuild, MdCall } from "react-icons/md";
+  
 import { EmailIcon, ArrowForwardIcon, AddIcon } from "@chakra-ui/icons";
-import { Button, Stack, HStack, ButtonGroup, IconButton, Box } from "@chakra-ui/react";
+import { HStack, ButtonGroup } from "@chakra-ui/react";
+import { Button } from "~/button";
+import { Stack } from "~/stack";
+import { IconButton } from "~/icon-button";
+import { Box } from "~/box";
 import { BeatLoader } from "react-spinners";
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -154,7 +159,7 @@ code={`
 `}
 />
 
-You can also change the spinner itself to use custom loaders as per your design
+You can change the spinner element to use custom loaders as per your design
 requirements. Pass the `spinner` prop and set it to a custom react element.
 
 <Playground
@@ -167,6 +172,35 @@ code={`
 >
   Click me
 </Button>
+`}
+/>
+
+When a `loadingText` is present, you can change the placement of the spinner
+element to either `start` or `end`. It is `start` by default.
+
+<Playground
+scope={{ Stack, Button }}
+code={`
+<Stack direction="row" spacing={4} align="center">
+  <Button
+    isLoading
+    loadingText="Loading"
+    colorScheme="teal"
+    variant="outline"
+    spinnerPosition="start"
+  >
+    Submit
+  </Button>
+  <Button
+    isLoading
+    loadingText="Loading"
+    colorScheme="teal"
+    variant="outline"
+    spinnerPlacement="end"
+  >
+    Continue
+  </Button>
+</Stack>
 `}
 />
 
@@ -293,18 +327,16 @@ code={`
 `}
 />
 
-## Props
-
 ### Button Props
 
-`Button` composes the `Box` component, so you can pass all its props.
-These are props specific to the `Button` component:
+`Button` composes the `Box` component, so you can pass all its props. These are
+props specific to the `Button` component:
 
 <PropsTable of="Button" />
 
 ### Button Group Props
 
-`ButtonGroup` composes the `Box` component, so you can pass all its props.
-These are props specific to the `ButtonGroup` component:
+`ButtonGroup` composes the `Box` component, so you can pass all its props. These
+are props specific to the `ButtonGroup` component:
 
 <PropsTable of="ButtonGroup" />

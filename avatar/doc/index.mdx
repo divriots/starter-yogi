@@ -1,4 +1,9 @@
-import { Wrap, WrapItem, Avatar, Stack, AvatarGroup, AiOutlineUser, AvatarBadge } from "@chakra-ui/react";
+import { AiOutlineUser } from "react-icons/ai";  
+
+import { WrapItem, AvatarGroup, AvatarBadge } from "@chakra-ui/react";
+import { Wrap } from "~/wrap";
+import { Avatar } from "~/avatar";
+import { Stack } from "~/stack";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -189,8 +194,6 @@ code={`
 Added `getInitials` prop to allow users to manage how initials are generated
 from name. By default we merge the first characters of each word in the `name`
 prop.
-
-## Props
 
 ### Avatar Props
 

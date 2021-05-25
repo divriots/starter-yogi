@@ -1,5 +1,9 @@
 import { ChevronDownIcon, HamburgerIcon, AddIcon, ExternalLinkIcon, RepeatIcon, EditIcon } from "@chakra-ui/icons";
-import { Menu, MenuButton, MenuList, MenuItem, MenuDivider, Image, Portal, MenuGroup, MenuOptionGroup, MenuItemOption } from "@chakra-ui/react";
+import { MenuButton, MenuList, MenuItem, MenuDivider, Portal, MenuGroup, MenuOptionGroup, MenuItemOption } from "@chakra-ui/react";
+import { Menu } from "~/menu";
+import { Button } from "~/button";
+import { Image } from "~/image";
+import { IconButton } from "~/icon-button";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -48,7 +52,7 @@ import {
 ## Usage
 
 <Playground
-scope={{ Menu, MenuButton, ChevronDownIcon, MenuList, MenuItem }}
+scope={{ Menu, MenuButton, Button, ChevronDownIcon, MenuList, MenuItem }}
 code={`
 <Menu>
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
@@ -72,7 +76,7 @@ To access the internal state of the `Menu`, use a function as `children`
 `isOpen` and method `onClose`.
 
 <Playground
-scope={{ Menu, MenuButton, ChevronDownIcon, MenuList, MenuItem }}
+scope={{ Menu, MenuButton, Button, ChevronDownIcon, MenuList, MenuItem }}
 code={`
 <Menu>
   {({ isOpen }) => (
@@ -142,7 +146,7 @@ code={`
 ### Just another example
 
 <Playground
-scope={{ Menu, MenuButton, ChevronDownIcon, MenuList, MenuItem, Image }}
+scope={{ Menu, MenuButton, Button, ChevronDownIcon, MenuList, MenuItem, Image }}
 code={`
 <Menu>
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
@@ -180,14 +184,13 @@ You can add icon to each `MenuItem` by passing the `icon` prop. To add a
 commands (or hotkeys) to menu items, you can use the `command` prop.
 
 <Playground
-scope={{ Menu, MenuButton, HamburgerIcon, MenuList, MenuItem, AddIcon, ExternalLinkIcon, RepeatIcon, EditIcon }}
+scope={{ Menu, MenuButton, IconButton, HamburgerIcon, MenuList, MenuItem, AddIcon, ExternalLinkIcon, RepeatIcon, EditIcon }}
 code={`
 <Menu>
   <MenuButton
     as={IconButton}
     aria-label="Options"
     icon={<HamburgerIcon />}
-    size="xs"
     variant="outline"
   />
   <MenuList>
@@ -261,7 +264,7 @@ To group related `MenuItem`s, use the `MenuGroup` component and pass it a
 `title` for the group name.
 
 <Playground
-scope={{ Menu, MenuButton, MenuList, MenuGroup, MenuItem, MenuDivider }}
+scope={{ Menu, MenuButton, Button, MenuList, MenuGroup, MenuItem, MenuDivider }}
 code={`
 <Menu>
   <MenuButton as={Button} colorScheme="pink">
@@ -288,7 +291,7 @@ You can compose a menu for table headers to help with sorting and filtering
 options. Use the `MenuOptionGroup` and `MenuItemOption` components.
 
 <Playground
-scope={{ Menu, MenuButton, MenuList, MenuOptionGroup, MenuItemOption, MenuDivider }}
+scope={{ Menu, MenuButton, Button, MenuList, MenuOptionGroup, MenuItemOption, MenuDivider }}
 code={`
 <Menu closeOnSelect={false}>
   <MenuButton as={Button} colorScheme="blue">
@@ -343,8 +346,6 @@ code={`
 
 - `role` is set to `menuitem`.
 - Gets one of these roles `menuitem`/`menuitemradio`/ `menuitemcheckbox`.
-
-## Props
 
 ### Menu Props
 

@@ -1,4 +1,9 @@
-import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, Box } from "@chakra-ui/react";
+import { MdGraphicEq } from "react-icons/md";
+  
+
+import { SliderTrack, SliderFilledTrack, SliderThumb } from "@chakra-ui/react";
+import { Slider } from "~/slider";
+import { Box } from "~/box";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -93,7 +98,7 @@ code={`
 customize its styles.
 
 <Playground
-scope={{ Slider, SliderTrack, SliderFilledTrack, SliderThumb, Box }}
+scope={{ Slider, SliderTrack, SliderFilledTrack, SliderThumb, Box, MdGraphicEq }}
 code={`
 <Slider aria-label="slider-ex-4" defaultValue={30}>
   <SliderTrack bg="red.100">
@@ -158,8 +163,6 @@ opt-out of this behavior by setting the value of `focusThumbOnChange` to
 
 We've exported the `useSlider` hook to help users manage and build custom slider
 UIs.
-
-## Props
 
 ### Slider Props
 
