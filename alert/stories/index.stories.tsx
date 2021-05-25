@@ -1,8 +1,8 @@
-import { chakra } from "@chakra-ui/system"
+import { chakra } from "../src/index"
 import * as React from "react"
 import { Alert } from "../src/index"
-import { AlertDescription, AlertIcon, AlertTitle } from "@chakra-ui/react"
-import { Container } from "@chakra-ui/layout"
+import { AlertDescription, AlertIcon, AlertTitle } from "../src/index"
+import { Container } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

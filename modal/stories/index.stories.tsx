@@ -1,9 +1,9 @@
-import { useDisclosure } from "@chakra-ui/hooks"
-import { chakra } from "@chakra-ui/system"
+import { useDisclosure } from "../src/index"
+import { chakra } from "../src/index"
 import * as React from "react"
 import Lorem from "react-lorem-component"
 import { Modal } from "../src/index"
-import { ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from "@chakra-ui/react"
+import { ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from "../src/index"
 
 const Button = chakra("button", {
   baseStyle: {

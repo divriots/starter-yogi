@@ -1,8 +1,8 @@
 import * as React from "react"
-import { Button, ButtonGroup } from "@chakra-ui/button"
-import { chakra, useColorMode } from "@chakra-ui/system"
-import { Alert } from "@chakra-ui/alert"
-import { useToast } from "@chakra-ui/react"
+import { Button, ButtonGroup } from "../src/index"
+import { chakra, useColorMode } from "../src/index"
+import { Alert } from "../src/index"
+import { useToast } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

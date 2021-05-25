@@ -1,8 +1,8 @@
 import * as React from "react"
-import { chakra } from "@chakra-ui/system"
-import { Stack, Wrap, SimpleGrid, Container, WrapItem } from "@chakra-ui/layout"
+import { chakra } from "../src/index"
+import { Stack, Wrap, SimpleGrid, Container, WrapItem } from "../src/index"
 import { Radio } from "../src/index"
-import { useRadio, useRadioGroup, RadioGroup, UseRadioProps } from "@chakra-ui/react"
+import { useRadio, useRadioGroup, RadioGroup, UseRadioProps } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

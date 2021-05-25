@@ -3,14 +3,14 @@ import {
   FormErrorMessage,
   FormHelperText,
   FormLabel,
-} from "@chakra-ui/form-control"
-import { CheckIcon, PhoneIcon } from "@chakra-ui/icons"
-import { useDisclosure } from "@chakra-ui/hooks"
-import { Stack } from "@chakra-ui/layout"
-import { chakra } from "@chakra-ui/system"
+} from "../src/index"
+import { CheckIcon, PhoneIcon } from "../src/index"
+import { useDisclosure } from "../src/index"
+import { Stack } from "../src/index"
+import { chakra } from "../src/index"
 import * as React from "react"
 import { Input } from "../src/index"
-import { InputGroup, InputLeftAddon, InputLeftElement, InputRightAddon, InputRightElement } from "@chakra-ui/react"
+import { InputGroup, InputLeftAddon, InputLeftElement, InputRightAddon, InputRightElement } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

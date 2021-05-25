@@ -1,4 +1,4 @@
-import { Container } from "@chakra-ui/layout"
+import { Container } from "../src/index"
 import {
   Box,
   Button,
@@ -10,11 +10,11 @@ import {
   DrawerHeader,
   DrawerOverlay,
   useDisclosure,
-} from "@chakra-ui/react"
-import { chakra } from "@chakra-ui/system"
+} from "../src/index"
+import { chakra } from "../src/index"
 import * as React from "react"
 import { Accordion } from "../src/index"
-import { AccordionButton, AccordionIcon, AccordionItem, AccordionPanel } from "@chakra-ui/react"
+import { AccordionButton, AccordionIcon, AccordionItem, AccordionPanel } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

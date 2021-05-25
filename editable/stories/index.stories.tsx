@@ -1,8 +1,8 @@
-import { chakra } from "@chakra-ui/system"
+import { chakra } from "../src/index"
 import * as React from "react"
-import { useEditable } from "@chakra-ui/react"
+import { useEditable } from "../src/index"
 import { Editable } from "../src/index"
-import { EditableInput, EditablePreview, useEditableControls } from "@chakra-ui/react"
+import { EditableInput, EditablePreview, useEditableControls } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

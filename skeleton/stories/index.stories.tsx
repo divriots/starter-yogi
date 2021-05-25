@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Skeleton } from "../src/index"
-import { SkeletonText, SkeletonCircle } from "@chakra-ui/react"
-import { chakra, DarkMode } from "@chakra-ui/system"
-import { Stack } from "@chakra-ui/layout"
+import { SkeletonText, SkeletonCircle } from "../src/index"
+import { chakra, DarkMode } from "../src/index"
+import { Stack } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

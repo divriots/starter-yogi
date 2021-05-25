@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { Icon } from "@chakra-ui/icon"
-import { Container, Divider, Heading, Stack } from "@chakra-ui/layout"
+import { Icon } from "../src/index"
+import { Container, Divider, Heading, Stack } from "../src/index"
 import * as React from "react"
 import { Checkbox } from "../src/index"
-import { CheckboxGroup, useCheckbox } from "@chakra-ui/react"
+import { CheckboxGroup, useCheckbox } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

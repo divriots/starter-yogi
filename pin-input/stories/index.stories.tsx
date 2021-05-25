@@ -1,6 +1,6 @@
 import * as React from "react"
 import { PinInput } from "../src/index"
-import { PinInputField, usePinInput, usePinInputField, PinInputProvider, PinInputDescendantsProvider } from "@chakra-ui/react"
+import { PinInputField, usePinInput, usePinInputField, PinInputProvider, PinInputDescendantsProvider } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

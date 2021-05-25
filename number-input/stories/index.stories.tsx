@@ -1,18 +1,18 @@
-import { chakra } from "@chakra-ui/system"
+import { chakra } from "../src/index"
 import * as React from "react"
 import Lorem from "react-lorem-component"
-import { Button } from "@chakra-ui/button"
-import { Input } from "@chakra-ui/input"
-import { Stack } from "@chakra-ui/layout"
+import { Button } from "../src/index"
+import { Input } from "../src/index"
+import { Stack } from "../src/index"
 import { useForm } from "react-hook-form"
 import {
   FormControl,
   FormErrorMessage,
   FormHelperText,
   FormLabel,
-} from "@chakra-ui/form-control"
+} from "../src/index"
 import { NumberInput } from "../src/index"
-import { NumberDecrementStepper, NumberIncrementStepper, NumberInputField, NumberInputStepper, useNumberInput } from "@chakra-ui/react"
+import { NumberDecrementStepper, NumberIncrementStepper, NumberInputField, NumberInputStepper, useNumberInput } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

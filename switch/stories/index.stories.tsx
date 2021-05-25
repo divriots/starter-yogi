@@ -1,5 +1,5 @@
-import { HStack } from "@chakra-ui/layout"
-import { chakra } from "@chakra-ui/system"
+import { HStack } from "../src/index"
+import { chakra } from "../src/index"
 import * as React from "react"
 import { useForm } from "react-hook-form"
 import { Switch } from "../src/index"

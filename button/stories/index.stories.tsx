@@ -4,14 +4,14 @@ import {
   EmailIcon,
   PhoneIcon,
   SearchIcon,
-} from "@chakra-ui/icons"
-import { Container, HStack, Stack } from "@chakra-ui/layout"
+} from "../src/index"
+import { Container, HStack, Stack } from "../src/index"
 import * as React from "react"
 import { FaFacebook, FaTwitter } from "react-icons/fa"
 import { MdBuild, MdCall } from "react-icons/md"
 import { BeatLoader } from "react-spinners"
 import { Button } from "../src/index"
-import { ButtonGroup, IconButton } from "@chakra-ui/react"
+import { ButtonGroup, IconButton } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 

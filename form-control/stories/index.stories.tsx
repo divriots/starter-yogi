@@ -1,7 +1,7 @@
-import { chakra, PropsOf, useMultiStyleConfig } from "@chakra-ui/system"
+import { chakra, PropsOf, useMultiStyleConfig } from "../src/index"
 import * as React from "react"
 import { FormControl } from "../src/index"
-import { FormControlOptions, FormErrorIcon, FormErrorMessage, FormHelperText, FormLabel, useFormControl } from "@chakra-ui/react"
+import { FormControlOptions, FormErrorIcon, FormErrorMessage, FormHelperText, FormLabel, useFormControl } from "../src/index"
 
 import { themeDecorator } from "../../story-layout/src/index";
 
@@ -98,4 +98,10 @@ export const StylingFocus: React.FC = () => (
     <Input placeholder="First Name" width="100%" />
     <FormErrorMessage>Your First name is invalid</FormErrorMessage>
   </FormControl>
+)
+
+export const FormLabelStandalone = () => (
+  <FormLabel fontWeight="bold" color="blue">
+    Not wrapperd by FormControl
+  </FormLabel>
 )
