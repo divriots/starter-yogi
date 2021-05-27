@@ -1,5 +1,14 @@
-import { AddIcon } from "@chakra-ui/icons";
-import {  useDisclosure, Button, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Input, DrawerFooter, RadioGroup, Stack, Radio, Box, FormLabel, InputGroup, InputLeftAddon, InputRightAddon, Select, Textarea } from "@chakra-ui/react";
+import { AddIcon } from "../src/index";
+import { useDisclosure, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, DrawerFooter, RadioGroup, FormLabel } from "../src/index";
+import { Button } from "~/button";
+import { Drawer } from "~/drawer";
+import { Input } from "~/input";
+import { Stack } from "~/stack";
+import { Radio } from "~/radio";
+import { Box } from "~/box";
+import { Select } from "~/select";
+import { Textarea } from "~/textarea";
+import { InputGroup, InputLeftAddon, InputRightAddon} from "../src/index";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -36,7 +45,7 @@ import {
 ### Basic Drawer
 
 <Playground
-scope={{  useDisclosure, Button, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Input, DrawerFooter }}
+scope={{ useDisclosure, Button, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Input, DrawerFooter }}
 code={`
 function DrawerExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -52,21 +61,20 @@ function DrawerExample() {
         onClose={onClose}
         finalFocusRef={btnRef}
       >
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
-            <DrawerBody>
-              <Input placeholder="Type here..." />
-            </DrawerBody>
-            <DrawerFooter>
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme="blue">Save</Button>
-            </DrawerFooter>
-          </DrawerContent>
-        </DrawerOverlay>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Create your account</DrawerHeader>
+          <DrawerBody>
+            <Input placeholder="Type here..." />
+          </DrawerBody>
+          <DrawerFooter>
+            <Button variant="outline" mr={3} onClick={onClose}>
+              Cancel
+            </Button>
+            <Button colorScheme="blue">Save</Button>
+          </DrawerFooter>
+        </DrawerContent>
       </Drawer>
     </>
   )
@@ -80,7 +88,7 @@ The Drawer can appear from any edge of the screen. Pass the `placement` prop and
 set it to `top`, `right`, `bottom`, or `left`.
 
 <Playground
-scope={{  useDisclosure, RadioGroup, Stack, Radio, Button, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody }}
+scope={{ useDisclosure, RadioGroup, Stack, Radio, Button, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody }}
 code={`
 function PlacementExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -99,16 +107,15 @@ function PlacementExample() {
         Open
       </Button>
       <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
-            <DrawerBody>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-            </DrawerBody>
-          </DrawerContent>
-        </DrawerOverlay>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
+          <DrawerBody>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+          </DrawerBody>
+        </DrawerContent>
       </Drawer>
     </>
   )
@@ -125,7 +132,7 @@ when the drawer opens. Pass the `initialFocusRef` prop.
 > focusable element** when it opens.
 
 <Playground
-scope={{  useDisclosure, Button, AddIcon, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Stack, Box, FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Textarea, DrawerFooter }}
+scope={{ useDisclosure, Button, AddIcon, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Stack, Box, FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Textarea, DrawerFooter }}
 code={`
 function DrawerExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -141,55 +148,54 @@ function DrawerExample() {
         initialFocusRef={firstField}
         onClose={onClose}
       >
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader borderBottomWidth="1px">
-              Create a new account
-            </DrawerHeader>
-            <DrawerBody>
-              <Stack spacing="24px">
-                <Box>
-                  <FormLabel htmlFor="username">Name</FormLabel>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader borderBottomWidth="1px">
+            Create a new account
+          </DrawerHeader>
+          <DrawerBody>
+            <Stack spacing="24px">
+              <Box>
+                <FormLabel htmlFor="username">Name</FormLabel>
+                <Input
+                  ref={firstField}
+                  id="username"
+                  placeholder="Please enter user name"
+                />
+              </Box>
+              <Box>
+                <FormLabel htmlFor="url">Url</FormLabel>
+                <InputGroup>
+                  <InputLeftAddon>http://</InputLeftAddon>
                   <Input
-                    ref={firstField}
-                    id="username"
-                    placeholder="Please enter user name"
+                    type="url"
+                    id="url"
+                    placeholder="Please enter domain"
                   />
-                </Box>
-                <Box>
-                  <FormLabel htmlFor="url">Url</FormLabel>
-                  <InputGroup>
-                    <InputLeftAddon>http://</InputLeftAddon>
-                    <Input
-                      type="url"
-                      id="url"
-                      placeholder="Please enter domain"
-                    />
-                    <InputRightAddon>.com</InputRightAddon>
-                  </InputGroup>
-                </Box>
-                <Box>
-                  <FormLabel htmlFor="owner">Select Owner</FormLabel>
-                  <Select id="owner" defaultValue="segun">
-                    <option value="segun">Segun Adebayo</option>
-                    <option value="kola">Kola Tioluwani</option>
-                  </Select>
-                </Box>
-                <Box>
-                  <FormLabel htmlFor="desc">Description</FormLabel>
-                  <Textarea id="desc" />
-                </Box>
-              </Stack>
-            </DrawerBody>
-            <DrawerFooter borderTopWidth="1px">
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme="blue">Submit</Button>
-            </DrawerFooter>
-          </DrawerContent>
-        </DrawerOverlay>
+                  <InputRightAddon>.com</InputRightAddon>
+                </InputGroup>
+              </Box>
+              <Box>
+                <FormLabel htmlFor="owner">Select Owner</FormLabel>
+                <Select id="owner" defaultValue="segun">
+                  <option value="segun">Segun Adebayo</option>
+                  <option value="kola">Kola Tioluwani</option>
+                </Select>
+              </Box>
+              <Box>
+                <FormLabel htmlFor="desc">Description</FormLabel>
+                <Textarea id="desc" />
+              </Box>
+            </Stack>
+          </DrawerBody>
+          <DrawerFooter borderTopWidth="1px">
+            <Button variant="outline" mr={3} onClick={onClose}>
+              Cancel
+            </Button>
+            <Button colorScheme="blue">Submit</Button>
+          </DrawerFooter>
+        </DrawerContent>
       </Drawer>
     </>
   )
@@ -203,7 +209,7 @@ Pass the `size` prop if you need to adjust the size of the drawer. Values can be
 `xs`, `sm`, `md`, `lg`, `xl`, or `full`.
 
 <Playground
-scope={{  useDisclosure, Button, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody }}
+scope={{ useDisclosure, Button, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody }}
 code={`
 function SizeExample() {
   const [size, setSize] = React.useState("md")
@@ -220,19 +226,18 @@ function SizeExample() {
           onClick={() => handleClick(size)}
           key={size}
           m={4}
-        >{`Open ${size} Drawer`}</Button>
+        >{'Open ' + size + ' Drawer'}</Button>
       ))}
       <Drawer onClose={onClose} isOpen={isOpen} size={size}>
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerHeader>{`${size} drawer contents`}</DrawerHeader>
-            <DrawerBody>
-              {size === "full"
-                ? `You're trapped 😆 , refresh the page to leave or press 'Esc' key.`
-                : null}
-            </DrawerBody>
-          </DrawerContent>
-        </DrawerOverlay>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader>{'' + size + ' drawer contents'}</DrawerHeader>
+          <DrawerBody>
+            {size === "full"
+              ? \`You're trapped 😆 , refresh the page to leave or press 'Esc' key.\`
+              : null}
+          </DrawerBody>
+        </DrawerContent>
       </Drawer>
     </>
   )
@@ -292,8 +297,6 @@ export const App = () => {
   `initialFocusRef` prop is passed, the drawer sets focus on the element with
   the assigned `ref`.
 - After the drawer closes, it'll return focus to the element that triggered it.
-
-## Props
 
 ### Drawer Props
 

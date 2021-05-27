@@ -1,4 +1,6 @@
-import { LinkBox, Box, Heading, LinkOverlay, Text } from "@chakra-ui/react";
+import { LinkBox, Heading, Text } from "../src/index";
+import { Box } from "~/box";
+import { LinkOverlay } from "~/link-overlay";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -120,11 +122,3 @@ function Example() {
 One of the side-effects for this technique is that the content can't be
 "selectable" (i.e with a pointing device), however this seems to be pretty
 trivial compared to the benefits!
-
-## Props
-
-The `LinkBox` component composes the `Box` component.
-
-The `LinkOverlay` component composes the `chakra.a` in addition to these props:
-
-<PropsTable of="LinkOverlay" />

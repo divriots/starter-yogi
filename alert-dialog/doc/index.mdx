@@ -1,4 +1,6 @@
-import { Button, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter,  useDisclosure, AlertDialogCloseButton } from "@chakra-ui/react";
+import { AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter, useDisclosure, AlertDialogCloseButton } from "../src/index";
+import { Button } from "~/button";
+import { AlertDialog } from "~/alert-dialog";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -96,7 +98,7 @@ passing a `motionPreset` prop, and set its value to either `slideInBottom`,
 `slideInRight`, or `scale`.
 
 <Playground
-scope={{  useDisclosure, Button, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogCloseButton, AlertDialogBody, AlertDialogFooter }}
+scope={{ useDisclosure, Button, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogCloseButton, AlertDialogBody, AlertDialogFooter }}
 code={`
 function TransitionExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -145,11 +147,3 @@ function TransitionExample() {
   `aria-describedby` attributes.
 - Clicking on the overlay closes the `AlertDialog`.
 - Pressing <kbd>esc</kbd> closes the dialog.
-
-## Props
-
-`AlertDialog` and its components compose the `Modal` component. The only
-exception is that it requires a `leastDestructiveRef` which is similar to the
-`initialFocusRef` of `Modal`.
-
-<PropsTable of="AlertDialog" />

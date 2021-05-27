@@ -1,5 +1,9 @@
-import { TagLeftIcon, TagRightIcon } from "@chakra-ui/icons";
-import { Tag, HStack, TagLabel, TagCloseButton, Avatar } from "@chakra-ui/react";
+import { MdSettings } from "react-icons/md";
+  
+import { AddIcon } from "../src/index";
+import { HStack, TagLeftIcon, TagLabel, TagRightIcon, TagCloseButton } from "../src/index";
+import { Tag } from "~/tag";
+import { Avatar } from "~/avatar";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -61,7 +65,7 @@ code={`
 ## With left icon
 
 <Playground
-scope={{ HStack, Tag, TagLeftIcon, TagLabel }}
+scope={{ HStack, Tag, TagLeftIcon, AddIcon, TagLabel }}
 code={`
 <HStack spacing={4}>
   {["sm", "md", "lg"].map((size) => (
@@ -77,7 +81,7 @@ code={`
 ## With right icon
 
 <Playground
-scope={{ HStack, Tag, TagLabel, TagRightIcon }}
+scope={{ HStack, Tag, TagLabel, TagRightIcon, MdSettings }}
 code={`
 <HStack spacing={4}>
   {["sm", "md", "lg"].map((size) => (
@@ -129,7 +133,3 @@ code={`
 </Tag>
 `}
 />
-
-## Props
-
-<PropsTable of="Tag" />

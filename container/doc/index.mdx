@@ -1,4 +1,5 @@
-import { Container, VStack } from "@chakra-ui/react";
+import { VStack } from "../src/index";
+import { Container } from "~/container";
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -6,7 +7,7 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  "Container"
+#  Container
 
 Containers are used to constrain a content's width to the current breakpoint,
 while keeping it fluid.
@@ -70,10 +71,3 @@ width, you can use the `centerContent` prop to center the content.
   </Box>
 </Container>
 ```
-
-## Props
-
-Container composes `Box` so you can pass all `Box` related props in addition to
-this.
-
-<PropsTable of="Container" />
