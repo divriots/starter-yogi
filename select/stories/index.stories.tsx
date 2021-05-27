@@ -8,6 +8,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Select",
   decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 export const BasicUsage = () => (

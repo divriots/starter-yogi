@@ -7,6 +7,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Stat",
 decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 /**

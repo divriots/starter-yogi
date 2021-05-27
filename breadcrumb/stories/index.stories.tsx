@@ -10,6 +10,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Breadcrumb",
 decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 export const Default = () => (

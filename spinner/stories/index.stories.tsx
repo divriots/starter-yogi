@@ -9,6 +9,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Spinner",
 decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 export const basic = () => <Spinner />

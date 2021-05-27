@@ -11,6 +11,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Tag",
   decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 export const basic = () => <Tag>Gray</Tag>

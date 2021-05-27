@@ -8,6 +8,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "FormControl",
   decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 type OmittedTypes = "disabled" | "required" | "readOnly" | "size"

@@ -11,6 +11,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Tooltip",
   decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 const HookTooltip = ({ children }: any) => {
