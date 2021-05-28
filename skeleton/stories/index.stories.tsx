@@ -9,6 +9,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Skeleton",
   decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 // Get more examples from here:

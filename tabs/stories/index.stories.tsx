@@ -9,6 +9,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Tabs",
   decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 export const automatic = () => (

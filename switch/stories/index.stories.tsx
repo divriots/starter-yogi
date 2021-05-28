@@ -10,6 +10,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Switch",
   decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 export const Base = () => <Switch colorScheme="green" />

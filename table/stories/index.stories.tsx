@@ -7,6 +7,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Table / Simple",
 decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 const SimpleTable = (props: TableProps) => (

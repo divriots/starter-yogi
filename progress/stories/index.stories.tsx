@@ -9,6 +9,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Linear Progress",
   decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 export const basic = () => <Progress value={50} />

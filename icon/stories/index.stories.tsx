@@ -8,6 +8,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Icon",
 decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 export const Basic = () => <Icon fontSize="24px" />

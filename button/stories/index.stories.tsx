@@ -18,6 +18,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Button",
   decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 export const basic = () => (

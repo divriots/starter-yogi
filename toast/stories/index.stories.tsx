@@ -9,6 +9,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Toast",
   decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 export function ToastExample() {

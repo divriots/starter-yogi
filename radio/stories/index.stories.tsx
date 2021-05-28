@@ -9,6 +9,9 @@ import { themeDecorator } from "../../story-layout/src/index";
 export default {
   title: "Radio",
   decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 export const Basic = () => <Radio>Hello</Radio>
