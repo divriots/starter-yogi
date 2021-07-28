@@ -31,7 +31,7 @@
     "@chakra-ui/react": "^1.6.1",
     "@chakra-ui/system": "^1.6.5",
     "@chakra-ui/utils": "^1.8.0",
-    "@divriots/dockit-react": "0.0.46",
+    "@divriots/dockit-react": "latest",
     "@mdx-js/react": "^1.6.22",
     "deepmerge": "^4.2.2",
     "framer-motion": "^4.1.11",
