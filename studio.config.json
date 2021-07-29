@@ -2,7 +2,7 @@
   "packages": {
     "dir": "",
     "menu": [
-      "Introduction",
+      "readme",
       [
         "Tokens",
         [
@@ -13,7 +13,8 @@
           "shadows",
           "radii",
           "border",
-          "z-index"
+          "z-index",
+          "theme"
         ]
       ],
       [
@@ -27,7 +28,8 @@
           "grid",
           "simple-grid",
           "stack",
-          "wrap"
+          "wrap",
+          "chakra-factory"
         ]
       ],
       [
@@ -74,13 +76,6 @@
         ]
       ],
       [
-        "Infrastructure",
-        [
-          "theme",
-          "doc-layout"
-        ]
-      ],
-      [
         "Media and Icons",
         [
           "avatar",
@@ -113,6 +108,13 @@
           "modal",
           "popover",
           "tooltip"
+        ]
+      ],
+      [
+        "dockit",
+        [
+          "doc-layout",
+          "story-layout"
         ]
       ]
     ]
