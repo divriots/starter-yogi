@@ -12,7 +12,7 @@ const components = {
   h6: (props) => <chakra.h6 apply="mdx.h6" {...props} />,
   hr: (props) => <chakra.hr apply="mdx.hr" {...props} />,
   inlineCode: (props) => (
-    <chakra.code apply="mdx.code" color="teal.500" bg="teal.100" {...props} />
+    <chakra.code apply="mdx.code" color="teal.500" bg="teal.50" {...props} />
   ),
   //code: CodeBlock,
   // pre: Pre,
