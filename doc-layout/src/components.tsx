@@ -1,5 +1,7 @@
 import React from 'react';
 import { chakra } from '@chakra-ui/react';
+import { Alert } from '~/alert';
+import { Table } from '~/table';
 
 const components = {
   h1: (props) => <chakra.h1 apply="mdx.h1" {...props} />,
@@ -9,8 +11,10 @@ const components = {
   h5: (props) => <chakra.h5 apply="mdx.h5" {...props} />,
   h6: (props) => <chakra.h6 apply="mdx.h6" {...props} />,
   hr: (props) => <chakra.hr apply="mdx.hr" {...props} />,
-  // inlineCode: InlineCode,
-  // code: CodeBlock,
+  inlineCode: (props) => (
+    <chakra.code apply="mdx.code" color="teal.500" bg="teal.100" {...props} />
+  ),
+  //code: CodeBlock,
   // pre: Pre,
   // kbd: Kbd,
   // br: ({ reset, ...props }) => (
@@ -20,26 +24,26 @@ const components = {
   //     {...props}
   //   />
   // ),
-  // table: Table,
-  // th: THead,
+  table: Table,
+  // th: Thead,
   // td: TData,
-  // a: (props) => <chakra.a apply="mdx.a" {...props} />,
-  // p: (props) => <chakra.p apply="mdx.p" {...props} />,
+  a: (props) => <chakra.a apply="mdx.a" {...props} />,
+  p: (props) => <chakra.p apply="mdx.p" {...props} />,
   // ul: (props) => <chakra.ul apply="mdx.ul" {...props} />,
   // ol: (props) => <chakra.ol apply="mdx.ul" {...props} />,
   // li: (props) => <chakra.li pb="4px" {...props} />,
-  // blockquote: (props) => (
-  //   <Alert
-  //     mt="4"
-  //     role="none"
-  //     status="warning"
-  //     variant="left-accent"
-  //     as="blockquote"
-  //     rounded="4px"
-  //     my="1.5rem"
-  //     {...props}
-  //   />
-  // ),
+  blockquote: (props) => (
+    <Alert
+      mt="4"
+      role="none"
+      status="warning"
+      variant="left-accent"
+      as="blockquote"
+      rounded="4px"
+      my="1.5rem"
+      {...props}
+    />
+  ),
 };
 
 export { components };

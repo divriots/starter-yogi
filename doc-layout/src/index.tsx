@@ -15,7 +15,7 @@ const ThemeProviderLayout = (props) => (
       <CoreLayout
         logo={
           <img
-            src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/logo/logo-colored@2x.png"
+            src="https://storage.googleapis.com/prd-assets/yogi-color.svg"
             style={{ width: '8rem' }}
           />
         }
