@@ -1,6 +1,9 @@
 {
   "name": "@divriots/starter-yogi",
   "version": "0.0.0",
+  "description": "A chakra-ui based design system as a starter kit for Backlight",
+  "license": "MIT",
+  "type": "module",
   "scripts": {
     "serve": "dsd-cli serve sNbJipmRTmslL3f8RZaO --open"
   },
