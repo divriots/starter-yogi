@@ -1,48 +1,49 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { Icon } from "../src/index"
-import { Container, Divider, Heading, Stack } from "../src/index"
-import * as React from "react"
-import { Checkbox } from "../src/index"
-import { CheckboxGroup, useCheckbox } from "../src/index"
+import { Icon } from '../src/index';
+import { Divider, Heading, Stack } from '../src/index';
+import * as React from 'react';
+import { Checkbox } from '../src/index';
+import { CheckboxGroup, useCheckbox } from '../src/index';
 
-import { themeDecorator } from "../../story-layout/src/index";
+import { themeDecorator } from '../../story-layout/src/index';
 
 export default {
-  title: "Checkbox",
+  title: 'Checkbox',
   decorators: [themeDecorator],
   parameters: {
     layout: 'centered',
   },
-}
+};
 
-export const CheckboxWithHooks = () => {
-  const { state, getRootProps, getInputProps, getCheckboxProps } = useCheckbox()
+const CheckboxWithHooks = () => {
+  const { state, getRootProps, getInputProps, getCheckboxProps } =
+    useCheckbox();
   return (
     <label {...getRootProps()}>
       <input {...getInputProps()} />
       <span {...getCheckboxProps()}>{JSON.stringify(state, null, 4)}</span>
       <span>Hello</span>
     </label>
-  )
-}
+  );
+};
 
-export const Basic = () => <Checkbox colorScheme="red">Hello</Checkbox>
+export const Basic = () => <Checkbox colorScheme="red">Hello</Checkbox>;
 
 export const BasicWithDisableFalse = () => (
   <Checkbox isDisabled={false} colorScheme="red">
     Hello
   </Checkbox>
-)
+);
 
-export const Disabled = () => <Checkbox isDisabled>Disabled</Checkbox>
+export const Disabled = () => <Checkbox isDisabled>Disabled</Checkbox>;
 
-export const Readonly = () => <Checkbox isReadOnly>Readonly</Checkbox>
+export const Readonly = () => <Checkbox isReadOnly>Readonly</Checkbox>;
 
-export const Invalid = () => <Checkbox isInvalid>Invalid</Checkbox>
+export const Invalid = () => <Checkbox isInvalid>Invalid</Checkbox>;
 
 export const WithIconColor = () => (
   <Checkbox iconColor="yellow.400">I love chakra</Checkbox>
-)
+);
 
 export const withColorScheme = () => {
   return (
@@ -52,28 +53,28 @@ export const withColorScheme = () => {
       </Checkbox>
       <Checkbox defaultIsChecked>Hello world</Checkbox>
     </Stack>
-  )
-}
+  );
+};
 
 const CustomIcon = (props: any) => {
-  const { isIndeterminate, ...rest } = props
+  const { isIndeterminate, ...rest } = props;
 
   const d = isIndeterminate
-    ? "M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,19a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,12,19Zm1.6-6.08a1,1,0,0,0-.6.917,1,1,0,1,1-2,0,3,3,0,0,1,1.8-2.75A2,2,0,1,0,10,9.255a1,1,0,1,1-2,0,4,4,0,1,1,5.6,3.666Z"
-    : "M0,12a1.5,1.5,0,0,0,1.5,1.5h8.75a.25.25,0,0,1,.25.25V22.5a1.5,1.5,0,0,0,3,0V13.75a.25.25,0,0,1,.25-.25H22.5a1.5,1.5,0,0,0,0-3H13.75a.25.25,0,0,1-.25-.25V1.5a1.5,1.5,0,0,0-3,0v8.75a.25.25,0,0,1-.25.25H1.5A1.5,1.5,0,0,0,0,12Z"
+    ? 'M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,19a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,12,19Zm1.6-6.08a1,1,0,0,0-.6.917,1,1,0,1,1-2,0,3,3,0,0,1,1.8-2.75A2,2,0,1,0,10,9.255a1,1,0,1,1-2,0,4,4,0,1,1,5.6,3.666Z'
+    : 'M0,12a1.5,1.5,0,0,0,1.5,1.5h8.75a.25.25,0,0,1,.25.25V22.5a1.5,1.5,0,0,0,3,0V13.75a.25.25,0,0,1,.25-.25H22.5a1.5,1.5,0,0,0,0-3H13.75a.25.25,0,0,1-.25-.25V1.5a1.5,1.5,0,0,0-3,0v8.75a.25.25,0,0,1-.25.25H1.5A1.5,1.5,0,0,0,0,12Z';
 
   return (
     <Icon viewBox="0 0 24 24" {...rest}>
       <path fill="currentColor" d={d} />
     </Icon>
-  )
-}
+  );
+};
 
 export const WithCustomIcon = () => {
-  const [checkedItems, setCheckedItems] = React.useState([false, false])
+  const [checkedItems, setCheckedItems] = React.useState([false, false]);
 
-  const allChecked = checkedItems.every(Boolean)
-  const isIndeterminate = checkedItems.some(Boolean) && !allChecked
+  const allChecked = checkedItems.every(Boolean);
+  const isIndeterminate = checkedItems.some(Boolean) && !allChecked;
 
   return (
     <>
@@ -108,11 +109,11 @@ export const WithCustomIcon = () => {
         </Checkbox>
       </Stack>
     </>
-  )
-}
+  );
+};
 
 export const Sizes = () => {
-  const sizes = ["sm", "md", "lg"]
+  const sizes = ['sm', 'md', 'lg'];
 
   return (
     <Stack direction="row">
@@ -120,14 +121,14 @@ export const Sizes = () => {
         <Checkbox key={size} size={size} />
       ))}
     </Stack>
-  )
-}
+  );
+};
 
 export const Indeterminate = () => {
-  const [checkedItems, setCheckedItems] = React.useState([false, false])
+  const [checkedItems, setCheckedItems] = React.useState([false, false]);
 
-  const allChecked = checkedItems.every(Boolean)
-  const isIndeterminate = checkedItems.some(Boolean) && !allChecked
+  const allChecked = checkedItems.every(Boolean);
+  const isIndeterminate = checkedItems.some(Boolean) && !allChecked;
 
   return (
     <>
@@ -153,60 +154,60 @@ export const Indeterminate = () => {
         </Checkbox>
       </Stack>
     </>
-  )
-}
+  );
+};
 
 export const Controlled = () => {
-  const [value, setValue] = React.useState(false)
+  const [value, setValue] = React.useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.checked)
-  }
+    setValue(e.target.checked);
+  };
 
-  return <Checkbox isChecked={value} onChange={handleChange} />
-}
+  return <Checkbox isChecked={value} onChange={handleChange} />;
+};
 
 export const CheckboxGroupExample = () => {
   return (
     <CheckboxGroup
-      defaultValue={["one", "two"]}
+      defaultValue={['one', 'two']}
       onChange={(value) => console.log(value)}
     >
-      <Stack align="start" direction={["column", "row"]} spacing={[2, 4, 6]}>
+      <Stack align="start" direction={['column', 'row']} spacing={[2, 4, 6]}>
         <Checkbox value="one">One</Checkbox>
         <Checkbox value="two">Two</Checkbox>
         <Checkbox value="three">Three</Checkbox>
       </Stack>
     </CheckboxGroup>
-  )
-}
+  );
+};
 
 export const ResponsiveCheckboxGroup = () => {
   return (
     <CheckboxGroup
-      defaultValue={["one", "two"]}
+      defaultValue={['one', 'two']}
       onChange={(value) => console.log(value)}
     >
-      <Stack spacing={[2, 4, 6]} direction={["column", "row"]}>
+      <Stack spacing={[2, 4, 6]} direction={['column', 'row']}>
         <Checkbox value="one">One</Checkbox>
         <Checkbox value="two">Two</Checkbox>
         <Checkbox value="three">Three</Checkbox>
       </Stack>
     </CheckboxGroup>
-  )
-}
+  );
+};
 
-type Value = string | number
-type ArrayOfValue = Value[]
+type Value = string | number;
+type ArrayOfValue = Value[];
 
 export const ControlledCheckboxGroup = () => {
-  const [value, setValue] = React.useState<ArrayOfValue>(["one", "two"])
+  const [value, setValue] = React.useState<ArrayOfValue>(['one', 'two']);
   return (
     <CheckboxGroup
       value={value}
       onChange={(value) => {
-        console.log(value)
-        setValue(value)
+        console.log(value);
+        setValue(value);
       }}
     >
       <Stack direction="row" spacing="40px">
@@ -215,5 +216,5 @@ export const ControlledCheckboxGroup = () => {
         <Checkbox value="three">Three</Checkbox>
       </Stack>
     </CheckboxGroup>
-  )
-}
+  );
+};

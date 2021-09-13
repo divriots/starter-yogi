@@ -5,14 +5,13 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "serve": "dsd-cli serve sNbJipmRTmslL3f8RZaO --open"
+    "serve": "npx backlight@latest serve sNbJipmRTmslL3f8RZaO --open"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.0.0",
     "autoprefixer": "^10.2.5",
-    "dsd-cli": "latest",
     "prettier": "latest",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
@@ -38,8 +37,10 @@
     "@mdx-js/react": "^1.6.22",
     "deepmerge": "^4.2.2",
     "framer-motion": "^4.1.11",
+    "react-focus-lock": "^2.5.2",
     "react-hook-form": "^7.4.1",
     "react-icons": "^4.2.0",
+    "react-lorem-component": "^0.13.0",
     "react-router-dom": "^5.2.0",
     "react-spinners": "^0.10.6"
   }

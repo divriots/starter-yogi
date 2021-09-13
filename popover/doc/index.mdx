@@ -1,12 +1,25 @@
-import { EditIcon } from "../src/index";
-import { PopoverTrigger, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverHeader, PopoverBody, Portal, PopoverFooter, ButtonGroup, FormLabel, TextInput, useDisclosure, FocusLock, Form, PopoverForm } from "../src/index";
-import { Popover } from "~/popover";
-import { Button } from "~/button";
-import { Box } from "~/box";
-import { FormControl } from "~/form-control";
-import { Input } from "~/input";
-import { Stack } from "~/stack";
-import { IconButton } from "~/icon-button";
+import { EditIcon } from '../src/index';
+import {
+  PopoverTrigger,
+  PopoverContent,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverHeader,
+  PopoverBody,
+  Portal,
+  PopoverFooter,
+  ButtonGroup,
+  FormLabel,
+  useDisclosure,
+} from '../src/index';
+import FocusLock from 'react-focus-lock';
+import { Popover } from '~/popover';
+import { Button } from '~/button';
+import { Box } from '~/box';
+import { FormControl } from '~/form-control';
+import { Input } from '~/input';
+import { Stack } from '~/stack';
+import { IconButton } from '~/icon-button';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -14,15 +27,11 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Popover
+# Popover
 
 Popover is a non-modal dialog that floats around a trigger. It is used to
 display contextual information to the user, and should be paired with a
 clickable trigger element.
-
-
-
-
 
 `Popover` is built on top of the [Popper.js](https://popper.js.org/) library.
 
@@ -47,7 +56,7 @@ import {
   PopoverFooter,
   PopoverArrow,
   PopoverCloseButton,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Basic Usage
@@ -60,8 +69,17 @@ is critical for accessiblity.
 > closes, focus is returned to the trigger.
 
 <Playground
-scope={{ Popover, PopoverTrigger, Button, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverHeader, PopoverBody }}
-code={`
+  scope={{
+    Popover,
+    PopoverTrigger,
+    Button,
+    PopoverContent,
+    PopoverArrow,
+    PopoverCloseButton,
+    PopoverHeader,
+    PopoverBody,
+  }}
+  code={`
 <Popover>
   <PopoverTrigger>
     <Button>Trigger</Button>
@@ -85,8 +103,19 @@ portal, wrap the `PopoverContent` in a `Portal`
 > `PopoverContent` is rendered as a child of `<body>`
 
 <Playground
-scope={{ Popover, PopoverTrigger, Button, Portal, PopoverContent, PopoverArrow, PopoverHeader, PopoverCloseButton, PopoverBody, PopoverFooter }}
-code={`
+  scope={{
+    Popover,
+    PopoverTrigger,
+    Button,
+    Portal,
+    PopoverContent,
+    PopoverArrow,
+    PopoverHeader,
+    PopoverCloseButton,
+    PopoverBody,
+    PopoverFooter,
+  }}
+  code={`
 <Popover>
   <PopoverTrigger>
     <Button>Trigger</Button>
@@ -112,8 +141,20 @@ By default, focus is to sent to `PopoverContent` when it opens. Pass the
 `initialFocusRef` prop to send focus to a specific element instead.
 
 <Playground
-scope={{ Popover, PopoverTrigger, Button, PopoverContent, PopoverHeader, PopoverArrow, PopoverCloseButton, PopoverBody, PopoverFooter, Box, ButtonGroup }}
-code={`
+  scope={{
+    Popover,
+    PopoverTrigger,
+    Button,
+    PopoverContent,
+    PopoverHeader,
+    PopoverArrow,
+    PopoverCloseButton,
+    PopoverBody,
+    PopoverFooter,
+    Box,
+    ButtonGroup,
+  }}
+  code={`
 function WalkthroughPopover() {
   const initialFocusRef = React.useRef()
   return (
@@ -167,10 +208,26 @@ You can leverage
 within the `PopoverContent`.
 
 <Playground
-scope={{ FormControl, FormLabel, Input, Stack, TextInput, ButtonGroup, Button, useDisclosure, Box, Popover, PopoverTrigger, IconButton, EditIcon, PopoverContent, FocusLock, PopoverArrow, PopoverCloseButton, Form, PopoverForm }}
-noInline={true}
-code={`
-// import  FocusLock from "react-focus-lock"
+  scope={{
+    FormControl,
+    FormLabel,
+    Input,
+    Stack,
+    ButtonGroup,
+    Button,
+    useDisclosure,
+    Box,
+    Popover,
+    PopoverTrigger,
+    IconButton,
+    EditIcon,
+    PopoverContent,
+    FocusLock,
+    PopoverArrow,
+    PopoverCloseButton,
+  }}
+  noInline={true}
+  code={`
 // 1. Create a text input component
 const TextInput = React.forwardRef((props, ref) => {
   return (
@@ -247,8 +304,19 @@ Sometimes you might need to set the `returnFocusOnClose` prop to `false` to
 prevent popver from returning focus to `PopoverTrigger`'s children.
 
 <Playground
-scope={{ Button, Popover, PopoverTrigger, PopoverContent, PopoverHeader, PopoverArrow, PopoverCloseButton, PopoverBody, PopoverFooter, ButtonGroup }}
-code={`
+  scope={{
+    Button,
+    Popover,
+    PopoverTrigger,
+    PopoverContent,
+    PopoverHeader,
+    PopoverArrow,
+    PopoverCloseButton,
+    PopoverBody,
+    PopoverFooter,
+    ButtonGroup,
+  }}
+  code={`
 function ControlledUsage() {
   const [isOpen, setIsOpen] = React.useState(false)
   const open = () => setIsOpen(!isOpen)
@@ -295,8 +363,19 @@ Chakra provides access to two internal details: `isOpen` and `onClose`. Use the
 render prop pattern to gain access to them.
 
 <Playground
-scope={{ Popover, PopoverTrigger, Button, Portal, PopoverContent, PopoverHeader, PopoverCloseButton, PopoverBody, Box, PopoverFooter }}
-code={`
+  scope={{
+    Popover,
+    PopoverTrigger,
+    Button,
+    Portal,
+    PopoverContent,
+    PopoverHeader,
+    PopoverCloseButton,
+    PopoverBody,
+    Box,
+    PopoverFooter,
+  }}
+  code={`
 function InternalStateEx() {
   const initRef = React.useRef()
   return (
@@ -340,8 +419,17 @@ Chakra exports all the components you need to customize the look and feel of the
 popover. You can change the background, arrow size, box shadow and so on.
 
 <Playground
-scope={{ Popover, PopoverTrigger, Box, PopoverContent, PopoverHeader, PopoverArrow, PopoverCloseButton, PopoverBody }}
-code={`
+  scope={{
+    Popover,
+    PopoverTrigger,
+    Box,
+    PopoverContent,
+    PopoverHeader,
+    PopoverArrow,
+    PopoverCloseButton,
+    PopoverBody,
+  }}
+  code={`
 <Popover>
   <PopoverTrigger>
     <Box
@@ -377,8 +465,17 @@ possible placement values.
 > in the event that available space at the specified placement isn't enough.
 
 <Playground
-scope={{ Popover, PopoverTrigger, Button, PopoverContent, PopoverHeader, PopoverArrow, PopoverCloseButton, PopoverBody }}
-code={`
+  scope={{
+    Popover,
+    PopoverTrigger,
+    Button,
+    PopoverContent,
+    PopoverHeader,
+    PopoverArrow,
+    PopoverCloseButton,
+    PopoverBody,
+  }}
+  code={`
 <Popover placement="top-start">
   <PopoverTrigger>
     <Button>Click me</Button>
@@ -408,8 +505,17 @@ needs to be extra performant, or make network calls on mount that should only
 happen when the component is displayed.
 
 <Playground
-scope={{ Popover, PopoverTrigger, Button, PopoverContent, PopoverHeader, PopoverArrow, PopoverCloseButton, PopoverBody }}
-code={`
+  scope={{
+    Popover,
+    PopoverTrigger,
+    Button,
+    PopoverContent,
+    PopoverHeader,
+    PopoverArrow,
+    PopoverCloseButton,
+    PopoverBody,
+  }}
+  code={`
 <Popover isLazy>
   <PopoverTrigger>
     <Button>Click me</Button>
