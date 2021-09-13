@@ -1,19 +1,34 @@
-import { useDisclosure } from "../src/index"
-import { chakra } from "../src/index"
-import * as React from "react"
-import Lorem from "react-lorem-component"
-import { Modal } from "../src/index"
-import { ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from "../src/index"
+import { useDisclosure } from '../src/index';
+import { chakra } from '../src/index';
+import * as React from 'react';
+import Lorem from 'react-lorem-component';
+import { Modal } from '../src/index';
+import {
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+} from '../src/index';
+import { themeDecorator } from '../../story-layout/src/index';
 
-const Button = chakra("button", {
+export default {
+  decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
+};
+
+const Button = chakra('button', {
   baseStyle: {
     outline: 0,
-    transition: "all 0.2s",
+    transition: 'all 0.2s',
   },
-})
+});
 
-export function BasicUsage() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+function BasicUsage() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Button onClick={onOpen}>Open</Button>
@@ -34,12 +49,14 @@ export function BasicUsage() {
         </ModalContent>
       </Modal>
     </>
-  )
+  );
 }
 
-export function ReturnFocus() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const finalRef = React.useRef<any>()
+export const Basic_Usage = () => <BasicUsage />;
+
+function ReturnFocus() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const finalRef = React.useRef<any>();
 
   return (
     <>
@@ -74,13 +91,15 @@ export function ReturnFocus() {
         </ModalContent>
       </Modal>
     </>
-  )
+  );
 }
 
-export function NestedModal() {
-  const first = useDisclosure()
-  const second = useDisclosure()
-  const third = useDisclosure()
+export const Return_Focus = () => <ReturnFocus />;
+
+function NestedModal() {
+  const first = useDisclosure();
+  const second = useDisclosure();
+  const third = useDisclosure();
   return (
     <>
       <button onClick={first.onOpen}>Open</button>
@@ -120,11 +139,13 @@ export function NestedModal() {
         </ModalContent>
       </Modal>
     </>
-  )
+  );
 }
 
-export const InsideScroll = () => {
-  const { isOpen, onClose, onOpen } = useDisclosure()
+export const Nested_Modal = () => <NestedModal />;
+
+const InsideScroll = () => {
+  const { isOpen, onClose, onOpen } = useDisclosure();
   return (
     <>
       <button onClick={onOpen}>Open</button>
@@ -142,11 +163,13 @@ export const InsideScroll = () => {
         </ModalContent>
       </Modal>
     </>
-  )
-}
+  );
+};
 
-export const AnimationDisabled = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+export const Inside_Scroll = () => <InsideScroll />;
+
+const AnimationDisabled = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <button onClick={onOpen}>Open</button>
@@ -164,11 +187,13 @@ export const AnimationDisabled = () => {
         </ModalContent>
       </Modal>
     </>
-  )
-}
+  );
+};
 
-export const FullWithLongContent = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+export const Animation_Disabled = () => <AnimationDisabled />;
+
+const FullWithLongContent = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <button onClick={onOpen}>Open</button>
@@ -186,5 +211,7 @@ export const FullWithLongContent = () => {
         </ModalContent>
       </Modal>
     </>
-  )
-}
+  );
+};
+
+export const Full_With_Long_Content = () => <FullWithLongContent />;

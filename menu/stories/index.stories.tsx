@@ -1,33 +1,50 @@
-import { Button } from "../src/index"
-import { Image } from "../src/index"
-import { Portal } from "../src/index"
-import { chakra } from "../src/index"
-import * as React from "react"
+import { Button } from '../src/index';
+import { Image } from '../src/index';
+import { Portal } from '../src/index';
+import { chakra } from '../src/index';
+import * as React from 'react';
 import {
   FaChevronDown,
   FaSearch,
   FaTruck,
   FaUndoAlt,
   FaUnlink,
-} from "react-icons/fa"
-import { Menu } from "../src/index"
-import { MenuButton, MenuDivider, MenuGroup, MenuItem, MenuItemOption, MenuList, MenuOptionGroup, useMenuItem } from "../src/index"
+} from 'react-icons/fa';
+import { Menu } from '../src/index';
+import {
+  MenuButton,
+  MenuDivider,
+  MenuGroup,
+  MenuItem,
+  MenuItemOption,
+  MenuList,
+  MenuOptionGroup,
+  useMenuItem,
+} from '../src/index';
+import { themeDecorator } from '../../story-layout/src/index';
+
+export default {
+  decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
+};
 
 const words = [
-  "About Visual Studio Code",
-  "Check for updates",
-  "Preferences",
-  "Services",
-  "Hide Visual Studio Code",
-  "Show All",
-]
+  'About Visual Studio Code',
+  'Check for updates',
+  'Preferences',
+  'Services',
+  'Hide Visual Studio Code',
+  'Show All',
+];
 
 function logEvents(e: React.MouseEvent | React.KeyboardEvent | undefined) {
   if (e && e.persist) {
     // Stop react from complaining about unpersisted events.
-    e.persist()
+    e.persist();
   }
-  console.log(e)
+  console.log(e);
 }
 
 export const Basic = () => (
@@ -51,7 +68,7 @@ export const Basic = () => (
       </MenuList>
     </Menu>
   </div>
-)
+);
 
 export const LazyMenu = () => (
   <Menu isLazy>
@@ -64,7 +81,7 @@ export const LazyMenu = () => (
       ))}
     </MenuList>
   </Menu>
-)
+);
 
 export const WithDisabledItem = () => (
   <>
@@ -100,7 +117,7 @@ export const WithDisabledItem = () => (
       </MenuList>
     </Menu>
   </>
-)
+);
 
 export const WithDisabledButFocusableItem = () => (
   <Menu>
@@ -116,33 +133,33 @@ export const WithDisabledButFocusableItem = () => (
       <MenuItem>Menu 4</MenuItem>
     </MenuList>
   </Menu>
-)
+);
 
 export const WithTogglableMenuItems = () => {
   const [items, setItems] = React.useState<
     {
-      content: string
-      icon: React.ReactElement
-      isDisabled?: boolean
-      command?: string
+      content: string;
+      icon: React.ReactElement;
+      isDisabled?: boolean;
+      command?: string;
     }[]
   >([
     {
-      content: "Search",
+      content: 'Search',
       icon: <FaSearch />,
       isDisabled: true,
-      command: "⌥T",
+      command: '⌥T',
     },
     {
-      content: "Delivery",
+      content: 'Delivery',
       icon: <FaUndoAlt />,
     },
     {
-      content: "Unlink",
+      content: 'Unlink',
       icon: <FaUnlink />,
       isDisabled: true,
     },
-  ])
+  ]);
 
   return (
     <>
@@ -150,21 +167,21 @@ export const WithTogglableMenuItems = () => {
         onClick={() => {
           return setItems([
             {
-              content: "Search",
+              content: 'Search',
               icon: <FaSearch />,
               isDisabled: false,
-              command: "⌥T",
+              command: '⌥T',
             },
             {
-              content: "Delivery",
+              content: 'Delivery',
               icon: <FaUndoAlt />,
             },
             {
-              content: "Unlink",
+              content: 'Unlink',
               icon: <FaUnlink />,
               isDisabled: true,
             },
-          ])
+          ]);
         }}
       >
         Enable Search
@@ -187,8 +204,8 @@ export const WithTogglableMenuItems = () => {
         </MenuList>
       </Menu>
     </>
-  )
-}
+  );
+};
 
 export const WithPortal = () => (
   <Menu>
@@ -204,7 +221,7 @@ export const WithPortal = () => (
       </MenuList>
     </Portal>
   </Menu>
-)
+);
 
 export const withGroupedItems = () => (
   <Menu>
@@ -222,7 +239,7 @@ export const withGroupedItems = () => (
       </MenuGroup>
     </MenuList>
   </Menu>
-)
+);
 
 export const withMenuRadio = () => (
   <Menu closeOnSelect={false}>
@@ -249,23 +266,23 @@ export const withMenuRadio = () => (
       </MenuOptionGroup>
     </MenuList>
   </Menu>
-)
+);
 
 export const WithInternalState = () => (
   <Menu>
     {({ isOpen }) => (
       <>
-        <MenuButton as={Button}>{isOpen ? "Close" : "Open"}</MenuButton>
+        <MenuButton as={Button}>{isOpen ? 'Close' : 'Open'}</MenuButton>
         <MenuList>
           <MenuItem>Download</MenuItem>
-          <MenuItem onClick={() => alert("Kagebunshin")}>
+          <MenuItem onClick={() => alert('Kagebunshin')}>
             Create a Copy
           </MenuItem>
         </MenuList>
       </>
     )}
   </Menu>
-)
+);
 
 export const WithLetterNavigation = () => (
   <Menu>
@@ -275,9 +292,9 @@ export const WithLetterNavigation = () => (
       transition="all 0.2s"
       borderRadius="md"
       borderWidth="1px"
-      _hover={{ bg: "gray.100" }}
-      _expanded={{ bg: "red.200" }}
-      _focus={{ outline: 0, boxShadow: "outline" }}
+      _hover={{ bg: 'gray.100' }}
+      _expanded={{ bg: 'red.200' }}
+      _focus={{ outline: 0, boxShadow: 'outline' }}
     >
       File <FaChevronDown />
     </MenuButton>
@@ -289,7 +306,7 @@ export const WithLetterNavigation = () => (
       <MenuItem>Save File</MenuItem>
     </MenuList>
   </Menu>
-)
+);
 
 export const JustAnotherExample = () => (
   <Menu>
@@ -317,7 +334,7 @@ export const JustAnotherExample = () => (
       </MenuItem>
     </MenuList>
   </Menu>
-)
+);
 
 export const WithLink = () => (
   <Menu>
@@ -332,7 +349,7 @@ export const WithLink = () => (
       </MenuItem>
     </MenuList>
   </Menu>
-)
+);
 
 export const SplitButton = () => (
   <chakra.div display="flex">
@@ -356,7 +373,7 @@ export const SplitButton = () => (
       </MenuList>
     </Menu>
   </chakra.div>
-)
+);
 
 export const WithinForm = () => {
   return (
@@ -377,8 +394,8 @@ export const WithinForm = () => {
         </Menu>
       </fieldset>
     </form>
-  )
-}
+  );
+};
 
 export const GroupWithDivider = () => {
   return (
@@ -395,8 +412,8 @@ export const GroupWithDivider = () => {
         </MenuOptionGroup>
       </MenuList>
     </Menu>
-  )
-}
+  );
+};
 
 export const WithCloseOnSelect = () => (
   <Menu>
@@ -413,16 +430,16 @@ export const WithCloseOnSelect = () => (
       </MenuOptionGroup>
     </MenuList>
   </Menu>
-)
+);
 
 const MenuItemWithInput = (props: any) => {
-  const { role: _, ...rest } = useMenuItem(props)
+  const { role: _, ...rest } = useMenuItem(props);
   return (
     <div>
       <input {...rest} />
     </div>
-  )
-}
+  );
+};
 
 export const MenuWithInput = () => {
   return (
@@ -436,5 +453,5 @@ export const MenuWithInput = () => {
         <MenuItem>Menu 4</MenuItem>
       </MenuList>
     </Menu>
-  )
-}
+  );
+};

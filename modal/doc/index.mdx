@@ -1,11 +1,23 @@
-import { useDisclosure, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Lorem, ModalFooter, Text, FormLabel, RadioGroup } from "../src/index";
-import { Button } from "~/button";
-import { Modal } from "~/modal";
-import { Box } from "~/box";
-import { FormControl } from "~/form-control";
-import { Input } from "~/input";
-import { Stack } from "~/stack";
-import { Radio } from "~/radio";
+import {
+  useDisclosure,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  Text,
+  FormLabel,
+  RadioGroup,
+} from '../src/index';
+import Lorem from 'react-lorem-component';
+import { Button } from '~/button';
+import { Modal } from '~/modal';
+import { Box } from '~/box';
+import { FormControl } from '~/form-control';
+import { Input } from '~/input';
+import { Stack } from '~/stack';
+import { Radio } from '~/radio';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -13,15 +25,11 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Modal Dialog
+# Modal Dialog
 
 A dialog is a window overlaid on either the primary window or another dialog
 window. Content behind a modal dialog is **inert**, meaning that users cannot
 interact with it.
-
-
-
-
 
 > 🚨 Version (v1.0.0) introduced a breaking change to this component's API.
 > Kindly update accordingly.
@@ -47,7 +55,7 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Usage
@@ -56,8 +64,19 @@ When the modal opens, focus is sent into the modal and set to the first tabbable
 element. If there are no tabbled elements, focus is set on `ModalContent`.
 
 <Playground
-scope={{ useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Lorem, ModalFooter }}
-code={`
+  scope={{
+    useDisclosure,
+    Button,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    Lorem,
+    ModalFooter,
+  }}
+  code={`
 function BasicUsage() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
@@ -92,8 +111,20 @@ When the dialog closes, it returns focus to the element that triggered it. Set
 closes.
 
 <Playground
-scope={{ useDisclosure, Box, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Lorem, ModalFooter }}
-code={`
+  scope={{
+    useDisclosure,
+    Box,
+    Button,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    Lorem,
+    ModalFooter,
+  }}
+  code={`
 function ReturnFocus() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const finalRef = React.useRef()
@@ -134,8 +165,20 @@ behind the modal. Chakra does this by default but you can set
 `blockScrollOnMount` to `false` to allow scrolling behind the modal.
 
 <Playground
-scope={{ useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Text, Lorem, ModalFooter }}
-code={`
+  scope={{
+    useDisclosure,
+    Button,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    Text,
+    Lorem,
+    ModalFooter,
+  }}
+  code={`
 function BasicUsage() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
@@ -183,8 +226,21 @@ Chakra provides 2 props for this use case:
 > so it doesn't return focus to the element that triggered it.
 
 <Playground
-scope={{ useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, FormControl, FormLabel, Input, ModalFooter }}
-code={`
+  scope={{
+    useDisclosure,
+    Button,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    FormControl,
+    FormLabel,
+    Input,
+    ModalFooter,
+  }}
+  code={`
 function InitialFocus() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const initialRef = React.useRef()
@@ -235,8 +291,19 @@ By default, the modal closes when you click its overlay. You can set
 `closeOnOverlayClick` to `false` if you want the modal to stay visible.
 
 <Playground
-scope={{ useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Lorem, ModalFooter }}
-code={`
+  scope={{
+    useDisclosure,
+    Button,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    Lorem,
+    ModalFooter,
+  }}
+  code={`
 function ManualClose() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
@@ -274,8 +341,19 @@ pass the `isCentered` prop.
 > prop. Try setting the [overflow behavior](#modal-overflow-behavior) instead.
 
 <Playground
-scope={{ useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Lorem, ModalFooter }}
-code={`
+  scope={{
+    useDisclosure,
+    Button,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    Lorem,
+    ModalFooter,
+  }}
+  code={`
 function VerticallyCenter() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
@@ -307,8 +385,19 @@ passing a `motionPreset` prop, and set its value to either `slideInBottom`,
 `slideInRight`, `scale` or `none`.
 
 <Playground
-scope={{ useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Lorem, ModalFooter }}
-code={`
+  scope={{
+    useDisclosure,
+    Button,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    Lorem,
+    ModalFooter,
+  }}
+  code={`
 function TransitionExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
@@ -351,8 +440,22 @@ If the content within the modal overflows beyond the viewport, you can use the
   viewport.
 
 <Playground
-scope={{ useDisclosure, RadioGroup, Stack, Radio, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Lorem, ModalFooter }}
-code={`
+  scope={{
+    useDisclosure,
+    RadioGroup,
+    Stack,
+    Radio,
+    Button,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    Lorem,
+    ModalFooter,
+  }}
+  code={`
 function ScrollingExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [scrollBehavior, setScrollBehavior] = React.useState("inside")
@@ -398,8 +501,19 @@ Pass the `size` prop if you need to adjust the size of the modal. Values can be
 `xs`, `sm`, `md`, `lg`, `xl`, or `full`.
 
 <Playground
-scope={{ useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Lorem, ModalFooter }}
-code={`
+  scope={{
+    useDisclosure,
+    Button,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    Lorem,
+    ModalFooter,
+  }}
+  code={`
 function SizeExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [size, setSize] = React.useState("md")

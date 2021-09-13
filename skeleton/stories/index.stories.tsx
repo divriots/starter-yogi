@@ -1,105 +1,107 @@
-import * as React from "react"
-import { Skeleton } from "../src/index"
-import { SkeletonText, SkeletonCircle } from "../src/index"
-import { chakra, DarkMode } from "../src/index"
-import { Stack } from "../src/index"
+import * as React from 'react';
+import { Skeleton } from '../src/index';
+import { SkeletonText, SkeletonCircle } from '../src/index';
+import { chakra, DarkMode } from '../src/index';
+import { Stack } from '../src/index';
 
-import { themeDecorator } from "../../story-layout/src/index";
+import { themeDecorator } from '../../story-layout/src/index';
 
 export default {
-  title: "Skeleton",
+  title: 'Skeleton',
   decorators: [themeDecorator],
   parameters: {
     layout: 'centered',
   },
-}
+};
 
 // Get more examples from here:
 // https://danilowoz.com/create-content-loader/
 
-export const Basic = () => <Skeleton h="20px" />
+export const Basic = () => <Skeleton h="20px" w="200px" />;
 
 export const Text = () => (
-  <SkeletonText
-    padding="20px"
-    borderWidth="1px"
-    borderRadius="lg"
-    noOfLines={[3, 4, 5, 6, 7]}
-  />
-)
+  <div style={{ width: '15rem', height: '15rem' }}>
+    <SkeletonText
+      padding="20px"
+      borderWidth="1px"
+      borderRadius="lg"
+      noOfLines={[3, 4, 5, 6, 7]}
+    />
+  </div>
+);
 
 export const AsContainer = () => (
   <Skeleton>
     <span>Chakra ui is cool</span>
   </Skeleton>
-)
+);
 
 export const WithFade = () => {
-  const [hasLoaded, setHasLoaded] = React.useState(false)
+  const [hasLoaded, setHasLoaded] = React.useState(false);
 
   React.useEffect(() => {
-    setTimeout(() => setHasLoaded(true), 1000)
-  }, [])
+    setTimeout(() => setHasLoaded(true), 1000);
+  }, []);
 
   return (
     <Skeleton isLoaded={hasLoaded}>
       <span>Chakra ui is cool</span>
     </Skeleton>
-  )
-}
+  );
+};
 
 export const WithFadeText = () => {
-  const [hasLoaded, setHasLoaded] = React.useState(false)
+  const [hasLoaded, setHasLoaded] = React.useState(false);
 
   React.useEffect(() => {
-    setTimeout(() => setHasLoaded(true), 1000)
-  }, [])
+    setTimeout(() => setHasLoaded(true), 1000);
+  }, []);
 
   return (
     <SkeletonText isLoaded={hasLoaded}>
       <span>Chakra ui is cool</span>
     </SkeletonText>
-  )
-}
+  );
+};
 
 export const WithFadeAlreadyLoaded = () => {
   return (
     <Skeleton isLoaded={true}>
       <span>This should not fade in</span>
     </Skeleton>
-  )
-}
+  );
+};
 
 export const WithNoFade = () => {
-  const [hasLoaded, setHasLoaded] = React.useState(false)
+  const [hasLoaded, setHasLoaded] = React.useState(false);
 
   React.useEffect(() => {
-    setTimeout(() => setHasLoaded(true), 1000)
-  }, [])
+    setTimeout(() => setHasLoaded(true), 1000);
+  }, []);
 
   return (
     <Skeleton fadeDuration={0} isLoaded={hasLoaded}>
       <span>Chakra ui is cool</span>
     </Skeleton>
-  )
-}
+  );
+};
 
-export const Circle = () => <SkeletonCircle />
+export const Circle = () => <SkeletonCircle />;
 
 export const Combined = () => (
   <chakra.div padding="6" boxShadow="lg" bg="white">
     <SkeletonCircle size="10" />
     <SkeletonText mt="4" noOfLines={4} spacing="4" />
   </chakra.div>
-)
+);
 
 export const WithIsLoaded = () => {
-  const [hasLoaded, setHasLoaded] = React.useState(false)
+  const [hasLoaded, setHasLoaded] = React.useState(false);
 
   React.useEffect(() => {
-    const intervalId = setInterval(() => setHasLoaded((x) => !x), 1000)
-    return () => clearInterval(intervalId)
-  }, [])
+    const intervalId = setInterval(() => setHasLoaded((x) => !x), 1000);
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <chakra.div>
@@ -116,12 +118,12 @@ export const WithIsLoaded = () => {
         Content
       </chakra.div>
     </chakra.div>
-  )
-}
+  );
+};
 
 export const WithCustomSpeed = () => (
   <Skeleton boxSize="100px" speed={2.4} borderRadius="100px" />
-)
+);
 
 export const WithDarkMode = () => (
   <DarkMode>
@@ -132,4 +134,4 @@ export const WithDarkMode = () => (
       <Skeleton boxSize="100px" />
     </Stack>
   </DarkMode>
-)
+);

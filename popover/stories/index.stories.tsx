@@ -1,12 +1,30 @@
-import { Button, ButtonGroup } from "../src/index"
-import { useInterval } from "../src/index"
-import { chakra } from "../src/index"
-import * as React from "react"
-import { Popover } from "../src/index"
-import { PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverFooter, PopoverHeader, PopoverTrigger, usePopover } from "../src/index"
+import { Button, ButtonGroup } from '../src/index';
+import { useInterval } from '../src/index';
+import { chakra } from '../src/index';
+import * as React from 'react';
+import { Popover } from '../src/index';
+import {
+  PopoverArrow,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverFooter,
+  PopoverHeader,
+  PopoverTrigger,
+  usePopover,
+} from '../src/index';
+import { themeDecorator } from '../../story-layout/src/index';
 
-export function PopoverExample() {
-  const { getTriggerProps, getPopoverProps, onClose } = usePopover()
+export default {
+  title: 'Menu',
+  decorators: [themeDecorator],
+  parameters: {
+    layout: 'centered',
+  },
+};
+
+function PopoverExample() {
+  const { getTriggerProps, getPopoverProps, onClose } = usePopover();
 
   return (
     <>
@@ -16,8 +34,8 @@ export function PopoverExample() {
       <div
         {...getPopoverProps({
           style: {
-            background: "tomato",
-            color: "white",
+            background: 'tomato',
+            color: 'white',
             padding: 30,
           },
         })}
@@ -28,10 +46,12 @@ export function PopoverExample() {
         </button>
       </div>
     </>
-  )
+  );
 }
 
-export const simple = () => (
+export const PopoverExample_ = () => <PopoverExample />;
+
+const Simple = () => (
   <Popover placement="right-start">
     <PopoverTrigger>
       <chakra.button mt="180px">Trigger</chakra.button>
@@ -48,9 +68,11 @@ export const simple = () => (
       </PopoverBody>
     </PopoverContent>
   </Popover>
-)
+);
 
-export const basic = () => (
+export const Simple_ = () => <Simple />;
+
+const Basic = () => (
   <>
     <Popover placement="top">
       <PopoverTrigger>
@@ -83,12 +105,14 @@ export const basic = () => (
 
     <chakra.input />
   </>
-)
+);
 
-export function ControlledUsage() {
-  const [isOpen, setIsOpen] = React.useState(false)
-  const open = () => setIsOpen(!isOpen)
-  const close = () => setIsOpen(false)
+export const Basic_ = () => <Basic />;
+
+function ControlledUsage() {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const open = () => setIsOpen(!isOpen);
+  const close = () => setIsOpen(false);
   return (
     <>
       <Button mr={5} onClick={open}>
@@ -120,20 +144,22 @@ export function ControlledUsage() {
         </PopoverContent>
       </Popover>
     </>
-  )
+  );
 }
 
 const Interval = () => {
-  const [value, setValue] = React.useState(0)
-  useInterval(() => setValue((v) => v + 1), 1000)
+  const [value, setValue] = React.useState(0);
+  useInterval(() => setValue((v) => v + 1), 1000);
   return (
-    <span style={{ fontWeight: "bold", color: "tomato", padding: 4 }}>
+    <span style={{ fontWeight: 'bold', color: 'tomato', padding: 4 }}>
       {value}
     </span>
-  )
-}
+  );
+};
 
-export function WithLazyPopover() {
+export const ControlledUsage_ = () => <ControlledUsage />;
+
+function WithLazyPopover() {
   return (
     <Popover isLazy>
       <PopoverTrigger>
@@ -148,8 +174,10 @@ export function WithLazyPopover() {
         </PopoverBody>
       </PopoverContent>
     </Popover>
-  )
+  );
 }
+
+export const WithLazyPopover_ = () => <WithLazyPopover />;
 
 export function WithLazyPopoverMounted() {
   return (
@@ -166,5 +194,5 @@ export function WithLazyPopoverMounted() {
         </PopoverBody>
       </PopoverContent>
     </Popover>
-  )
+  );
 }
