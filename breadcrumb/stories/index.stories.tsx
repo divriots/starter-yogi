@@ -1,19 +1,19 @@
-import * as React from "react"
-import { BrowserRouter, Link } from "react-router-dom"
-import { Breadcrumb } from "../src/index"
-import { BreadcrumbItem, BreadcrumbLink } from "../src/index"
-import { ChevronRightIcon } from "../src/index"
-import { extendTheme, useTheme, ThemeProvider } from "../src/index"
+import * as React from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
+import { Breadcrumb } from '../src/index';
+import { BreadcrumbItem, BreadcrumbLink } from '../src/index';
+import { ChevronRightIcon } from '../src/index';
+import { extendTheme, useTheme, ThemeProvider } from '../src/index';
 
-import { themeDecorator } from "../../story-layout/src/index";
+import { themeDecorator } from '../../story-layout/src/index';
 
 export default {
-  title: "Breadcrumb",
-decorators: [themeDecorator],
+  title: 'Breadcrumb',
+  decorators: [themeDecorator],
   parameters: {
     layout: 'centered',
   },
-}
+};
 
 export const Default = () => (
   <BrowserRouter>
@@ -33,7 +33,7 @@ export const Default = () => (
       </BreadcrumbItem>
     </Breadcrumb>
   </BrowserRouter>
-)
+);
 
 export const Separator = () => (
   <Breadcrumb separator=">">
@@ -49,7 +49,7 @@ export const Separator = () => (
       <BreadcrumbLink href="#">Current</BreadcrumbLink>
     </BreadcrumbItem>
   </Breadcrumb>
-)
+);
 
 export const SeparatorV2 = () => (
   <Breadcrumb spacing="8px" separator={<ChevronRightIcon color="gray.300" />}>
@@ -65,10 +65,10 @@ export const SeparatorV2 = () => (
       <BreadcrumbLink href="/contact">Contact</BreadcrumbLink>
     </BreadcrumbItem>
   </Breadcrumb>
-)
+);
 
 export const WithThemeOverrides = () => {
-  const currentTheme = useTheme()
+  const currentTheme = useTheme();
   const theme = extendTheme(
     {
       components: {
@@ -80,25 +80,25 @@ export const WithThemeOverrides = () => {
             },
             item: {
               borderWidth: 2,
-              borderRadius: "full",
-              textTransform: "uppercase",
+              borderRadius: 'full',
+              textTransform: 'uppercase',
             },
             link: {
-              color: "red.500",
-              "&[aria-current=page]": {
-                color: "blue.500",
+              color: 'red.500',
+              '&[aria-current=page]': {
+                color: 'blue.500',
               },
             },
             separator: {
               borderWidth: 4,
-              borderColor: "red.300",
+              borderColor: 'red.300',
             },
           },
         },
       },
     },
-    currentTheme,
-  )
+    currentTheme
+  );
 
   return (
     <ThemeProvider theme={theme}>
@@ -119,5 +119,5 @@ export const WithThemeOverrides = () => {
         </BreadcrumbItem>
       </Breadcrumb>
     </ThemeProvider>
-  )
-}
+  );
+};

@@ -1,10 +1,20 @@
-import { NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper, SliderTrack, SliderFilledTrack, SliderThumb, useNumberInput, HStack } from "../src/index";
-import { NumberInput } from "~/number-input";
-import { Stack } from "~/stack";
-import { Flex } from "~/flex";
-import { Slider } from "~/slider";
-import { Button } from "~/button";
-import { Input } from "~/input";
+import {
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+  SliderTrack,
+  SliderFilledTrack,
+  SliderThumb,
+  useNumberInput,
+  HStack,
+} from '../src/index';
+import { NumberInput } from '~/number-input';
+import { Stack } from '~/stack';
+import { Flex } from '~/flex';
+import { Slider } from '~/slider';
+import { Button } from '~/button';
+import { Input } from '~/input';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -12,14 +22,10 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Number Input
+# Number Input
 
 The `NumberInput` component is similar to the [Input](/docs/form/input)
 component, but it has controls for incrementing or decrementing numeric values.
-
-
-
-
 
 It follows the
 [WAI-ARIA authoring practices](https://www.w3.org/TR/wai-aria-practices-1.1/#spinbutton)
@@ -42,7 +48,7 @@ import {
   NumberInputStepper,
   NumberIncrementStepper,
   NumberDecrementStepper,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Usage
@@ -51,8 +57,14 @@ The `NumberInput` is composed of smaller components to give you control of the
 styling of each part.
 
 <Playground
-scope={{ NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper }}
-code={`
+  scope={{
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+  }}
+  code={`
 <NumberInput>
   <NumberInputField />
   <NumberInputStepper>
@@ -70,8 +82,14 @@ By default, the input will restrict the value to stay within the specified
 range.
 
 <Playground
-scope={{ NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper }}
-code={`
+  scope={{
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+  }}
+  code={`
 <NumberInput defaultValue={15} min={10} max={20}>
   <NumberInputField />
   <NumberInputStepper>
@@ -89,8 +107,14 @@ value. By default, the value is rounded to match the number of decimals in the
 `step`.
 
 <Playground
-scope={{ NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper }}
-code={`
+  scope={{
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+  }}
+  code={`
 <NumberInput step={5} defaultValue={15} min={10} max={30}>
   <NumberInputField />
   <NumberInputStepper>
@@ -108,8 +132,14 @@ points. Simply pass the `precision` prop and set it to the number of decimal
 points.
 
 <Playground
-scope={{ NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper }}
-code={`
+  scope={{
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+  }}
+  code={`
 <NumberInput defaultValue={15} precision={2} step={0.2}>
   <NumberInputField />
   <NumberInputStepper>
@@ -132,8 +162,14 @@ To disable this behavior, pass `clampValueOnBlur` and set to `false`.
 > value on blur.
 
 <Playground
-scope={{ NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper }}
-code={`
+  scope={{
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+  }}
+  code={`
 <NumberInput defaultValue={15} max={30} clampValueOnBlur={false}>
   <NumberInputField />
   <NumberInputStepper>
@@ -155,8 +191,14 @@ support this use case.
 > than `min`.
 
 <Playground
-scope={{ NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper }}
-code={`
+  scope={{
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+  }}
+  code={`
 <NumberInput
   defaultValue={15}
   max={10}
@@ -175,8 +217,14 @@ code={`
 ### Formatting and Parsing the value
 
 <Playground
-scope={{ NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper }}
-code={`
+  scope={{
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+  }}
+  code={`
 function Example() {
   const format = (val) => \`$\` + val
   const parse = (val) => val.replace(/^\$/, "")
@@ -204,8 +252,15 @@ Like the `Input` component, you can pass the `size` prop to change the size of
 the input.
 
 <Playground
-scope={{ Stack, NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper }}
-code={`
+  scope={{
+    Stack,
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+  }}
+  code={`
 <Stack shouldWrapChildren direction="row">
   <NumberInput size="xs" maxW={16} defaultValue={15} min={10}>
     <NumberInputField />
@@ -245,8 +300,14 @@ You can change the style of any part of the components using style props. You
 can also change the icons used in the steppers.
 
 <Playground
-scope={{ NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper }}
-code={`
+  scope={{
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+  }}
+  code={`
 <NumberInput size="sm" defaultValue={15} min={10}>
   <NumberInputField focusBorderColor="red.200" />
   <NumberInputStepper>
@@ -275,8 +336,19 @@ won't lose focus after input.
 Here's an example of how to do that:
 
 <Playground
-scope={{ Flex, NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper, Slider, SliderTrack, SliderFilledTrack, SliderThumb }}
-code={`
+  scope={{
+    Flex,
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+    Slider,
+    SliderTrack,
+    SliderFilledTrack,
+    SliderThumb,
+  }}
+  code={`
 function SliderInput() {
   const [value, setValue] = React.useState(0)
   const handleChange = (value) => setValue(value)
@@ -307,8 +379,8 @@ Sometimes, you might need to create a mobile version of the number input. Here's
 how you can leverage the `useNumberInput` hook to build one.
 
 <Playground
-scope={{ useNumberInput, HStack, Button, Input }}
-code={`
+  scope={{ useNumberInput, HStack, Button, Input }}
+  code={`
 function HookUsage() {
   const {
     getInputProps,
@@ -342,8 +414,14 @@ values using the mouse wheel events. To activate this, pass the
 `allowMouseWheel` prop.
 
 <Playground
-scope={{ NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper }}
-code={`
+  scope={{
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+  }}
+  code={`
 function MouseWheelExample() {
   return (
     <NumberInput allowMouseWheel>

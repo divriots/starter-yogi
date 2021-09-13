@@ -1,5 +1,11 @@
-import { StatLabel, StatNumber, StatHelpText, StatGroup, StatArrow } from "../src/index";
-import { Stat } from "~/stat";
+import {
+  StatLabel,
+  StatNumber,
+  StatHelpText,
+  StatGroup,
+  StatArrow,
+} from '../src/index';
+import { Stat } from '~/stat';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -7,13 +13,9 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Stat
+# Stat
 
 As the name implies, the `Stat` component is used to display some statistics.
-
-
-
-
 
 ## Import
 
@@ -25,14 +27,14 @@ import {
   StatHelpText,
   StatArrow,
   StatGroup,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Basic Usage
 
 <Playground
-scope={{ Stat, StatLabel, StatNumber, StatHelpText }}
-code={`
+  scope={{ Stat, StatLabel, StatNumber, StatHelpText }}
+  code={`
 <Stat>
   <StatLabel>Collected Fees</StatLabel>
   <StatNumber>£0.00</StatNumber>
@@ -44,8 +46,8 @@ code={`
 ### Stat with Indicator
 
 <Playground
-scope={{ StatGroup, Stat, StatLabel, StatNumber, StatHelpText, StatArrow }}
-code={`
+  scope={{ StatGroup, Stat, StatLabel, StatNumber, StatHelpText, StatArrow }}
+  code={`
 <StatGroup>
   <Stat>
     <StatLabel>Sent</StatLabel>

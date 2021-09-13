@@ -1,16 +1,22 @@
-import * as React from "react"
-import { Stat } from "../src/index"
-import { StatArrow, StatGroup, StatHelpText, StatLabel, StatNumber } from "../src/index"
+import * as React from 'react';
+import { Stat } from '../src/index';
+import {
+  StatArrow,
+  StatGroup,
+  StatHelpText,
+  StatLabel,
+  StatNumber,
+} from '../src/index';
 
-import { themeDecorator } from "../../story-layout/src/index";
+import { themeDecorator } from '../../story-layout/src/index';
 
 export default {
-  title: "Stat",
-decorators: [themeDecorator],
+  title: 'Stat',
+  decorators: [themeDecorator],
   parameters: {
     layout: 'centered',
   },
-}
+};
 
 /**
  * Default Stat component
@@ -23,8 +29,8 @@ export const Default = () => {
       <StatNumber>£0.00</StatNumber>
       <StatHelpText>Feb 12 - Feb 28</StatHelpText>
     </Stat>
-  )
-}
+  );
+};
 
 /**
  * Stat component with indicators
@@ -51,5 +57,5 @@ export const WithIndicators = () => {
         </StatHelpText>
       </Stat>
     </StatGroup>
-  )
-}
+  );
+};

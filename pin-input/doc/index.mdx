@@ -1,6 +1,6 @@
-import { HStack, PinInputField } from "../src/index";
-import { PinInput } from "~/pin-input";
-import { Stack } from "~/stack";
+import { HStack, PinInputField } from '../src/index';
+import { PinInput } from '~/pin-input';
+import { Stack } from '~/stack';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -8,21 +8,17 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Pin Input
+# Pin Input
 
 The `PinInput` component is similar to the [Input](/docs/form/input) component,
 but it is optimized for entering sequences of digits.
 
 The most common application is for entering OTP or security codes.
 
-
-
-
-
 ## Import
 
 ```js
-import { PinInput, PinInputField } from "@chakra-ui/react"
+import { PinInput, PinInputField } from '@chakra-ui/react';
 ```
 
 - **PinInput:** The component that provides context to all the pin-input fields.
@@ -36,8 +32,8 @@ is entered, focus is moved automatically to the next input, until all fields are
 filled.
 
 <Playground
-scope={{ HStack, PinInput, PinInputField }}
-code={`
+  scope={{ HStack, PinInput, PinInputField }}
+  code={`
 <HStack>
   <PinInput>
     <PinInputField />
@@ -56,8 +52,8 @@ alphanumeric values, pass the `type` prop and set its value to either
 `alphanumeric` or `number`.
 
 <Playground
-scope={{ HStack, PinInput, PinInputField }}
-code={`
+  scope={{ HStack, PinInput, PinInputField }}
+  code={`
 <HStack>
   <PinInput type="alphanumeric">
     <PinInputField />
@@ -75,8 +71,8 @@ Use the `otp` prop on `PinInput` to set `autocomplete="one-time-code"` for all
 children `PinInputField` components.
 
 <Playground
-scope={{ PinInput, PinInputField }}
-code={`
+  scope={{ PinInput, PinInputField }}
+  code={`
 <PinInput otp>
   <PinInputField />
   <PinInputField />
@@ -94,8 +90,8 @@ need to mask the value entered, similar to `<input type="password"/>`.
 Pass the `mask` prop to `PinInput` to achieve this.
 
 <Playground
-scope={{ HStack, PinInput, PinInputField }}
-code={`
+  scope={{ HStack, PinInput, PinInputField }}
+  code={`
 <HStack>
   <PinInput type="alphanumeric" mask>
     <PinInputField />
@@ -117,8 +113,8 @@ The `PinInput` component comes in four sizes. The default is `md`.
 - `lg` (`48px`)
 
 <Playground
-scope={{ Stack, HStack, PinInput, PinInputField }}
-code={`
+  scope={{ Stack, HStack, PinInput, PinInputField }}
+  code={`
 <Stack>
   <HStack>
     <PinInput size="xs">
@@ -157,8 +153,8 @@ code={`
 You can set the `defaultValue` of the PinInput if you wish:
 
 <Playground
-scope={{ HStack, PinInput, PinInputField }}
-code={`
+  scope={{ HStack, PinInput, PinInputField }}
+  code={`
 <HStack>
   <PinInput defaultValue="234">
     <PinInputField />
@@ -172,8 +168,8 @@ code={`
 Or even a partial defaultValue:
 
 <Playground
-scope={{ HStack, PinInput, PinInputField }}
-code={`
+  scope={{ HStack, PinInput, PinInputField }}
+  code={`
 <HStack>
   <PinInput defaultValue="23">
     <PinInputField />
@@ -190,8 +186,8 @@ To customize the default input placeholder (`○`), pass the `placeholder` prop
 and set it to your desired placeholder.
 
 <Playground
-scope={{ HStack, PinInput, PinInputField }}
-code={`
+  scope={{ HStack, PinInput, PinInputField }}
+  code={`
 <HStack>
   <PinInput placeholder="🥳">
     <PinInputField />
@@ -211,8 +207,8 @@ pressed with focus on an empty input.
 To disable this behavior, set `manageFocus` to `false`
 
 <Playground
-scope={{ HStack, PinInput, PinInputField }}
-code={`
+  scope={{ HStack, PinInput, PinInputField }}
+  code={`
 <HStack>
   <PinInput manageFocus={false}>
     <PinInputField />
@@ -232,8 +228,8 @@ field receives a longer string by pasting into it, `PinInput` attempts to
 validate the string and fill the other inputs.
 
 <Playground
-scope={{ HStack, PinInput, PinInputField }}
-code={`
+  scope={{ HStack, PinInput, PinInputField }}
+  code={`
 <HStack>
   <PinInput>
     <PinInputField />

@@ -1,9 +1,9 @@
-import { Text } from "../src/index";
-import { Badge } from "~/badge";
-import { Stack } from "~/stack";
-import { Flex } from "~/flex";
-import { Avatar } from "~/avatar";
-import { Box } from "~/box";
+import { Text } from '../src/index';
+import { Badge } from '~/badge';
+import { Stack } from '~/stack';
+import { Flex } from '~/flex';
+import { Avatar } from '~/avatar';
+import { Box } from '~/box';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -11,25 +11,21 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Badge
+# Badge
 
 Badges are used to highlight an item's status for quick recognition.
-
-
-
-
 
 ## Import
 
 ```js
-import { Badge } from "@chakra-ui/react"
+import { Badge } from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ Badge }}
-code={`
+  scope={{ Badge }}
+  code={`
 <Badge>Default</Badge>
 `}
 />
@@ -41,8 +37,8 @@ can be any **color key** that exists in `theme.colors`.
 [Learn more about theming](/docs/theming/theme).
 
 <Playground
-scope={{ Stack, Badge }}
-code={`
+  scope={{ Stack, Badge }}
+  code={`
 <Stack direction="row">
   <Badge>Default</Badge>
   <Badge colorScheme="green">Success</Badge>
@@ -58,8 +54,8 @@ Pass the `variant` prop and set it to either `subtle`, `solid`, or `outline` to
 get a different style.
 
 <Playground
-scope={{ Stack, Badge }}
-code={`
+  scope={{ Stack, Badge }}
+  code={`
 <Stack direction="row">
   <Badge variant="outline" colorScheme="green">
     Default
@@ -77,8 +73,8 @@ code={`
 ## Composition
 
 <Playground
-scope={{ Flex, Avatar, Box, Text, Badge }}
-code={`
+  scope={{ Flex, Avatar, Box, Text, Badge }}
+  code={`
 <Flex>
   <Avatar src="https://bit.ly/sage-adebayo" />
   <Box ml="3">
@@ -97,8 +93,8 @@ code={`
 You can also change the size of the badge by passing the `fontSize` prop.
 
 <Playground
-scope={{ Text, Badge }}
-code={`
+  scope={{ Text, Badge }}
+  code={`
 <Text fontSize="xl" fontWeight="bold">
   Segun Adebayo
   <Badge ml="1" fontSize="0.8em" colorScheme="green">

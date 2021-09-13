@@ -1,9 +1,15 @@
-import { MdSettings } from "react-icons/md";
-  
-import { AddIcon } from "../src/index";
-import { HStack, TagLeftIcon, TagLabel, TagRightIcon, TagCloseButton } from "../src/index";
-import { Tag } from "~/tag";
-import { Avatar } from "~/avatar";
+import { MdSettings } from 'react-icons/md';
+
+import { AddIcon } from '../src/index';
+import {
+  HStack,
+  TagLeftIcon,
+  TagLabel,
+  TagRightIcon,
+  TagCloseButton,
+} from '../src/index';
+import { Tag } from '~/tag';
+import { Avatar } from '~/avatar';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -11,14 +17,10 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Tag
+# Tag
 
 `Tag` component is used for items that need to be labeled, categorized, or
 organized using keywords that describe them.
-
-
-
-
 
 ## Import
 
@@ -37,21 +39,21 @@ import {
   TagLeftIcon,
   TagRightIcon,
   TagCloseButton,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ Tag }}
-code={`
+  scope={{ Tag }}
+  code={`
 <Tag>Sample Tag</Tag>
 `}
 />
 
 <Playground
-scope={{ HStack, Tag }}
-code={`
+  scope={{ HStack, Tag }}
+  code={`
 <HStack spacing={4}>
   {["sm", "md", "lg"].map((size) => (
     <Tag size={size} key={size} variant="solid" colorScheme="teal">
@@ -65,8 +67,8 @@ code={`
 ## With left icon
 
 <Playground
-scope={{ HStack, Tag, TagLeftIcon, AddIcon, TagLabel }}
-code={`
+  scope={{ HStack, Tag, TagLeftIcon, AddIcon, TagLabel }}
+  code={`
 <HStack spacing={4}>
   {["sm", "md", "lg"].map((size) => (
     <Tag size={size} key={size} variant="subtle" colorScheme="cyan">
@@ -81,8 +83,8 @@ code={`
 ## With right icon
 
 <Playground
-scope={{ HStack, Tag, TagLabel, TagRightIcon, MdSettings }}
-code={`
+  scope={{ HStack, Tag, TagLabel, TagRightIcon, MdSettings }}
+  code={`
 <HStack spacing={4}>
   {["sm", "md", "lg"].map((size) => (
     <Tag size={size} key={size} variant="outline" colorScheme="blue">
@@ -97,8 +99,8 @@ code={`
 ## With close button
 
 <Playground
-scope={{ HStack, Tag, TagLabel, TagCloseButton }}
-code={`
+  scope={{ HStack, Tag, TagLabel, TagCloseButton }}
+  code={`
 <HStack spacing={4}>
   {["sm", "md", "lg"].map((size) => (
     <Tag
@@ -119,8 +121,8 @@ code={`
 ## With custom element
 
 <Playground
-scope={{ Tag, Avatar, TagLabel }}
-code={`
+  scope={{ Tag, Avatar, TagLabel }}
+  code={`
 <Tag size="lg" colorScheme="red" borderRadius="full">
   <Avatar
     src="https://bit.ly/sage-adebayo"

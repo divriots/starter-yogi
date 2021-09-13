@@ -1,5 +1,5 @@
-import { CircularProgressLabel } from "../src/index";
-import { CircularProgress } from "~/circular-progress";
+import { CircularProgressLabel } from '../src/index';
+import { CircularProgress } from '~/circular-progress';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -7,14 +7,10 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Circular Progress
+# Circular Progress
 
 The CircularProgress component is used to indicate the progress for determinate
 and indeterminate processes.
-
-
-
-
 
 - Determinate progress: fills the circular track with color, as the indicator
   moves from 0 to 360 degrees.
@@ -24,14 +20,14 @@ and indeterminate processes.
 ## Import
 
 ```js
-import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react"
+import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ CircularProgress }}
-code={`
+  scope={{ CircularProgress }}
+  code={`
 <CircularProgress value={80} />
 `}
 />
@@ -41,8 +37,8 @@ code={`
 You can add `size` prop to the progress bar to add a custom size.
 
 <Playground
-scope={{ CircularProgress }}
-code={`
+  scope={{ CircularProgress }}
+  code={`
 // Change the size to 120px
 <CircularProgress value={30} size="120px" />
 `}
@@ -55,8 +51,8 @@ You can add the `thickness` prop to update the thickness of the progress ring.
 > This defines the stroke width of the svg circle.
 
 <Playground
-scope={{ CircularProgress }}
-code={`
+  scope={{ CircularProgress }}
+  code={`
 <CircularProgress value={59} size="100px" thickness="4px" />
 `}
 />
@@ -67,8 +63,8 @@ You can add `color` prop to any progress bar to apply any color that exists in
 the theme.
 
 <Playground
-scope={{ CircularProgress }}
-code={`
+  scope={{ CircularProgress }}
+  code={`
 <CircularProgress value={30} color="orange.400" thickness="12px" />
 `}
 />
@@ -79,8 +75,8 @@ Chakra exports a `CircularProgressLabel` to help you add a label. Pass this
 component as `children` prop and you'll be able to render the value.
 
 <Playground
-scope={{ CircularProgress, CircularProgressLabel }}
-code={`
+  scope={{ CircularProgress, CircularProgressLabel }}
+  code={`
 <CircularProgress value={40} color="green.400">
   <CircularProgressLabel>40%</CircularProgressLabel>
 </CircularProgress>
@@ -93,8 +89,8 @@ Setting the progress to indeterminate means you're not able to determine the
 `value` upfront. Pass the `isIndeterminate` prop to activate this state.
 
 <Playground
-scope={{ CircularProgress }}
-code={`
+  scope={{ CircularProgress }}
+  code={`
 <CircularProgress isIndeterminate color="green.300" />
 `}
 />

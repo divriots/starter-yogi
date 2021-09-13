@@ -1,5 +1,5 @@
-import { Code } from "~/code";
-import { Stack } from "~/stack";
+import { Code } from '~/code';
+import { Stack } from '~/stack';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -7,27 +7,23 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Code
+# Code
 
 `Code` is a component used to display inline code. It is composed from the
 [Box](/docs/layout/box) component with a font family of `mono` for displaying
 code.
 
-
-
-
-
 ## Import
 
 ```js
-import { Code } from "@chakra-ui/react"
+import { Code } from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ Code }}
-code={`
+  scope={{ Code }}
+  code={`
 <Code>Hello world</Code>
 `}
 />
@@ -38,8 +34,8 @@ You can change the color scheme of the component by passing the `colorScheme`
 prop.
 
 <Playground
-scope={{ Stack, Code }}
-code={`
+  scope={{ Stack, Code }}
+  code={`
 <Stack direction="row">
   <Code children="console.log(welcome)" />
   <Code colorScheme="red" children="var chakra = 'awesome!'" />

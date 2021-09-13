@@ -1,7 +1,7 @@
-import { SkeletonCircle, SkeletonText } from "../src/index";
-import { Stack } from "~/stack";
-import { Skeleton } from "~/skeleton";
-import { Box } from "~/box";
+import { SkeletonCircle, SkeletonText } from '../src/index';
+import { Stack } from '~/stack';
+import { Skeleton } from '~/skeleton';
+import { Box } from '~/box';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -9,18 +9,14 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Skeleton
+# Skeleton
 
 `Skeleton` is used to display the loading state of some components.
-
-
-
-
 
 ## Import
 
 ```js
-import { Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react"
+import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react';
 ```
 
 ## Usage
@@ -28,8 +24,8 @@ import { Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react"
 You can use it as a standalone component.
 
 <Playground
-scope={{ Stack, Skeleton }}
-code={`
+  scope={{ Stack, Skeleton }}
+  code={`
 <Stack>
   <Skeleton height="20px" />
   <Skeleton height="20px" />
@@ -41,8 +37,8 @@ code={`
 Or to wrap another component to take the same height and width.
 
 <Playground
-scope={{ Skeleton }}
-code={`
+  scope={{ Skeleton }}
+  code={`
 <Skeleton>
   <div>contents wrapped</div>
   <div>won't be visible</div>
@@ -53,26 +49,26 @@ code={`
 Useful when fetching remote data.
 
 ```js live=false
-import { Box } from "@chakra-ui/react"
+import { Box } from '@chakra-ui/react';
 
 function Card() {
-  const { data, loading, error } = useRemoteData()
-  if (error) return <Box children="error" />
+  const { data, loading, error } = useRemoteData();
+  if (error) return <Box children="error" />;
   return (
     <Box>
       <Skeleton isLoaded={!loading}>
         <Heading>{data.title}</Heading>
       </Skeleton>
     </Box>
-  )
+  );
 }
 ```
 
 ### Circle and Text Skeleton
 
 <Playground
-scope={{ Box, SkeletonCircle, SkeletonText }}
-code={`
+  scope={{ Box, SkeletonCircle, SkeletonText }}
+  code={`
 <Box padding="6" boxShadow="lg" bg="white">
   <SkeletonCircle size="10" />
   <SkeletonText mt="4" noOfLines={4} spacing="4" />
@@ -85,8 +81,8 @@ code={`
 You can change the animation color with `startColor` and `endColor`.
 
 <Playground
-scope={{ Skeleton }}
-code={`
+  scope={{ Skeleton }}
+  code={`
 <Skeleton startColor="pink.500" endColor="orange.500" height="20px" />
 `}
 />
@@ -96,8 +92,8 @@ code={`
 You can prevent the skeleton from rendering using the `isLoaded` prop.
 
 <Playground
-scope={{ Skeleton }}
-code={`
+  scope={{ Skeleton }}
+  code={`
 <Skeleton isLoaded>
   <span>Chakra ui is cool</span>
 </Skeleton>

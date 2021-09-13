@@ -1,7 +1,12 @@
-import { AlertIcon, AlertTitle, AlertDescription, CloseButton } from "../src/index";
-import { Alert } from "~/alert";
-import { Stack } from "~/stack";
-import { Box } from "~/box";
+import {
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+  CloseButton,
+} from '../src/index';
+import { Alert } from '~/alert';
+import { Stack } from '~/stack';
+import { Box } from '~/box';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -9,13 +14,9 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Alert
+# Alert
 
 Alerts are used to communicate a state that affects a system, feature or page.
-
-
-
-
 
 ## Import
 
@@ -34,14 +35,14 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ Alert, AlertIcon, AlertTitle, AlertDescription, CloseButton }}
-code={`
+  scope={{ Alert, AlertIcon, AlertTitle, AlertDescription, CloseButton }}
+  code={`
 <Alert status="error">
   <AlertIcon />
   <AlertTitle mr={2}>Your browser is outdated!</AlertTitle>
@@ -58,8 +59,8 @@ color scheme and icon used. Alert supports `error`, `success`, `warning`, and
 `info` statuses.
 
 <Playground
-scope={{ Stack, Alert, AlertIcon }}
-code={`
+  scope={{ Stack, Alert, AlertIcon }}
+  code={`
 <Stack spacing={3}>
   <Alert status="error">
     <AlertIcon />
@@ -87,8 +88,8 @@ code={`
 `subtle`, `solid`, `left-accent` or `top-accent`.
 
 <Playground
-scope={{ Stack, Alert, AlertIcon }}
-code={`
+  scope={{ Stack, Alert, AlertIcon }}
+  code={`
 <Stack spacing={3}>
   <Alert status="success" variant="subtle">
     <AlertIcon />
@@ -116,8 +117,8 @@ code={`
 kinds of layouts. Here's an example of a custom alert style and layout:
 
 <Playground
-scope={{ Alert, AlertIcon, AlertTitle, AlertDescription }}
-code={`
+  scope={{ Alert, AlertIcon, AlertTitle, AlertDescription }}
+  code={`
 <Alert
   status="success"
   variant="subtle"
@@ -142,8 +143,8 @@ code={`
 alert with wrapping description text:
 
 <Playground
-scope={{ Alert, AlertIcon, Box, AlertTitle, AlertDescription, CloseButton }}
-code={`
+  scope={{ Alert, AlertIcon, Box, AlertTitle, AlertDescription, CloseButton }}
+  code={`
 <Alert status="success">
   <AlertIcon />
   <Box flex="1">

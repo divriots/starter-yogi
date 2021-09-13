@@ -1,8 +1,7 @@
-import { MdCheckCircle, MdSettings } from "react-icons/md";
-  
+import { MdCheckCircle, MdSettings } from 'react-icons/md';
 
-import { UnorderedList, ListItem, OrderedList, ListIcon } from "../src/index";
-import { List } from "~/list";
+import { UnorderedList, ListItem, OrderedList, ListIcon } from '../src/index';
+import { List } from '~/list';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -10,26 +9,28 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  List
+# List
 
 `List` component is used to display list items. It renders a `<ul>` element by
 default.
 
-
-
-
-
 ## Import
 
 ```js
-import { List, ListItem, ListIcon, OrderedList, UnorderedList } from "@chakra-ui/react"
+import {
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
+} from '@chakra-ui/react';
 ```
 
 ## Unordered List
 
 <Playground
-scope={{ UnorderedList, ListItem }}
-code={`
+  scope={{ UnorderedList, ListItem }}
+  code={`
 <UnorderedList>
   <ListItem>Lorem ipsum dolor sit amet</ListItem>
   <ListItem>Consectetur adipiscing elit</ListItem>
@@ -42,8 +43,8 @@ code={`
 ## Ordered List
 
 <Playground
-scope={{ OrderedList, ListItem }}
-code={`
+  scope={{ OrderedList, ListItem }}
+  code={`
 <OrderedList>
   <ListItem>Lorem ipsum dolor sit amet</ListItem>
   <ListItem>Consectetur adipiscing elit</ListItem>
@@ -60,8 +61,8 @@ name of the icon or use custom icons. The size of the icon is relative to the
 font size of the list item.
 
 <Playground
-scope={{ List, ListItem, ListIcon, MdCheckCircle, MdSettings }}
-code={`
+  scope={{ List, ListItem, ListIcon, MdCheckCircle, MdSettings }}
+  code={`
 <List spacing={3}>
   <ListItem>
     <ListIcon as={MdCheckCircle} color="green.500" />

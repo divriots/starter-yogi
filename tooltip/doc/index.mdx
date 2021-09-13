@@ -1,8 +1,8 @@
-import { PhoneIcon, SearchIcon } from "../src/index";
-import { VStack, HStack, WrapItem } from "../src/index";
-import { Tooltip } from "~/tooltip";
-import { Button } from "~/button";
-import { Wrap } from "~/wrap";
+import { PhoneIcon, SearchIcon } from '../src/index';
+import { VStack, HStack, WrapItem } from '../src/index';
+import { Tooltip } from '~/tooltip';
+import { Button } from '~/button';
+import { Wrap } from '~/wrap';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -10,15 +10,11 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Tooltip
+# Tooltip
 
 A tooltip is a brief, informative message that appears when a user interacts
 with an element. Tooltips are usually initiated in one of two ways: through a
 mouse-hover gesture or through a keyboard-hover gesture.
-
-
-
-
 
 The `Tooltip` component follows the
 [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/#tooltip) Tooltip Pattern.
@@ -26,7 +22,7 @@ The `Tooltip` component follows the
 ## Import
 
 ```js
-import { Tooltip } from "@chakra-ui/react"
+import { Tooltip } from '@chakra-ui/react';
 ```
 
 ## Usage
@@ -38,8 +34,8 @@ If the `children` of Tooltip is a `string`, we wrap with in a `span` with
 > functional component accepts a `ref` using `forwardRef`.
 
 <Playground
-scope={{ Tooltip }}
-code={`
+  scope={{ Tooltip }}
+  code={`
 <Tooltip label="Hey, I'm here!" aria-label="A tooltip">
   Hover me
 </Tooltip>
@@ -49,8 +45,8 @@ code={`
 ### With an icon
 
 <Playground
-scope={{ Tooltip, PhoneIcon }}
-code={`
+  scope={{ Tooltip, PhoneIcon }}
+  code={`
 <Tooltip label="Phone number" fontSize="md">
   <PhoneIcon />
 </Tooltip>
@@ -64,8 +60,8 @@ code={`
 ### With arrow
 
 <Playground
-scope={{ Tooltip, SearchIcon }}
-code={`
+  scope={{ Tooltip, SearchIcon }}
+  code={`
 <Tooltip hasArrow label="Search places" bg="gray.300" color="black">
   <SearchIcon />
 </Tooltip>
@@ -79,8 +75,8 @@ when you focus or hover on the element, and will hide when you blur or move
 cursor out of the element.
 
 <Playground
-scope={{ Tooltip, Button }}
-code={`
+  scope={{ Tooltip, Button }}
+  code={`
 <Tooltip hasArrow label="Search places" bg="red.600">
   <Button>Button</Button>
 </Tooltip>
@@ -90,8 +86,8 @@ code={`
 ### Disabled Tooltip
 
 <Playground
-scope={{ Tooltip, SearchIcon }}
-code={`
+  scope={{ Tooltip, SearchIcon }}
+  code={`
 <Tooltip isDisabled>
   <SearchIcon />
 </Tooltip>
@@ -103,8 +99,8 @@ code={`
 Using the `placement` prop you can adjust where your tooltip will be displayed.
 
 <Playground
-scope={{ VStack, HStack, Tooltip, Button }}
-code={`
+  scope={{ VStack, HStack, Tooltip, Button }}
+  code={`
 <VStack spacing={6}>
   <HStack spacing={6}>
     <Tooltip label="Auto start" placement="auto-start">
@@ -168,8 +164,8 @@ code={`
 ## More examples
 
 <Playground
-scope={{ Wrap, WrapItem, Tooltip, Button }}
-code={`
+  scope={{ Wrap, WrapItem, Tooltip, Button }}
+  code={`
 <Wrap spacing={6}>
   <WrapItem>
     <Tooltip label="I close on click">

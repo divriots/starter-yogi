@@ -1,9 +1,9 @@
-import { AiOutlineUser } from "react-icons/ai";  
+import { AiOutlineUser } from 'react-icons/ai';
 
-import { WrapItem, AvatarGroup, AvatarBadge } from "../src/index";
-import { Wrap } from "~/wrap";
-import { Avatar } from "~/avatar";
-import { Stack } from "~/stack";
+import { WrapItem, AvatarGroup, AvatarBadge } from '../src/index';
+import { Wrap } from '~/wrap';
+import { Avatar } from '~/avatar';
+import { Stack } from '~/stack';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -11,14 +11,10 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Avatar
+# Avatar
 
 The `Avatar` component is used to represent a user, and displays the profile
 picture, initials or fallback icon.
-
-
-
-
 
 ## Import
 
@@ -30,14 +26,14 @@ Chakra UI exports 3 avatar-related components:
 - `AvatarGroup`: A wrapper to stack multiple Avatars together.
 
 ```js
-import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react"
+import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ Wrap, WrapItem, Avatar }}
-code={`
+  scope={{ Wrap, WrapItem, Avatar }}
+  code={`
 <Wrap>
   <WrapItem>
     <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
@@ -69,8 +65,8 @@ code={`
 The `Avatar` component comes in 7 sizes.
 
 <Playground
-scope={{ Wrap, WrapItem, Avatar }}
-code={`
+  scope={{ Wrap, WrapItem, Avatar }}
+  code={`
 <Wrap>
   <WrapItem>
     <Avatar size="2xs" name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
@@ -114,8 +110,8 @@ If there is an error loading the `src` of the avatar, there are 2 fallbacks:
 - If there's no `name` prop, we use a default avatar.
 
 <Playground
-scope={{ Stack, Avatar }}
-code={`
+  scope={{ Stack, Avatar }}
+  code={`
 <Stack direction="row">
   <Avatar name="Oshigaki Kisame" src="https://bit.ly/broken-link" />
   <Avatar name="Sasuke Uchiha" src="https://bit.ly/broken-link" />
@@ -133,8 +129,8 @@ match your design requirements.
 - To update the icon svg, pass the `icon` prop.
 
 <Playground
-scope={{ AvatarGroup, Avatar, AiOutlineUser }}
-code={`
+  scope={{ AvatarGroup, Avatar, AiOutlineUser }}
+  code={`
 <AvatarGroup spacing="1rem">
   <Avatar bg="red.500" icon={<AiOutlineUser fontSize="1.5rem" />} />
   <Avatar bg="teal.500" />
@@ -149,8 +145,8 @@ avatar. We call this a **badge**. Here's an example that shows if the user is
 online:
 
 <Playground
-scope={{ Stack, Avatar, AvatarBadge }}
-code={`
+  scope={{ Stack, Avatar, AvatarBadge }}
+  code={`
 <Stack direction="row" spacing={4}>
   <Avatar>
     <AvatarBadge boxSize="1.25em" bg="green.500" />
@@ -177,8 +173,8 @@ component.
 - To adjust the spacing between the avatars, pass the `spacing` prop.
 
 <Playground
-scope={{ AvatarGroup, Avatar }}
-code={`
+  scope={{ AvatarGroup, Avatar }}
+  code={`
 <AvatarGroup size="md" max={2}>
   <Avatar name="Ryan Florence" src="https://bit.ly/ryan-florence" />
   <Avatar name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />

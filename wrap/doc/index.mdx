@@ -1,6 +1,6 @@
-import { WrapItem } from "../src/index";
-import { Wrap } from "~/wrap";
-import { Center } from "~/center";
+import { WrapItem } from '../src/index';
+import { Wrap } from '~/wrap';
+import { Center } from '~/center';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -8,7 +8,7 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Wrap
+# Wrap
 
 Wrap is a layout component that adds a defined space between its children. It
 wraps its children automatically if there isn't enough space to fit any more in
@@ -17,14 +17,10 @@ the same row.
 Think of it as a smarter `flex-wrap` with `spacing` support. It works really
 well with things like dialog buttons, tags, and chips.
 
-
-
-
-
 ## Import
 
 ```js
-import { Wrap, WrapItem } from "@chakra-ui/react"
+import { Wrap, WrapItem } from '@chakra-ui/react';
 ```
 
 - **Wrap**: Wrap composes the `Box` component and renders a `<ul>` tag
@@ -36,8 +32,8 @@ import { Wrap, WrapItem } from "@chakra-ui/react"
 In the example below, you see that the last `Box` wrapped to the next line.
 
 <Playground
-scope={{ Wrap, WrapItem, Center }}
-code={`
+  scope={{ Wrap, WrapItem, Center }}
+  code={`
 <Wrap>
   <WrapItem>
     <Center w="180px" h="80px" bg="red.200">
@@ -71,8 +67,8 @@ it wraps.
 > Pro Tip: You can pass responsive values for the spacing.
 
 <Playground
-scope={{ Wrap, WrapItem, Center }}
-code={`
+  scope={{ Wrap, WrapItem, Center }}
+  code={`
 <Wrap spacing="30px">
   <WrapItem>
     <Center w="180px" h="80px" bg="red.200">
@@ -108,8 +104,8 @@ code={`
 Pass the `align` prop to change the alignment of the child along the cross axis.
 
 <Playground
-scope={{ Wrap, WrapItem, Center }}
-code={`
+  scope={{ Wrap, WrapItem, Center }}
+  code={`
 <Wrap spacing="30px" align="center">
   <WrapItem>
     <Center w="180px" h="80px" bg="red.200">
@@ -144,8 +140,8 @@ Pass the `justify` prop to change the alignment of the child along the main
 axis.
 
 <Playground
-scope={{ Wrap, WrapItem, Center }}
-code={`
+  scope={{ Wrap, WrapItem, Center }}
+  code={`
 <Wrap spacing="30px" justify="center">
   <WrapItem>
     <Center w="180px" h="80px" bg="red.200">

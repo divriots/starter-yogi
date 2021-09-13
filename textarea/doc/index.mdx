@@ -1,7 +1,7 @@
-import { Text, RadioGroup } from "../src/index";
-import { Textarea } from "~/textarea";
-import { Stack } from "~/stack";
-import { Radio } from "~/radio";
+import { Text, RadioGroup } from '../src/index';
+import { Textarea } from '~/textarea';
+import { Stack } from '~/stack';
+import { Radio } from '~/radio';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -9,25 +9,21 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Textarea
+# Textarea
 
 The `Textarea` component allows you to easily create multi-line text inputs.
-
-
-
-
 
 ## Import
 
 ```js
-import { Textarea } from "@chakra-ui/react"
+import { Textarea } from '@chakra-ui/react';
 ```
 
 ### Usage
 
 <Playground
-scope={{ Textarea }}
-code={`
+  scope={{ Textarea }}
+  code={`
 <Textarea placeholder="Here is a sample placeholder" />
 `}
 />
@@ -35,8 +31,8 @@ code={`
 ### Controlled Textarea
 
 <Playground
-scope={{ Text, Textarea }}
-code={`
+  scope={{ Text, Textarea }}
+  code={`
 function Example() {
   let [value, setValue] = React.useState("")
   let handleInputChange = (e) => {
@@ -63,8 +59,8 @@ function Example() {
 You can add `resize` prop to change the `Textarea` resize behavior.
 
 <Playground
-scope={{ RadioGroup, Stack, Radio, Textarea }}
-code={`
+  scope={{ RadioGroup, Stack, Radio, Textarea }}
+  code={`
 function ResizeExample() {
   const [resize, setResize] = React.useState("horizontal")
   return (
@@ -90,8 +86,8 @@ function ResizeExample() {
 ### Disabled Textarea
 
 <Playground
-scope={{ Textarea }}
-code={`
+  scope={{ Textarea }}
+  code={`
 <Textarea isDisabled placeholder="Here is a sample placeholder" />
 `}
 />
@@ -99,8 +95,8 @@ code={`
 ### Invalid Textarea
 
 <Playground
-scope={{ Textarea }}
-code={`
+  scope={{ Textarea }}
+  code={`
 <Textarea isInvalid placeholder="Here is a sample placeholder" />
 `}
 />

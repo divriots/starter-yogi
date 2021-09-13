@@ -1,7 +1,12 @@
-import { MinusIcon, AddIcon } from "../src/index";
-import { AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "../src/index";
-import { Accordion } from "~/accordion";
-import { Box } from "~/box";
+import { MinusIcon, AddIcon } from '../src/index';
+import {
+  AccordionItem,
+  AccordionButton,
+  AccordionIcon,
+  AccordionPanel,
+} from '../src/index';
+import { Accordion } from '~/accordion';
+import { Box } from '~/box';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -9,14 +14,10 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Accordion
+# Accordion
 
 Accordions display a list of high-level options that can expand/collapse to
 reveal more information.
-
-
-
-
 
 ## Import
 
@@ -38,7 +39,7 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Usage
@@ -50,8 +51,15 @@ expanding another.
 the `up` and `down` arrow keys will move focus between accordion buttons.
 
 <Playground
-scope={{ Accordion, AccordionItem, AccordionButton, Box, AccordionIcon, AccordionPanel }}
-code={`
+  scope={{
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    Box,
+    AccordionIcon,
+    AccordionPanel,
+  }}
+  code={`
 <Accordion>
   <AccordionItem>
     <h2>
@@ -98,8 +106,15 @@ items to be expanded at once.
 > array.
 
 <Playground
-scope={{ Accordion, AccordionItem, AccordionButton, Box, AccordionIcon, AccordionPanel }}
-code={`
+  scope={{
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    Box,
+    AccordionIcon,
+    AccordionPanel,
+  }}
+  code={`
 <Accordion defaultIndex={[0]} allowMultiple>
   <AccordionItem>
     <h2>
@@ -142,8 +157,15 @@ code={`
 If you set `allowToggle` to `true`, any expanded item may be collapsed again.
 
 <Playground
-scope={{ Accordion, AccordionItem, AccordionButton, Box, AccordionIcon, AccordionPanel }}
-code={`
+  scope={{
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    Box,
+    AccordionIcon,
+    AccordionPanel,
+  }}
+  code={`
 <Accordion allowToggle>
   <AccordionItem>
     <h2>
@@ -188,8 +210,15 @@ depending on the state of the `AccordionItem`. Use the style prop `_expanded` to
 style this state.
 
 <Playground
-scope={{ Accordion, AccordionItem, AccordionButton, Box, AccordionIcon, AccordionPanel }}
-code={`
+  scope={{
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    Box,
+    AccordionIcon,
+    AccordionPanel,
+  }}
+  code={`
 <Accordion>
   <AccordionItem>
     <h2>
@@ -217,8 +246,17 @@ If you need access to the internal state of each accordion item, you can use a
 render prop. It provides 2 internal state props: `isExpanded` and `isDisabled`.
 
 <Playground
-scope={{ Accordion, AccordionItem, AccordionButton, Box, AccordionIcon, AccordionPanel, MinusIcon, AddIcon }}
-code={`
+  scope={{
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    Box,
+    AccordionIcon,
+    AccordionPanel,
+    MinusIcon,
+    AddIcon,
+  }}
+  code={`
 <Accordion allowMultiple>
   <AccordionItem>
     <h2>

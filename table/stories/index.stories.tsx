@@ -1,16 +1,25 @@
-import * as React from "react"
-import { Table } from "../src/index"
-import { TableCaption, TableContainer, TableProps, Tbody, Td, Th, Thead, Tr } from "../src/index"
+import * as React from 'react';
+import { Table } from '../src/index';
+import {
+  TableCaption,
+  TableContainer,
+  TableProps,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+} from '../src/index';
 
-import { themeDecorator } from "../../story-layout/src/index";
+import { themeDecorator } from '../../story-layout/src/index';
 
 export default {
-  title: "Table / Simple",
-decorators: [themeDecorator],
+  title: 'Table / Simple',
+  decorators: [themeDecorator],
   parameters: {
     layout: 'centered',
   },
-}
+};
 
 const SimpleTable = (props: TableProps) => (
   <Table {...props}>
@@ -87,20 +96,20 @@ const SimpleTable = (props: TableProps) => (
       </Tr>
     </Tbody>
   </Table>
-)
+);
 
-export const simpleSM = () => <SimpleTable size="sm" />
-export const simpleMD = () => <SimpleTable size="md" />
-export const simpleLG = () => <SimpleTable size="lg" />
+export const simpleSM = () => <SimpleTable size="sm" />;
+export const simpleMD = () => <SimpleTable size="md" />;
+export const simpleLG = () => <SimpleTable size="lg" />;
 
-export const stripedSM = () => <SimpleTable variant="striped" size="sm" />
-export const stripedMD = () => <SimpleTable variant="striped" size="md" />
-export const stripedLG = () => <SimpleTable variant="striped" size="lg" />
+export const stripedSM = () => <SimpleTable variant="striped" size="sm" />;
+export const stripedMD = () => <SimpleTable variant="striped" size="md" />;
+export const stripedLG = () => <SimpleTable variant="striped" size="lg" />;
 
-export const unstyled = () => <SimpleTable variant="unstyled" size="none" />
+export const unstyled = () => <SimpleTable variant="unstyled" size="none" />;
 
 export const withOverflow = () => (
-  <TableContainer maxW={{ base: "400px", lg: "unset" }}>
+  <TableContainer maxW={{ base: '400px', lg: 'unset' }}>
     <SimpleTable />
   </TableContainer>
-)
+);

@@ -4,24 +4,24 @@ import {
   EmailIcon,
   PhoneIcon,
   SearchIcon,
-} from "../src/index"
-import { Container, HStack, Stack } from "../src/index"
-import * as React from "react"
-import { FaFacebook, FaTwitter } from "react-icons/fa"
-import { MdBuild, MdCall } from "react-icons/md"
-import { BeatLoader } from "react-spinners"
-import { Button } from "../src/index"
-import { ButtonGroup, IconButton } from "../src/index"
+} from '../src/index';
+import { Container, HStack, Stack } from '../src/index';
+import * as React from 'react';
+import { FaFacebook, FaTwitter } from 'react-icons/fa';
+import { MdBuild, MdCall } from 'react-icons/md';
+import { BeatLoader } from 'react-spinners';
+import { Button } from '../src/index';
+import { ButtonGroup, IconButton } from '../src/index';
 
-import { themeDecorator } from "../../story-layout/src/index";
+import { themeDecorator } from '../../story-layout/src/index';
 
 export default {
-  title: "Button",
+  title: 'Button',
   decorators: [themeDecorator],
   parameters: {
     layout: 'centered',
   },
-}
+};
 
 export const basic = () => (
   <>
@@ -36,7 +36,7 @@ export const basic = () => (
     <Button colorScheme="orange">Button</Button>
     <Button colorScheme="yellow">Button</Button>
   </>
-)
+);
 
 export const outlines = () => (
   <>
@@ -68,7 +68,7 @@ export const outlines = () => (
       Button
     </Button>
   </>
-)
+);
 
 export const withVariants = () => (
   <HStack spacing="24px">
@@ -85,7 +85,7 @@ export const withVariants = () => (
       Button
     </Button>
   </HStack>
-)
+);
 
 export const withSizes = () => (
   <HStack>
@@ -102,7 +102,7 @@ export const withSizes = () => (
       Button
     </Button>
   </HStack>
-)
+);
 
 export const WithIcon = () => (
   <Stack direction="row" spacing={4}>
@@ -117,7 +117,7 @@ export const WithIcon = () => (
       Call us
     </Button>
   </Stack>
-)
+);
 
 export const withReactIcons = () => (
   <Stack direction="row" spacing={4} align="center">
@@ -128,7 +128,7 @@ export const withReactIcons = () => (
       Call us
     </Button>
   </Stack>
-)
+);
 
 export const WithLoading = () => (
   <Stack direction="row" spacing={4} align="center">
@@ -153,7 +153,7 @@ export const WithLoading = () => (
       Submit
     </Button>
   </Stack>
-)
+);
 
 export const WithLoadingSpinnerPlacement = () => (
   <Stack direction="row" spacing={4} align="center">
@@ -176,7 +176,7 @@ export const WithLoadingSpinnerPlacement = () => (
       Continue
     </Button>
   </Stack>
-)
+);
 
 export const withDisabled = () => (
   <HStack spacing="24px">
@@ -193,7 +193,7 @@ export const withDisabled = () => (
       Button
     </Button>
   </HStack>
-)
+);
 
 export const customComposition = () => (
   <Button
@@ -205,7 +205,7 @@ export const customComposition = () => (
   >
     Button
   </Button>
-)
+);
 
 export const iconButton = () => (
   <Stack direction="row">
@@ -221,14 +221,14 @@ export const iconButton = () => (
       <PhoneIcon />
     </IconButton>
   </Stack>
-)
+);
 
 export const WithButtonGroup = () => (
   <ButtonGroup variant="outline">
     <Button colorScheme="blue">Save</Button>
     <Button>Cancel</Button>
   </ButtonGroup>
-)
+);
 
 export const attachedButtons = () => (
   <ButtonGroup size="sm" isAttached variant="outline">
@@ -239,7 +239,7 @@ export const attachedButtons = () => (
       icon={<ChevronDownIcon />}
     />
   </ButtonGroup>
-)
+);
 
 export const socialButton = () => (
   <Stack direction="row">
@@ -250,4 +250,4 @@ export const socialButton = () => (
       Twitter
     </Button>
   </Stack>
-)
+);

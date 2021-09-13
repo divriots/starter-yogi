@@ -1,8 +1,8 @@
-import { MdPhone } from "react-icons/md";
-  
-import { SearchIcon, PhoneIcon, EmailIcon } from "../src/index";
+import { MdPhone } from 'react-icons/md';
 
-import { IconButton } from "~/icon-button";
+import { SearchIcon, PhoneIcon, EmailIcon } from '../src/index';
+
+import { IconButton } from '~/icon-button';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -10,13 +10,9 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Icon Button
+# Icon Button
 
 IconButton composes the `Button` component except that it renders only an icon.
-
-
-
-
 
 Since `IconButton` only renders an icon, you must pass the `aria-label` prop, so
 screen readers can give meaning to the button.
@@ -24,14 +20,14 @@ screen readers can give meaning to the button.
 ## Import
 
 ```js
-import { IconButton } from "@chakra-ui/react"
+import { IconButton } from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ IconButton, SearchIcon }}
-code={`
+  scope={{ IconButton, SearchIcon }}
+  code={`
 <IconButton aria-label="Search database" icon={<SearchIcon />} />
 `}
 />
@@ -42,8 +38,8 @@ The `IconButton` component accepts most of the props from the `Button`
 component, so we can use `colorScheme` prop to change the color of the button.
 
 <Playground
-scope={{ IconButton, SearchIcon }}
-code={`
+  scope={{ IconButton, SearchIcon }}
+  code={`
 <IconButton
   colorScheme="blue"
   aria-label="Search database"
@@ -58,8 +54,8 @@ Like the `Button component`, pass the `size` prop to change the size of the
 button.
 
 <Playground
-scope={{ IconButton, PhoneIcon }}
-code={`
+  scope={{ IconButton, PhoneIcon }}
+  code={`
 <IconButton
   colorScheme="teal"
   aria-label="Call Segun"
@@ -75,8 +71,8 @@ Like the `Button` component, pass the `variant` prop to change the style of the
 button.
 
 <Playground
-scope={{ IconButton, EmailIcon }}
-code={`
+  scope={{ IconButton, EmailIcon }}
+  code={`
 <IconButton
   variant="outline"
   colorScheme="teal"
@@ -93,8 +89,8 @@ You can also use icons from popular libraries like
 the button.
 
 <Playground
-scope={{ IconButton, MdPhone }}
-code={`
+  scope={{ IconButton, MdPhone }}
+  code={`
 <IconButton
   variant="outline"
   colorScheme="teal"

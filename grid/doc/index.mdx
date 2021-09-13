@@ -1,6 +1,6 @@
-import { GridItem } from "../src/index";
-import { Grid } from "~/grid";
-import { Box } from "~/box";
+import { GridItem } from '../src/index';
+import { Grid } from '~/grid';
+import { Box } from '~/box';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -8,19 +8,15 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Grid
+# Grid
 
 A primitive useful for grid layouts. Grid is `Box` with `display: grid` and it
 comes with helpful style shorthand. It renders a `div` element.
 
-
-
-
-
 ## Import
 
 ```js
-import { Grid, GridItem } from "@chakra-ui/react"
+import { Grid, GridItem } from '@chakra-ui/react';
 ```
 
 - **Grid:** The main wrapper with `display: grid`.
@@ -33,8 +29,8 @@ Here's an example of using grid template columns with the `grid` component, and
 applying a `gap` or space between the grid items.
 
 <Playground
-scope={{ Grid, Box }}
-code={`
+  scope={{ Grid, Box }}
+  code={`
 <Grid templateColumns="repeat(5, 1fr)" gap={6}>
   <Box w="100%" h="10" bg="blue.500" />
   <Box w="100%" h="10" bg="blue.500" />
@@ -54,8 +50,8 @@ also pass the `rowSpan` component to span across rows. You also need to specify
 the `templateColumns` and `templateRows`.
 
 <Playground
-scope={{ Grid, GridItem }}
-code={`
+  scope={{ Grid, GridItem }}
+  code={`
 <Grid
   h="200px"
   templateRows="repeat(2, 1fr)"
@@ -76,8 +72,8 @@ Pass the `colStart` and `colEnd` prop to `GridItem` component to make an element
 start or end at the `nth` grid position.
 
 <Playground
-scope={{ Grid, GridItem }}
-code={`
+  scope={{ Grid, GridItem }}
+  code={`
 <Grid templateColumns="repeat(5, 1fr)" gap={4}>
   <GridItem colSpan={2} h="10" bg="tomato" />
   <GridItem colStart={4} colEnd={6} h="10" bg="papayawhip" />

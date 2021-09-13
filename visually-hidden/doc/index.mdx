@@ -1,8 +1,8 @@
-import { CheckIcon } from "../src/index";
-import { Heading } from "../src/index";
-import { Button } from "~/button";
-import { VisuallyHidden } from "~/visually-hidden";
-import { Box } from "~/box";
+import { CheckIcon } from '../src/index';
+import { Heading } from '../src/index';
+import { Button } from '~/button';
+import { VisuallyHidden } from '~/visually-hidden';
+import { Box } from '~/box';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -10,26 +10,22 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  VisuallyHidden
+# VisuallyHidden
 
 VisuallyHidden is a common technique used in web accessibility to hide content
 from the visual client, but keep it readable for screen readers.
 
-
-
-
-
 ## Import
 
 ```js
-import { VisuallyHidden } from "@chakra-ui/react"
+import { VisuallyHidden } from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ Button, VisuallyHidden, CheckIcon }}
-code={`
+  scope={{ Button, VisuallyHidden, CheckIcon }}
+  code={`
 function Example() {
   return (
     <Button>
@@ -44,8 +40,8 @@ function Example() {
 Another Example
 
 <Playground
-scope={{ Box, Heading, VisuallyHidden }}
-code={`
+  scope={{ Box, Heading, VisuallyHidden }}
+  code={`
 function Example() {
   return (
     <Box>

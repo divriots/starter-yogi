@@ -1,9 +1,18 @@
-import { FormLabel, FormHelperText, RadioGroup, HStack, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper } from "../src/index";
-import { FormControl } from "~/form-control";
-import { Input } from "~/input";
-import { Radio } from "~/radio";
-import { Select } from "~/select";
-import { NumberInput } from "~/number-input";
+import {
+  FormLabel,
+  FormHelperText,
+  RadioGroup,
+  HStack,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+} from '../src/index';
+import { FormControl } from '~/form-control';
+import { Input } from '~/input';
+import { Radio } from '~/radio';
+import { Select } from '~/select';
+import { NumberInput } from '~/number-input';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -11,17 +20,13 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Form Control
+# Form Control
 
 FormControl provides context such as `isInvalid`, `isDisabled`, and `isRequired`
 to form elements.
 
 It follows the [WAI specifications](https://www.w3.org/WAI/tutorials/forms/) for
 forms.
-
-
-
-
 
 ## Import
 
@@ -31,14 +36,14 @@ import {
   FormLabel,
   FormErrorMessage,
   FormHelperText,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ FormControl, FormLabel, Input, FormHelperText }}
-code={`
+  scope={{ FormControl, FormLabel, Input, FormHelperText }}
+  code={`
 <FormControl id="email">
   <FormLabel>Email address</FormLabel>
   <Input type="email" />
@@ -50,8 +55,8 @@ code={`
 ### Sample usage for a radio or checkbox group
 
 <Playground
-scope={{ FormControl, FormLabel, RadioGroup, HStack, Radio, FormHelperText }}
-code={`
+  scope={{ FormControl, FormLabel, RadioGroup, HStack, Radio, FormHelperText }}
+  code={`
 <FormControl as="fieldset">
   <FormLabel as="legend">Favorite Naruto Character</FormLabel>
   <RadioGroup defaultValue="Itachi">
@@ -73,8 +78,8 @@ By passing the `isRequired` props, the `Input` field has `aria-required` set to
 `true`, and the `FormLabel` will show a red asterisk.
 
 <Playground
-scope={{ FormControl, FormLabel, Input }}
-code={`
+  scope={{ FormControl, FormLabel, Input }}
+  code={`
 <FormControl id="first-name" isRequired>
   <FormLabel>First name</FormLabel>
   <Input placeholder="First name" />
@@ -85,8 +90,8 @@ code={`
 ### Select Example
 
 <Playground
-scope={{ FormControl, FormLabel, Select }}
-code={`
+  scope={{ FormControl, FormLabel, Select }}
+  code={`
 <FormControl id="country">
   <FormLabel>Country</FormLabel>
   <Select placeholder="Select country">
@@ -100,8 +105,16 @@ code={`
 ### Number Input Example
 
 <Playground
-scope={{ FormControl, FormLabel, NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper }}
-code={`
+  scope={{
+    FormControl,
+    FormLabel,
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+  }}
+  code={`
 <FormControl id="amount">
   <FormLabel>Amount</FormLabel>
   <NumberInput max={50} min={10}>

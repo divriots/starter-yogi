@@ -1,17 +1,16 @@
-import { Container, Stack } from "../src/index"
-import * as React from "react"
-import { Select } from "../src/index"
+import { Container, Stack } from '../src/index';
+import * as React from 'react';
+import { Select } from '../src/index';
 
-
-import { themeDecorator } from "../../story-layout/src/index";
+import { themeDecorator } from '../../story-layout/src/index';
 
 export default {
-  title: "Select",
+  title: 'Select',
   decorators: [themeDecorator],
   parameters: {
     layout: 'centered',
   },
-}
+};
 
 export const BasicUsage = () => (
   <Select color="pink.500" placeholder="Select option">
@@ -19,7 +18,7 @@ export const BasicUsage = () => (
     <option value="Option 2">Option 2</option>
     <option value="Option 3">Option 3</option>
   </Select>
-)
+);
 
 export const SelectStates = () => (
   <Stack>
@@ -35,7 +34,7 @@ export const SelectStates = () => (
       <option value="Option 3">Option 3</option>
     </Select>
   </Stack>
-)
+);
 
 export const SelectVariants = () => (
   <Stack>
@@ -63,21 +62,21 @@ export const SelectVariants = () => (
       <option value="Option 3">Option 3</option>
     </Select>
   </Stack>
-)
+);
 
 export const SelectSizes = () => (
   <Stack spacing={4}>
-    {["xs", "sm", "md", "lg"].map((size) => (
+    {['xs', 'sm', 'md', 'lg'].map((size) => (
       <Select placeholder={`${size} size`} size={size} key={size} />
     ))}
   </Stack>
-)
+);
 
 export const SelectControlled = () => {
-  const [value, setValue] = React.useState("")
+  const [value, setValue] = React.useState('');
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setValue(event.target.value)
-  }
+    setValue(event.target.value);
+  };
 
   return (
     <Select
@@ -89,8 +88,8 @@ export const SelectControlled = () => {
       <option value="Option 2">Option 2</option>
       <option value="Option 3">Option 3</option>
     </Select>
-  )
-}
+  );
+};
 
 const UpDownIcon = (props: any) => (
   <svg viewBox="0 0 6 15" fill="none" stroke="currentColor" {...props}>
@@ -101,11 +100,11 @@ const UpDownIcon = (props: any) => (
       strokeLinejoin="round"
     />
   </svg>
-)
+);
 
 export const SelectIcon = () => (
   <Select icon={<UpDownIcon />} placeholder="Placeholder" size="md" />
-)
+);
 
 export const FocusAndErrorColors = () => (
   <Stack>
@@ -130,7 +129,7 @@ export const FocusAndErrorColors = () => (
       placeholder="Here is a sample placeholder"
     />
   </Stack>
-)
+);
 
 export const OverrideStyles = () => (
   <Select
@@ -140,4 +139,4 @@ export const OverrideStyles = () => (
     bg="tomato"
     placeholder="Woohoo! A new background color!"
   />
-)
+);
