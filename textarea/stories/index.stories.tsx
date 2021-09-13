@@ -1,31 +1,30 @@
-import { chakra } from "../src/index"
-import * as React from "react"
-import { Textarea } from "../src/index"
+import { chakra } from '../src/index';
+import * as React from 'react';
+import { Textarea } from '../src/index';
 
-
-import { themeDecorator } from "../../story-layout/src/index";
+import { themeDecorator } from '../../story-layout/src/index';
 
 export default {
-  title: "Textarea",
+  title: 'Textarea',
   decorators: [themeDecorator],
   parameters: {
     layout: 'centered',
   },
-}
+};
 
-export const basic = () => <Textarea defaultValue="This is a textarea" />
+export const basic = () => <Textarea defaultValue="This is a textarea" />;
 
 export const rows = () => (
   <Textarea defaultValue="This is a textarea" rows={12} />
-)
+);
 
 export const disabled = () => (
   <Textarea isDisabled placeholder="A disabled textarea" />
-)
+);
 
 export const invalid = () => (
   <Textarea isInvalid placeholder="An invalid textarea" />
-)
+);
 
 export const withSizes = () => (
   <>
@@ -49,14 +48,14 @@ export const withSizes = () => (
       defaultValue="This is a large textarea"
     />
   </>
-)
+);
 
 export const Controlled = () => {
-  const [value, setValue] = React.useState("")
+  const [value, setValue] = React.useState('');
 
   const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(e.target.value)
-  }
+    setValue(e.target.value);
+  };
 
   return (
     <>
@@ -68,9 +67,9 @@ export const Controlled = () => {
         onChange={onChange}
       />
     </>
-  )
-}
+  );
+};
 
 export const withResize = () => (
   <Textarea placeholder="Here is a sample placeholder" resize="horizontal" />
-)
+);

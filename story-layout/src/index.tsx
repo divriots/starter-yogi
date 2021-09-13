@@ -10,4 +10,3 @@ export const themeDecorator = (Story) => (
     <Story />
   </ChakraProvider>
 );
-

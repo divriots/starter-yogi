@@ -1,8 +1,8 @@
-import { StarIcon } from "../src/index";
+import { StarIcon } from '../src/index';
 
-import { Box } from "~/box";
-import { Image } from "~/image";
-import { Badge } from "~/badge";
+import { Box } from '~/box';
+import { Image } from '~/image';
+import { Badge } from '~/badge';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -10,14 +10,10 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Box
+# Box
 
 Box is the most abstract component on top of which all other Chakra UI
 components are built. By default, it renders a `div` element.
-
-
-
-
 
 <br />
 
@@ -31,14 +27,14 @@ components are built. By default, it renders a `div` element.
 ## Import
 
 ```js
-import { Box } from "@chakra-ui/react"
+import { Box } from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ Box }}
-code={`
+  scope={{ Box }}
+  code={`
 <Box bg="tomato" w="100%" p={4} color="white">
   This is the Box
 </Box>
@@ -48,8 +44,8 @@ code={`
 ### Usage
 
 <Playground
-scope={{ Box, Image, Badge, StarIcon }}
-code={`
+  scope={{ Box, Image, Badge, StarIcon }}
+  code={`
 // Sample card from Airbnb
 function AirbnbExample() {
   const property = {
@@ -122,8 +118,8 @@ You can use the `as` prop to change the element render, just like
 styled-components.
 
 <Playground
-scope={{ Box }}
-code={`
+  scope={{ Box }}
+  code={`
 <Box as="button" borderRadius="md" bg="tomato" color="white" px={4} h={8}>
   Button
 </Box>

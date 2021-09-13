@@ -1,7 +1,14 @@
-import { RadioGroup, useRadio, useRadioGroup, HStack, RadioCard, Example } from "../src/index";
-import { Stack } from "~/stack";
-import { Radio } from "~/radio";
-import { Box } from "~/box";
+import {
+  RadioGroup,
+  useRadio,
+  useRadioGroup,
+  HStack,
+  RadioCard,
+  Example,
+} from '../src/index';
+import { Stack } from '~/stack';
+import { Radio } from '~/radio';
+import { Box } from '~/box';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -9,13 +16,9 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Radio
+# Radio
 
 Radios are used when only one choice may be selected in a series of options.
-
-
-
-
 
 Native HTML radios are 100% accessible by default, so we used a
 [very common CSS technique](https://dev.to/lkopacz/create-custom-keyboard-accessible-radio-buttons-22eh)
@@ -24,14 +27,14 @@ to style the radio.
 ## Import
 
 ```js
-import { Radio, RadioGroup } from "@chakra-ui/react"
+import { Radio, RadioGroup } from '@chakra-ui/react';
 ```
 
 ### Usage
 
 <Playground
-scope={{ RadioGroup, Stack, Radio }}
-code={`
+  scope={{ RadioGroup, Stack, Radio }}
+  code={`
 function RadioExample() {
   const [value, setValue] = React.useState("1")
   return (
@@ -53,8 +56,8 @@ You can override the `colorScheme` of the Radio to any color key specified in
 `theme.colors`.
 
 <Playground
-scope={{ RadioGroup, Stack, Radio }}
-code={`
+  scope={{ RadioGroup, Stack, Radio }}
+  code={`
 <RadioGroup defaultValue="2">
   <Stack spacing={5} direction="row">
     <Radio colorScheme="red" value="1">
@@ -73,8 +76,8 @@ code={`
 The checkbox comes with 3 sizes.
 
 <Playground
-scope={{ Stack, Radio }}
-code={`
+  scope={{ Stack, Radio }}
+  code={`
 <Stack>
   <Radio size="sm" name="1" colorScheme="red">
     Radio
@@ -92,8 +95,8 @@ code={`
 ### Disabled radios
 
 <Playground
-scope={{ RadioGroup, Stack, Radio }}
-code={`
+  scope={{ RadioGroup, Stack, Radio }}
+  code={`
 <RadioGroup defaultValue="1">
   <Stack>
     <Radio value="1" isDisabled>
@@ -109,8 +112,8 @@ code={`
 ### Horizontal alignment
 
 <Playground
-scope={{ RadioGroup, Stack, Radio }}
-code={`
+  scope={{ RadioGroup, Stack, Radio }}
+  code={`
 <RadioGroup defaultValue="1">
   <Stack spacing={4} direction="row">
     <Radio value="1" isDisabled>
@@ -126,8 +129,8 @@ code={`
 ### Invalid Radio
 
 <Playground
-scope={{ Radio }}
-code={`
+  scope={{ Radio }}
+  code={`
 <Radio isInvalid>Radio</Radio>
 `}
 />
@@ -142,9 +145,9 @@ help with this scenario. Here's what you need to do:
 2. Use the `useRadioGroup` hook to control a group of custom radios.
 
 <Playground
-scope={{ useRadio, Box, useRadioGroup, HStack, RadioCard, Example }}
-noInline={true}
-code={`
+  scope={{ useRadio, Box, useRadioGroup, HStack, RadioCard, Example }}
+  noInline={true}
+  code={`
 // 1. Create a component that consumes the \`useRadio\` hook
 function RadioCard(props) {
   const { getInputProps, getCheckboxProps } = useRadio(props)

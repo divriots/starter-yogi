@@ -1,6 +1,6 @@
-import { ExternalLinkIcon } from "../src/index";
-import { Text } from "../src/index";
-import { Link } from "~/link";
+import { ExternalLinkIcon } from '../src/index';
+import { Text } from '../src/index';
+import { Link } from '~/link';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -8,27 +8,23 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Link
+# Link
 
 Links are accessible elements used primarily for navigation. This component is
 styled to resemble a hyperlink and semantically renders an `<a>`.
 
-
-
-
-
 ## Imports
 
 ```js
-import { Link } from "@chakra-ui/react"
-import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { Link } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 ```
 
 ## Usage
 
 <Playground
-scope={{ Link }}
-code={`
+  scope={{ Link }}
+  code={`
 <Link>Chakra UI</Link>
 `}
 />
@@ -36,8 +32,8 @@ code={`
 ### External Link
 
 <Playground
-scope={{ Link, ExternalLinkIcon }}
-code={`
+  scope={{ Link, ExternalLinkIcon }}
+  code={`
 <Link href="https://chakra-ui.com" isExternal>
   Chakra Design system <ExternalLinkIcon mx="2px" />
 </Link>
@@ -47,8 +43,8 @@ code={`
 ### Link inline with text
 
 <Playground
-scope={{ Text, Link }}
-code={`
+  scope={{ Text, Link }}
+  code={`
 <Text>
   Did you know that{" "}
   <Link color="teal.500" href="#">

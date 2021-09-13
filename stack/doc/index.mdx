@@ -1,6 +1,14 @@
-import { HStack, VStack, StackDivider, Heading, Text, Feature, StackEx } from "../src/index";
-import { Box } from "~/box";
-import { Stack } from "~/stack";
+import {
+  HStack,
+  VStack,
+  StackDivider,
+  Heading,
+  Text,
+  Feature,
+  StackEx,
+} from '../src/index';
+import { Box } from '~/box';
+import { Stack } from '~/stack';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -8,21 +16,17 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Stack
+# Stack
 
 Stack is a layout component that makes it easy to stack elements together and
 apply a space between them. It uses a modified version of the
 [CSS lobotomized owl selector](https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/)
 to add spacing between its children.
 
-
-
-
-
 ## Import
 
 ```js
-import { Stack, HStack, VStack } from "@chakra-ui/react"
+import { Stack, HStack, VStack } from '@chakra-ui/react';
 ```
 
 - **Stack:** Used to add spacing between elements in the horizontal or vertical
@@ -39,8 +43,8 @@ To stack elements in horizontal or vertical direction only, use the `HStack` or
 `direction` prop.
 
 <Playground
-scope={{ HStack, Box }}
-code={`
+  scope={{ HStack, Box }}
+  code={`
 <HStack spacing="24px">
   <Box w="40px" h="40px" bg="yellow.200">
     1
@@ -61,8 +65,8 @@ You can pass responsive values to the `Stack` component to change stack
 direction and/or spacing between elements.
 
 <Playground
-scope={{ Stack, Box }}
-code={`
+  scope={{ Stack, Box }}
+  code={`
 <Stack direction={["column", "row"]} spacing="24px">
   <Box w="40px" h="40px" bg="yellow.200">
     1
@@ -84,8 +88,8 @@ the `divider` prop and set its value to the `StackDivider` or any custom React
 element.
 
 <Playground
-scope={{ VStack, StackDivider, Box }}
-code={`
+  scope={{ VStack, StackDivider, Box }}
+  code={`
 <VStack
   divider={<StackDivider borderColor="gray.200" />}
   spacing={4}
@@ -107,9 +111,9 @@ code={`
 ### Example
 
 <Playground
-scope={{ Box, Heading, Text, Stack, Feature, StackEx }}
-noInline={true}
-code={`
+  scope={{ Box, Heading, Text, Stack, Feature, StackEx }}
+  noInline={true}
+  code={`
 function Feature({ title, desc, ...rest }) {
   return (
     <Box p={5} shadow="md" borderWidth="1px" {...rest}>
@@ -142,9 +146,9 @@ Pass the `direction` and set it to `row`. Optionally, you can use `align` and
 `justify` to adjust the alignment and distribution of the items.
 
 <Playground
-scope={{ Box, Heading, Text, HStack, Feature, StackEx }}
-noInline={true}
-code={`
+  scope={{ Box, Heading, Text, HStack, Feature, StackEx }}
+  noInline={true}
+  code={`
 function Feature({ title, desc, ...rest }) {
   return (
     <Box

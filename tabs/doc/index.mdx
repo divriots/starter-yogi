@@ -1,7 +1,14 @@
-import { TabList, Tab, TabPanels, TabPanel, useColorModeValue, DataTabs } from "../src/index";
-import { Tabs } from "~/tabs";
-import { Image } from "~/image";
-import { Box } from "~/box";
+import {
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel,
+  useColorModeValue,
+  DataTabs,
+} from '../src/index';
+import { Tabs } from '~/tabs';
+import { Image } from '~/image';
+import { Box } from '~/box';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -9,20 +16,16 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Tabs
+# Tabs
 
 An accessible tabs component that provides keyboard interactions and ARIA
 attributes described in the
 [WAI-ARIA Tabs Design Pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel).
 
-
-
-
-
 ## Import
 
 ```js
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react"
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 ```
 
 - **Tabs**: Provides context and state for all components
@@ -41,8 +44,8 @@ Tabs expects `TabList` and `TabPanels` as children. The order doesn't matter,
 you can have `TabList` at the top, at the bottom, or both.
 
 <Playground
-scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
-code={`
+  scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
+  code={`
 <Tabs>
   <TabList>
     <Tab>One</Tab>
@@ -70,8 +73,8 @@ Tabs come in 6 different variants to style the tabs: `line`,`enclosed`,
 `enclosed-colored`, `soft-rounded`, `solid-rounded`
 
 <Playground
-scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
-code={`
+  scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
+  code={`
 <Tabs variant="enclosed">
   <TabList>
     <Tab>One</Tab>
@@ -96,8 +99,8 @@ You can also change the color scheme for any specific variant by passing the
 > in `theme.colors` that has the `50` - `900` color values.
 
 <Playground
-scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
-code={`
+  scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
+  code={`
 <Tabs variant="soft-rounded" colorScheme="green">
   <TabList>
     <Tab>Tab 1</Tab>
@@ -121,8 +124,8 @@ You can change the size of the tab by passing `size` prop. We support 3 sizes
 `sm`, `md`, `lg`
 
 <Playground
-scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
-code={`
+  scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
+  code={`
 <Tabs size="md" variant="enclosed">
   <TabList>
     <Tab>One</Tab>
@@ -146,8 +149,8 @@ You can change the alignment of the `TabList` by passing `align` prop. We
 support 3 sizes `start`, `center`, `end`.
 
 <Playground
-scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
-code={`
+  scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
+  code={`
 <Tabs align="end" variant="enclosed">
   <TabList>
     <Tab>One</Tab>
@@ -170,8 +173,8 @@ code={`
 Stretch the tab list to fit the container by passing `isFitted` prop.
 
 <Playground
-scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
-code={`
+  scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
+  code={`
 <Tabs isFitted variant="enclosed">
   <TabList mb="1em">
     <Tab>One</Tab>
@@ -195,8 +198,8 @@ In event you need to create custom styles for the tabs. Simply set the variant
 to `unstyled`, and use the `_selected`, `_hover`, `_active` style props.
 
 <Playground
-scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
-code={`
+  scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
+  code={`
 <Tabs variant="unstyled">
   <TabList>
     <Tab _selected={{ color: "white", bg: "blue.500" }}>Tab 1</Tab>
@@ -221,8 +224,8 @@ tabs. If you intend to control the tabs programmatically, use this with the
 `index` prop.
 
 <Playground
-scope={{ useColorModeValue, Tabs, TabList, Tab, TabPanels, TabPanel }}
-code={`
+  scope={{ useColorModeValue, Tabs, TabList, Tab, TabPanels, TabPanel }}
+  code={`
 function Example() {
   const colors = useColorModeValue(
     ["red.50", "teal.50", "blue.50"],
@@ -254,8 +257,8 @@ If you want a tab to be initially active, simply pass the `defaultIndex` prop
 and set it to the index of that tab.
 
 <Playground
-scope={{ Tabs, TabPanels, TabPanel, Image, TabList, Tab }}
-code={`
+  scope={{ Tabs, TabPanels, TabPanel, Image, TabList, Tab }}
+  code={`
 <Tabs defaultIndex={1}>
   <TabPanels>
     <TabPanel>
@@ -287,8 +290,8 @@ When a `Tab` is disabled, it is skipped during keyboard navigation and it is not
 clickable.
 
 <Playground
-scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
-code={`
+  scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
+  code={`
 function Example() {
   return (
     <Tabs>
@@ -323,8 +326,8 @@ without activating the tabs. With focus on a specific tab, users can activate a
 tab by pressing <kbd>Space</kbd> or <kbd>Enter</kbd>.
 
 <Playground
-scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
-code={`
+  scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
+  code={`
 <Tabs isManual variant="enclosed">
   <TabList>
     <Tab>One</Tab>
@@ -353,8 +356,8 @@ make network calls on mount that should only happen when the component is
 displayed.
 
 <Playground
-scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
-code={`
+  scope={{ Tabs, TabList, Tab, TabPanels, TabPanel }}
+  code={`
 <Tabs isLazy>
   <TabList>
     <Tab>One</Tab>
@@ -380,8 +383,8 @@ Like form inputs, a tab's state can be controlled. Make sure to include an
 onChange as well, or else the tabs will not be interactive.
 
 <Playground
-scope={{ Box, Tabs, TabList, Tab, TabPanels, TabPanel }}
-code={`
+  scope={{ Box, Tabs, TabList, Tab, TabPanels, TabPanel }}
+  code={`
 function ControlledExample() {
   const [tabIndex, setTabIndex] = React.useState(0)
   const handleSliderChange = (event) => {
@@ -429,8 +432,8 @@ If you'd like to drive your tabs with an array instead of using the granular
 components, you can create your own DataTabs component.
 
 <Playground
-scope={{ Tabs, TabList, Tab, TabPanels, TabPanel, DataTabs }}
-code={`
+  scope={{ Tabs, TabList, Tab, TabPanels, TabPanel, DataTabs }}
+  code={`
 function Example() {
   // 1. Create the component
   function DataTabs({ data }) {
@@ -501,7 +504,7 @@ Tabs composes `Box` so you call pass all `Box` related props.
 
 <PropsTable
   of="Tabs"
-  omit={["isTruncated", "layerStyle", "noOfLines", "textStyle", "styleConfig"]}
+  omit={['isTruncated', 'layerStyle', 'noOfLines', 'textStyle', 'styleConfig']}
 />
 
 ### Tab Props

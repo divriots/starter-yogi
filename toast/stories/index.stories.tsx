@@ -1,38 +1,38 @@
-import * as React from "react"
-import { Button, ButtonGroup } from "../src/index"
-import { chakra, useColorMode } from "../src/index"
-import { Alert } from "../src/index"
-import { useToast } from "../src/index"
+import * as React from 'react';
+import { Button, ButtonGroup } from '../src/index';
+import { chakra, useColorMode } from '../src/index';
+import { Alert } from '../src/index';
+import { useToast } from '../src/index';
 
-import { themeDecorator } from "../../story-layout/src/index";
+import { themeDecorator } from '../../story-layout/src/index';
 
 export default {
-  title: "Toast",
+  title: 'Toast',
   decorators: [themeDecorator],
   parameters: {
     layout: 'centered',
   },
-}
+};
 
 export function ToastExample() {
-  const toast = useToast()
-  const id = "login-error-toast"
+  const toast = useToast();
+  const id = 'login-error-toast';
   return (
     <ButtonGroup>
       <Button
         onClick={() => {
-          if (toast.isActive(id)) return
+          if (toast.isActive(id)) return;
           toast({
             id,
-            title: "Error Connecting...",
-            description: "You do not have permissions to perform this action.",
-            status: "error",
+            title: 'Error Connecting...',
+            description: 'You do not have permissions to perform this action.',
+            status: 'error',
             duration: null,
             isClosable: true,
             onCloseComplete: () => {
-              console.log("hello")
+              console.log('hello');
             },
-          })
+          });
         }}
       >
         Show Toast
@@ -41,9 +41,9 @@ export function ToastExample() {
       <Button
         onClick={() =>
           toast.update(id, {
-            title: "Hooray 🥳🥳🥳!!!",
-            description: "You now have permissions to perform this action.",
-            status: "success",
+            title: 'Hooray 🥳🥳🥳!!!',
+            description: 'You now have permissions to perform this action.',
+            status: 'success',
             duration: 3000,
           })
         }
@@ -52,18 +52,18 @@ export function ToastExample() {
       </Button>
       <Button onClick={() => toast.close(id)}>Close One</Button>
     </ButtonGroup>
-  )
+  );
 }
 
 export function CustomRender() {
-  const toast = useToast()
+  const toast = useToast();
   return (
     <>
       <Button
         onClick={() =>
           toast({
             duration: null,
-            position: "top-right",
+            position: 'top-right',
             render: () => (
               <chakra.div rounded="md" color="white" p={3} bg="blue.500">
                 Hello World
@@ -78,50 +78,50 @@ export function CustomRender() {
         colorScheme="pink"
         onClick={() =>
           toast({
-            position: "bottom-right",
-            title: "Testing",
-            description: "This toast is working well",
+            position: 'bottom-right',
+            title: 'Testing',
+            description: 'This toast is working well',
           })
         }
       >
         Show Toastify
       </Button>
     </>
-  )
+  );
 }
 
 export function SuccessToast() {
-  const toast = useToast()
+  const toast = useToast();
   return (
     <Button
       onClick={() =>
         toast({
-          position: "bottom",
-          title: "Account created.",
+          position: 'bottom',
+          title: 'Account created.',
           description: "We've created your account for you.",
-          status: "success",
+          status: 'success',
           duration: 3000,
           isClosable: true,
           onCloseComplete: () => {
-            console.log("close")
+            console.log('close');
           },
         })
       }
     >
       Show Success Toast
     </Button>
-  )
+  );
 }
 
 export function WarningToast() {
-  const toast = useToast()
+  const toast = useToast();
   return (
     <Button
       onClick={() =>
         toast({
-          title: "Warning.",
-          description: "This is a warning.",
-          status: "warning",
+          title: 'Warning.',
+          description: 'This is a warning.',
+          status: 'warning',
           duration: 9000,
           isClosable: true,
         })
@@ -129,18 +129,18 @@ export function WarningToast() {
     >
       Show Warning Toast
     </Button>
-  )
+  );
 }
 
 export function ErrorToast() {
-  const toast = useToast()
+  const toast = useToast();
   return (
     <Button
       onClick={() =>
         toast({
-          title: "An error occurred.",
-          description: "Unable to create user account.",
-          status: "error",
+          title: 'An error occurred.',
+          description: 'Unable to create user account.',
+          status: 'error',
           duration: 9000,
           isClosable: true,
         })
@@ -148,28 +148,28 @@ export function ErrorToast() {
     >
       Show Error Toast
     </Button>
-  )
+  );
 }
 
 export const AllSides = () => {
-  const toast = useToast()
+  const toast = useToast();
 
   const positions = [
-    "top-left",
-    "top",
-    "top-right",
-    "bottom-left",
-    "bottom",
-    "bottom-right",
-  ] as const
+    'top-left',
+    'top',
+    'top-right',
+    'bottom-left',
+    'bottom',
+    'bottom-right',
+  ] as const;
 
   return (
     <>
       <Button
         onClick={() => {
           positions.forEach((p) => {
-            toast({ position: p, title: p })
-          })
+            toast({ position: p, title: p });
+          });
         }}
       >
         Trigger
@@ -179,19 +179,19 @@ export const AllSides = () => {
         Close all
       </Button>
     </>
-  )
-}
+  );
+};
 
 export const ColorModeBug = () => {
-  const toast = useToast()
-  const { toggleColorMode } = useColorMode()
+  const toast = useToast();
+  const { toggleColorMode } = useColorMode();
   return (
     <>
       <Button
         onClick={() =>
           toast({
             render() {
-              return <Alert>test</Alert>
+              return <Alert>test</Alert>;
             },
           })
         }
@@ -200,53 +200,53 @@ export const ColorModeBug = () => {
       </Button>
       <Button onClick={() => toggleColorMode()}>Toggle Mode</Button>
     </>
-  )
-}
+  );
+};
 
 export const CloseAllTopLeftToasts = () => {
-  const toast = useToast()
+  const toast = useToast();
 
   const positions = [
-    "top-left",
-    "top",
-    "top-right",
-    "bottom-left",
-    "bottom",
-    "bottom-right",
-  ] as const
+    'top-left',
+    'top',
+    'top-right',
+    'bottom-left',
+    'bottom',
+    'bottom-right',
+  ] as const;
 
   return (
     <>
       <Button
         onClick={() => {
           positions.forEach((position) => {
-            toast({ position, title: position })
-          })
+            toast({ position, title: position });
+          });
         }}
       >
         Trigger
       </Button>
 
       <hr />
-      <Button onClick={() => toast.closeAll({ positions: ["top-left"] })}>
+      <Button onClick={() => toast.closeAll({ positions: ['top-left'] })}>
         close all top-left
       </Button>
     </>
-  )
-}
+  );
+};
 
 export const UseToastWithDefaults = () => {
   const toast = useToast({
-    position: "top-right",
-    title: "asdf",
-  })
+    position: 'top-right',
+    title: 'asdf',
+  });
 
-  return <Button onClick={() => toast()}>toast</Button>
-}
+  return <Button onClick={() => toast()}>toast</Button>;
+};
 
 export const useToastCustomRenderUpdate = () => {
-  const [id, setId] = React.useState(null)
-  const toast = useToast()
+  const [id, setId] = React.useState(null);
+  const toast = useToast();
 
   React.useEffect(() => {
     if (id) {
@@ -259,26 +259,26 @@ export const useToastCustomRenderUpdate = () => {
               <Button variant="link">link button after update</Button>
             </ButtonGroup>
           ),
-        })
+        });
 
-        setId(null)
-      }, 2000)
+        setId(null);
+      }, 2000);
 
-      return () => clearTimeout(timeout)
+      return () => clearTimeout(timeout);
     }
-  }, [id])
+  }, [id]);
 
   return (
     <Button
       onClick={() => {
         const id = toast({
           render: () => <Button variant="solid">solid button initially</Button>,
-        })
+        });
 
-        setId(id)
+        setId(id);
       }}
     >
       toast
     </Button>
-  )
-}
+  );
+};

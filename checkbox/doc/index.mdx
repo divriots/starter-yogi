@@ -1,8 +1,8 @@
-import { CustomIcon } from "../src/index";
-import { HStack, CustomCheckbox, CheckboxGroup } from "../src/index";
-import { Checkbox } from "~/checkbox";
-import { Stack } from "~/stack";
-import { Icon } from "~/icon";
+import { CustomIcon } from '../src/index';
+import { HStack, CustomCheckbox, CheckboxGroup } from '../src/index';
+import { Checkbox } from '~/checkbox';
+import { Stack } from '~/stack';
+import { Icon } from '~/icon';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -10,14 +10,10 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Checkbox
+# Checkbox
 
 The `Checkbox` component is used in forms when a user needs to select multiple
 values from several options.
-
-
-
-
 
 Native HTML checkboxes are 100% accessible by default, so we used a
 [very common CSS technique](https://dev.to/lkopacz/create-custom-keyboard-accessible-checkboxes-2036)
@@ -26,7 +22,7 @@ to style the checkboxes.
 ## Import
 
 ```js
-import { Checkbox, CheckboxGroup } from "@chakra-ui/react"
+import { Checkbox, CheckboxGroup } from '@chakra-ui/react';
 ```
 
 ## Usage
@@ -34,8 +30,8 @@ import { Checkbox, CheckboxGroup } from "@chakra-ui/react"
 Basic usage of `Checkbox`.
 
 <Playground
-scope={{ Checkbox }}
-code={`
+  scope={{ Checkbox }}
+  code={`
 <Checkbox defaultIsChecked>Checkbox</Checkbox>
 `}
 />
@@ -43,8 +39,8 @@ code={`
 ### Disabled Checkbox
 
 <Playground
-scope={{ Stack, Checkbox }}
-code={`
+  scope={{ Stack, Checkbox }}
+  code={`
 <Stack spacing={10} direction="row">
   <Checkbox isDisabled>Checkbox</Checkbox>
   <Checkbox isDisabled defaultIsChecked>
@@ -60,8 +56,8 @@ You can override the color scheme of the `Checkbox` to any color key specified
 in `theme.colors`.
 
 <Playground
-scope={{ Stack, Checkbox }}
-code={`
+  scope={{ Stack, Checkbox }}
+  code={`
 <Stack spacing={10} direction="row">
   <Checkbox colorScheme="red" defaultIsChecked>
     Checkbox
@@ -79,8 +75,8 @@ Pass the `size` prop to change the size of the `Checkbox`. Values can be either
 `sm`, `md` or `lg`.
 
 <Playground
-scope={{ HStack, Checkbox }}
-code={`
+  scope={{ HStack, Checkbox }}
+  code={`
 <HStack spacing={10} direction="row">
   <Checkbox size="sm" colorScheme="red">
     Checkbox
@@ -98,8 +94,8 @@ code={`
 ### Invalid Checkbox
 
 <Playground
-scope={{ Checkbox }}
-code={`
+  scope={{ Checkbox }}
+  code={`
 <Checkbox isInvalid>Checkbox</Checkbox>
 `}
 />
@@ -127,8 +123,8 @@ You can customize the color and size of the check icon by passing the
 ### Indeterminate
 
 <Playground
-scope={{ Checkbox, Stack }}
-code={`
+  scope={{ Checkbox, Stack }}
+  code={`
 function IndeterminateExample() {
   const [checkedItems, setCheckedItems] = React.useState([false, false])
   const allChecked = checkedItems.every(Boolean)
@@ -165,9 +161,9 @@ function IndeterminateExample() {
 ### Icon
 
 <Playground
-scope={{ Icon, Checkbox, CustomIcon, CustomCheckbox }}
-noInline={true}
-code={`
+  scope={{ Icon, Checkbox, CustomIcon, CustomCheckbox }}
+  noInline={true}
+  code={`
 /**
  * 1. Create a custom icon that accepts 2 props: \`isIndeterminate\` and \`isChecked\`
  */
@@ -201,8 +197,8 @@ props to each. See the props table at the bottom of this page for a list of the
 shared styling props.
 
 <Playground
-scope={{ CheckboxGroup, HStack, Checkbox }}
-code={`
+  scope={{ CheckboxGroup, HStack, Checkbox }}
+  code={`
 <CheckboxGroup colorScheme="green" defaultValue={["naruto", "kakashi"]}>
   <HStack>
     <Checkbox value="naruto">Naruto</Checkbox>

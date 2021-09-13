@@ -1,8 +1,8 @@
-import { useToast, WrapItem } from "../src/index";
-import { Button } from "~/button";
-import { Box } from "~/box";
-import { Stack } from "~/stack";
-import { Wrap } from "~/wrap";
+import { useToast, WrapItem } from '../src/index';
+import { Button } from '~/button';
+import { Box } from '~/box';
+import { Stack } from '~/stack';
+import { Wrap } from '~/wrap';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -10,16 +10,12 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Toast
+# Toast
 
 The toast is used to show alerts on top of an overlay. The toast will close
 itself when the close button is clicked, or after a timeout — the default is 5
 seconds. The toast component is used to give feedback to users after an action
 has taken place.
-
-
-
-
 
 Toasts can be configured to appear at either the top or the bottom of an
 application window, and it is possible to have more than one toast onscreen at a
@@ -28,14 +24,14 @@ time.
 ## Import
 
 ```js
-import { useToast } from "@chakra-ui/react"
+import { useToast } from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ useToast, Button }}
-code={`
+  scope={{ useToast, Button }}
+  code={`
 function ToastExample() {
   const toast = useToast()
   return (
@@ -65,8 +61,8 @@ function ToastExample() {
 Display a custom component instead of the default Toast UI.
 
 <Playground
-scope={{ useToast, Button, Box }}
-code={`
+  scope={{ useToast, Button, Box }}
+  code={`
 function CustomToastExample() {
   const toast = useToast()
   return (
@@ -95,8 +91,8 @@ Toasts can be closed imperatively, individually (via the `close` instance
 method) or all together (via the `closeAll` instance method).
 
 <Playground
-scope={{ useToast, Stack, Button }}
-code={`
+  scope={{ useToast, Stack, Button }}
+  code={`
 function ClosingToastExample() {
   const toast = useToast()
   const toastIdRef = React.useRef()
@@ -136,8 +132,8 @@ function ClosingToastExample() {
 You can use `status` to change the color of your toasts.
 
 <Playground
-scope={{ useToast, Wrap, WrapItem, Button }}
-code={`
+  scope={{ useToast, Wrap, WrapItem, Button }}
+  code={`
 function ToastStatusExample() {
   const toast = useToast()
   const statuses = ["success", "error", "warning", "info"]
@@ -170,8 +166,8 @@ function ToastStatusExample() {
 [`Alert`](https://chakra-ui.com/docs/feedback/alert) component.
 
 <Playground
-scope={{ useToast, Wrap, WrapItem, Button }}
-code={`
+  scope={{ useToast, Wrap, WrapItem, Button }}
+  code={`
 function ToastVariantsExample() {
   const toast = useToast()
   const variants = ["solid", "subtle", "left-accent", "top-accent"]
@@ -203,8 +199,8 @@ function ToastVariantsExample() {
 Using the `position` prop you can adjust where your toast will be popup from.
 
 <Playground
-scope={{ useToast, Wrap, WrapItem, Button }}
-code={`
+  scope={{ useToast, Wrap, WrapItem, Button }}
+  code={`
 function PositionExample() {
   const toast = useToast()
   const positions = [
@@ -246,22 +242,22 @@ to call `toast(...)`.
 
 ```jsx live=false
 function PreventDuplicateExample() {
-  const toast = useToast()
-  const id = "test-toast"
+  const toast = useToast();
+  const id = 'test-toast';
   return (
     <Button
       onClick={() => {
         if (!toast.isActive(id)) {
           toast({
             id,
-            title: "Hey! You can create a duplicate toast",
-          })
+            title: 'Hey! You can create a duplicate toast',
+          });
         }
       }}
     >
       Click me!
     </Button>
-  )
+  );
 }
 ```
 
@@ -271,16 +267,16 @@ Use `createStandaloneToast` to create toasts from outside of your React
 Components.
 
 ```js
-import { createStandaloneToast } from "@chakra-ui/react"
+import { createStandaloneToast } from '@chakra-ui/react';
 
-const toast = createStandaloneToast()
+const toast = createStandaloneToast();
 // const customToast = createStandaloneToast({ theme: yourCustomTheme })
 
 toast({
-  title: "An error occurred.",
-  description: "Unable to create user account.",
-  status: "error",
+  title: 'An error occurred.',
+  description: 'Unable to create user account.',
+  status: 'error',
   duration: 9000,
   isClosable: true,
-})
+});
 ```

@@ -1,9 +1,25 @@
-import { ChevronDownIcon, HamburgerIcon, AddIcon, ExternalLinkIcon, RepeatIcon, EditIcon } from "../src/index";
-import { MenuButton, MenuList, MenuItem, MenuDivider, Portal, MenuGroup, MenuOptionGroup, MenuItemOption } from "../src/index";
-import { Menu } from "~/menu";
-import { Button } from "~/button";
-import { Image } from "~/image";
-import { IconButton } from "~/icon-button";
+import {
+  ChevronDownIcon,
+  HamburgerIcon,
+  AddIcon,
+  ExternalLinkIcon,
+  RepeatIcon,
+  EditIcon,
+} from '../src/index';
+import {
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuDivider,
+  Portal,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuItemOption,
+} from '../src/index';
+import { Menu } from '~/menu';
+import { Button } from '~/button';
+import { Image } from '~/image';
+import { IconButton } from '~/icon-button';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -11,14 +27,10 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Menu
+# Menu
 
 An accessible dropdown menu for the common dropdown menu button design pattern.
 `Menu` uses roving `tabIndex` for focus management.
-
-
-
-
 
 ## Import
 
@@ -46,14 +58,14 @@ import {
   MenuIcon,
   MenuCommand,
   MenuDivider,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ Menu, MenuButton, Button, ChevronDownIcon, MenuList, MenuItem }}
-code={`
+  scope={{ Menu, MenuButton, Button, ChevronDownIcon, MenuList, MenuItem }}
+  code={`
 <Menu>
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Actions
@@ -76,8 +88,8 @@ To access the internal state of the `Menu`, use a function as `children`
 `isOpen` and method `onClose`.
 
 <Playground
-scope={{ Menu, MenuButton, Button, ChevronDownIcon, MenuList, MenuItem }}
-code={`
+  scope={{ Menu, MenuButton, Button, ChevronDownIcon, MenuList, MenuItem }}
+  code={`
 <Menu>
   {({ isOpen }) => (
     <>
@@ -117,8 +129,8 @@ the letter you typed.
 > Open the menu, try and type any letter, (say "S") to see the focus movement.
 
 <Playground
-scope={{ Menu, MenuButton, ChevronDownIcon, MenuList, MenuItem, MenuDivider }}
-code={`
+  scope={{ Menu, MenuButton, ChevronDownIcon, MenuList, MenuItem, MenuDivider }}
+  code={`
 <Menu>
   <MenuButton
     px={4}
@@ -146,8 +158,16 @@ code={`
 ### Just another example
 
 <Playground
-scope={{ Menu, MenuButton, Button, ChevronDownIcon, MenuList, MenuItem, Image }}
-code={`
+  scope={{
+    Menu,
+    MenuButton,
+    Button,
+    ChevronDownIcon,
+    MenuList,
+    MenuItem,
+    Image,
+  }}
+  code={`
 <Menu>
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Your Cats
@@ -184,8 +204,19 @@ You can add icon to each `MenuItem` by passing the `icon` prop. To add a
 commands (or hotkeys) to menu items, you can use the `command` prop.
 
 <Playground
-scope={{ Menu, MenuButton, IconButton, HamburgerIcon, MenuList, MenuItem, AddIcon, ExternalLinkIcon, RepeatIcon, EditIcon }}
-code={`
+  scope={{
+    Menu,
+    MenuButton,
+    IconButton,
+    HamburgerIcon,
+    MenuList,
+    MenuItem,
+    AddIcon,
+    ExternalLinkIcon,
+    RepeatIcon,
+    EditIcon,
+  }}
+  code={`
 <Menu>
   <MenuButton
     as={IconButton}
@@ -222,8 +253,8 @@ extra performant, or make network calls on mount that should only happen when
 the component is displayed.
 
 <Playground
-scope={{ Menu, MenuButton, MenuList, MenuItem }}
-code={`
+  scope={{ Menu, MenuButton, MenuList, MenuItem }}
+  code={`
 <Menu isLazy>
   <MenuButton>Open menu</MenuButton>
   <MenuList>
@@ -242,8 +273,8 @@ To render menus in a portal, import the `Portal` component and wrap the
 `MenuList` within the `Portal`.
 
 <Playground
-scope={{ Menu, MenuButton, Portal, MenuList, MenuItem }}
-code={`
+  scope={{ Menu, MenuButton, Portal, MenuList, MenuItem }}
+  code={`
 <Menu>
   <MenuButton>Open menu</MenuButton>
   <Portal>
@@ -264,8 +295,16 @@ To group related `MenuItem`s, use the `MenuGroup` component and pass it a
 `title` for the group name.
 
 <Playground
-scope={{ Menu, MenuButton, Button, MenuList, MenuGroup, MenuItem, MenuDivider }}
-code={`
+  scope={{
+    Menu,
+    MenuButton,
+    Button,
+    MenuList,
+    MenuGroup,
+    MenuItem,
+    MenuDivider,
+  }}
+  code={`
 <Menu>
   <MenuButton as={Button} colorScheme="pink">
     Profile
@@ -291,8 +330,16 @@ You can compose a menu for table headers to help with sorting and filtering
 options. Use the `MenuOptionGroup` and `MenuItemOption` components.
 
 <Playground
-scope={{ Menu, MenuButton, Button, MenuList, MenuOptionGroup, MenuItemOption, MenuDivider }}
-code={`
+  scope={{
+    Menu,
+    MenuButton,
+    Button,
+    MenuList,
+    MenuOptionGroup,
+    MenuItemOption,
+    MenuDivider,
+  }}
+  code={`
 <Menu closeOnSelect={false}>
   <MenuButton as={Button} colorScheme="blue">
     MenuItem

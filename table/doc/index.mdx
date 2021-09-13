@@ -1,5 +1,5 @@
-import { TableCaption, Thead, Tr, Th, Tbody, Td, Tfoot } from "../src/index";
-import { Table } from "~/table";
+import { TableCaption, Thead, Tr, Th, Tbody, Td, Tfoot } from '../src/index';
+import { Table } from '~/table';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -7,14 +7,10 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Table
+# Table
 
 Tables are used to organize and display data efficiently. It renders a `<table>`
 element by default.
-
-
-
-
 
 ## Import
 
@@ -28,7 +24,7 @@ import {
   Th,
   Td,
   TableCaption,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Table Variants
@@ -41,8 +37,8 @@ The default variant is `simple`
 ### Simple Table
 
 <Playground
-scope={{ Table, TableCaption, Thead, Tr, Th, Tbody, Td, Tfoot }}
-code={`
+  scope={{ Table, TableCaption, Thead, Tr, Th, Tbody, Td, Tfoot }}
+  code={`
 <Table variant="simple">
   <TableCaption>Imperial to metric conversion factors</TableCaption>
   <Thead>
@@ -83,8 +79,8 @@ code={`
 ### Striped Table
 
 <Playground
-scope={{ Table, TableCaption, Thead, Tr, Th, Tbody, Td, Tfoot }}
-code={`
+  scope={{ Table, TableCaption, Thead, Tr, Th, Tbody, Td, Tfoot }}
+  code={`
 <Table variant="striped" colorScheme="teal">
   <TableCaption>Imperial to metric conversion factors</TableCaption>
   <Thead>
@@ -128,8 +124,8 @@ The table component is available in 3 sizes: `sm`, `md`, `lg`. The default size
 is `md`.
 
 <Playground
-scope={{ Table, Thead, Tr, Th, Tbody, Td, Tfoot }}
-code={`
+  scope={{ Table, Thead, Tr, Th, Tbody, Td, Tfoot }}
+  code={`
 <Table size="sm">
   <Thead>
     <Tr>

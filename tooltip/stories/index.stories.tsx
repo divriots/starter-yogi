@@ -1,20 +1,20 @@
-import { Modal, ModalContent, ModalOverlay } from "../src/index"
-import { Portal } from "../src/index"
-import { chakra } from "../src/index"
-import { AnimatePresence, motion } from "framer-motion"
-import * as React from "react"
-import { Tooltip } from "../src/index"
-import { useTooltip } from "../src/index"
+import { Modal, ModalContent, ModalOverlay } from '../src/index';
+import { Portal } from '../src/index';
+import { chakra } from '../src/index';
+import { AnimatePresence, motion } from 'framer-motion';
+import * as React from 'react';
+import { Tooltip } from '../src/index';
+import { useTooltip } from '../src/index';
 
-import { themeDecorator } from "../../story-layout/src/index";
+import { themeDecorator } from '../../story-layout/src/index';
 
 export default {
-  title: "Tooltip",
+  title: 'Tooltip',
   decorators: [themeDecorator],
   parameters: {
     layout: 'centered',
   },
-}
+};
 
 const HookTooltip = ({ children }: any) => {
   const {
@@ -25,8 +25,8 @@ const HookTooltip = ({ children }: any) => {
   } = useTooltip({
     openDelay: 100,
     arrowSize: 8,
-    placement: "bottom",
-  })
+    placement: 'bottom',
+  });
 
   return (
     <>
@@ -35,12 +35,12 @@ const HookTooltip = ({ children }: any) => {
         <div
           {...getTooltipProps({
             style: {
-              background: "tomato",
-              color: "white",
-              borderRadius: "4px",
-              padding: "0.5em 1em",
-              visibility: isOpen ? "visible" : "hidden",
-              "--popper-arrow-bg": "tomato",
+              background: 'tomato',
+              color: 'white',
+              borderRadius: '4px',
+              padding: '0.5em 1em',
+              visibility: isOpen ? 'visible' : 'hidden',
+              '--popper-arrow-bg': 'tomato',
             },
           })}
         >
@@ -51,17 +51,17 @@ const HookTooltip = ({ children }: any) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export const Basic = () => <HookTooltip>This is me</HookTooltip>
+export const Basic = () => <HookTooltip>This is me</HookTooltip>;
 
 export const MultipleTooltips = () => (
   <>
     <HookTooltip>This is tip 1</HookTooltip>
     <HookTooltip>This is tip 2</HookTooltip>
   </>
-)
+);
 
 export const WithTransition = () => {
   const {
@@ -71,7 +71,7 @@ export const WithTransition = () => {
     isOpen,
   } = useTooltip({
     openDelay: 100,
-  })
+  });
 
   return (
     <>
@@ -97,12 +97,12 @@ export const WithTransition = () => {
                     enter: { scale: 1, opacity: 1 },
                   }}
                   style={{
-                    transformOrigin: "var(--popper-transform-origin)",
-                    background: "tomato",
-                    "--popper-arrow-bg": "tomato",
-                    color: "white",
-                    borderRadius: "4px",
-                    padding: "0.5em 1em",
+                    transformOrigin: 'var(--popper-transform-origin)',
+                    background: 'tomato',
+                    '--popper-arrow-bg': 'tomato',
+                    color: 'white',
+                    borderRadius: '4px',
+                    padding: '0.5em 1em',
                   }}
                 >
                   Fade! This is tooltip
@@ -116,18 +116,18 @@ export const WithTransition = () => {
         )}
       </AnimatePresence>
     </>
-  )
-}
+  );
+};
 
 export const withButton = () => (
   <Tooltip label="This is a chakra tooltip" placement="bottom" hasArrow>
     <button>Hover me</button>
   </Tooltip>
-)
+);
 
 export const withString = () => (
   <Tooltip label="This is a chakra tooltip">Hover me</Tooltip>
-)
+);
 
 export const withAriaLabel = () => (
   <Tooltip
@@ -144,25 +144,25 @@ export const withAriaLabel = () => (
       <span>3</span>
     </button>
   </Tooltip>
-)
+);
 
 export const issue607 = () => (
   <div
     style={{
-      position: "fixed",
-      background: "red",
-      height: "100px",
-      width: "200px",
+      position: 'fixed',
+      background: 'red',
+      height: '100px',
+      width: '200px',
     }}
   >
     <Tooltip label="Hello" aria-label="hello">
       Hi
     </Tooltip>
   </div>
-)
+);
 
 export const WithModal = () => {
-  const [showDialog, setShowDialog] = React.useState(false)
+  const [showDialog, setShowDialog] = React.useState(false);
   return (
     <div>
       <button onClick={() => setShowDialog(true)}>Show Dialog</button>
@@ -187,7 +187,7 @@ export const WithModal = () => {
               </button>
             </Tooltip>
 
-            <div style={{ float: "right" }}>
+            <div style={{ float: 'right' }}>
               <Tooltip label="Notifications" aria-label="3 Notifications">
                 <button style={{ fontSize: 25 }}>
                   <span role="img" aria-label="Bell">
@@ -201,51 +201,51 @@ export const WithModal = () => {
         </ModalContent>
       </Modal>
     </div>
-  )
-}
+  );
+};
 
 export const withDisabledButton = () => (
   <Tooltip label="Oh oh oh, oh oh">
-    <button style={{ fontSize: 25, pointerEvents: "all" }} disabled>
+    <button style={{ fontSize: 25, pointerEvents: 'all' }} disabled>
       Can't Touch This
     </button>
   </Tooltip>
-)
+);
 
 export const withWrappedDisabledButton = () => (
   <Tooltip label="Hello world" shouldWrapChildren>
-    <button style={{ fontSize: 25, pointerEvents: "all" }} disabled>
+    <button style={{ fontSize: 25, pointerEvents: 'all' }} disabled>
       Hover me
     </button>
   </Tooltip>
-)
+);
 
 export const withIsOpenProp = () => (
   <Tooltip label="Hello world" isOpen hasArrow>
-    <button style={{ fontSize: 25, pointerEvents: "all" }} disabled>
+    <button style={{ fontSize: 25, pointerEvents: 'all' }} disabled>
       Can't Touch This
     </button>
   </Tooltip>
-)
+);
 
 export const withDefaultIsOpenProp = () => (
   <Tooltip label="Hello world" defaultIsOpen>
-    <button style={{ fontSize: 25, pointerEvents: "all" }}>
+    <button style={{ fontSize: 25, pointerEvents: 'all' }}>
       Can't Touch This
     </button>
   </Tooltip>
-)
+);
 
 export const withAutoPlacement = () => (
   <Tooltip label="Hello world" placement="auto" hasArrow>
-    <button style={{ fontSize: 25, pointerEvents: "all" }}>
+    <button style={{ fontSize: 25, pointerEvents: 'all' }}>
       Can't Touch This
     </button>
   </Tooltip>
-)
+);
 
-declare module "csstype" {
+declare module 'csstype' {
   interface Properties {
-    [k: string]: any
+    [k: string]: any;
   }
 }

@@ -1,14 +1,24 @@
-import { AddIcon } from "../src/index";
-import { useDisclosure, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, DrawerFooter, RadioGroup, FormLabel } from "../src/index";
-import { Button } from "~/button";
-import { Drawer } from "~/drawer";
-import { Input } from "~/input";
-import { Stack } from "~/stack";
-import { Radio } from "~/radio";
-import { Box } from "~/box";
-import { Select } from "~/select";
-import { Textarea } from "~/textarea";
-import { InputGroup, InputLeftAddon, InputRightAddon} from "../src/index";
+import { AddIcon } from '../src/index';
+import {
+  useDisclosure,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+  DrawerFooter,
+  RadioGroup,
+  FormLabel,
+} from '../src/index';
+import { Button } from '~/button';
+import { Drawer } from '~/drawer';
+import { Input } from '~/input';
+import { Stack } from '~/stack';
+import { Radio } from '~/radio';
+import { Box } from '~/box';
+import { Select } from '~/select';
+import { Textarea } from '~/textarea';
+import { InputGroup, InputLeftAddon, InputRightAddon } from '../src/index';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -16,15 +26,11 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Drawer
+# Drawer
 
 The `Drawer` component is a panel that slides out from the edge of the screen.
 It can be useful when you need users to complete a task or view some details
 without leaving the current page.
-
-
-
-
 
 ## Import
 
@@ -37,7 +43,7 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Usage
@@ -45,8 +51,19 @@ import {
 ### Basic Drawer
 
 <Playground
-scope={{ useDisclosure, Button, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Input, DrawerFooter }}
-code={`
+  scope={{
+    useDisclosure,
+    Button,
+    Drawer,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    DrawerHeader,
+    DrawerBody,
+    Input,
+    DrawerFooter,
+  }}
+  code={`
 function DrawerExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
@@ -88,8 +105,19 @@ The Drawer can appear from any edge of the screen. Pass the `placement` prop and
 set it to `top`, `right`, `bottom`, or `left`.
 
 <Playground
-scope={{ useDisclosure, RadioGroup, Stack, Radio, Button, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody }}
-code={`
+  scope={{
+    useDisclosure,
+    RadioGroup,
+    Stack,
+    Radio,
+    Button,
+    Drawer,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerHeader,
+    DrawerBody,
+  }}
+  code={`
 function PlacementExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [placement, setPlacement] = React.useState("right")
@@ -132,8 +160,28 @@ when the drawer opens. Pass the `initialFocusRef` prop.
 > focusable element** when it opens.
 
 <Playground
-scope={{ useDisclosure, Button, AddIcon, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Stack, Box, FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Textarea, DrawerFooter }}
-code={`
+  scope={{
+    useDisclosure,
+    Button,
+    AddIcon,
+    Drawer,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    DrawerHeader,
+    DrawerBody,
+    Stack,
+    Box,
+    FormLabel,
+    Input,
+    InputGroup,
+    InputLeftAddon,
+    InputRightAddon,
+    Select,
+    Textarea,
+    DrawerFooter,
+  }}
+  code={`
 function DrawerExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const firstField = React.useRef()
@@ -209,8 +257,16 @@ Pass the `size` prop if you need to adjust the size of the drawer. Values can be
 `xs`, `sm`, `md`, `lg`, `xl`, or `full`.
 
 <Playground
-scope={{ useDisclosure, Button, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody }}
-code={`
+  scope={{
+    useDisclosure,
+    Button,
+    Drawer,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerHeader,
+    DrawerBody,
+  }}
+  code={`
 function SizeExample() {
   const [size, setSize] = React.useState("md")
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -256,7 +312,7 @@ way to do it:
 
 ```jsx live=false
 export const App = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Button onClick={onOpen}>Open</Button>
@@ -270,8 +326,8 @@ export const App = () => {
             <form
               id="my-form"
               onSubmit={(e) => {
-                e.preventDefault()
-                console.log("submitted")
+                e.preventDefault();
+                console.log('submitted');
               }}
             >
               <Input name="nickname" placeholder="Type here..." />
@@ -286,8 +342,8 @@ export const App = () => {
         </DrawerContent>
       </Drawer>
     </>
-  )
-}
+  );
+};
 ```
 
 ## Accessibility

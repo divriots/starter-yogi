@@ -1,6 +1,14 @@
-import { AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter, useDisclosure, AlertDialogCloseButton } from "../src/index";
-import { Button } from "~/button";
-import { AlertDialog } from "~/alert-dialog";
+import {
+  AlertDialogOverlay,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogBody,
+  AlertDialogFooter,
+  useDisclosure,
+  AlertDialogCloseButton,
+} from '../src/index';
+import { Button } from '~/button';
+import { AlertDialog } from '~/alert-dialog';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -8,14 +16,10 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Alert Dialog
+# Alert Dialog
 
 `AlertDialog` component is used to interrupt the user with a mandatory
 confirmation or action.
-
-
-
-
 
 ## Import
 
@@ -37,7 +41,7 @@ import {
   AlertDialogHeader,
   AlertDialogContent,
   AlertDialogOverlay,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Usage
@@ -50,8 +54,16 @@ focus should be placed on the least destructive element when the dialog opens,
 to prevent users from accidentally confirming the destructive action.
 
 <Playground
-scope={{ Button, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter }}
-code={`
+  scope={{
+    Button,
+    AlertDialog,
+    AlertDialogOverlay,
+    AlertDialogContent,
+    AlertDialogHeader,
+    AlertDialogBody,
+    AlertDialogFooter,
+  }}
+  code={`
 function AlertDialogExample() {
   const [isOpen, setIsOpen] = React.useState(false)
   const onClose = () => setIsOpen(false)
@@ -98,8 +110,18 @@ passing a `motionPreset` prop, and set its value to either `slideInBottom`,
 `slideInRight`, or `scale`.
 
 <Playground
-scope={{ useDisclosure, Button, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogCloseButton, AlertDialogBody, AlertDialogFooter }}
-code={`
+  scope={{
+    useDisclosure,
+    Button,
+    AlertDialog,
+    AlertDialogOverlay,
+    AlertDialogContent,
+    AlertDialogHeader,
+    AlertDialogCloseButton,
+    AlertDialogBody,
+    AlertDialogFooter,
+  }}
+  code={`
 function TransitionExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const cancelRef = React.useRef()

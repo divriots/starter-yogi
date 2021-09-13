@@ -1,9 +1,9 @@
-import { Text, Square, Spacer, HStack, Heading } from "../src/index";
-import { Flex } from "~/flex";
-import { Center } from "~/center";
-import { Box } from "~/box";
-import { Grid } from "~/grid";
-import { Button } from "~/button";
+import { Text, Square, Spacer, HStack, Heading } from '../src/index';
+import { Flex } from '~/flex';
+import { Center } from '~/center';
+import { Box } from '~/box';
+import { Grid } from '~/grid';
+import { Button } from '~/button';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -11,19 +11,15 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Flex
+# Flex
 
 Flex is [Box](/docs/layout/box) with `display: flex` and comes with helpful
 style shorthand. It renders a `div` element.
 
-
-
-
-
 ## Import
 
 ```js
-import { Flex, Spacer } from "@chakra-ui/react"
+import { Flex, Spacer } from '@chakra-ui/react';
 ```
 
 - **Flex:** A `Box` with `display: flex`.
@@ -46,8 +42,8 @@ While you can pass the verbose props, using the shorthand can save you some
 time.
 
 <Playground
-scope={{ Flex, Center, Text, Square, Box }}
-code={`
+  scope={{ Flex, Center, Text, Square, Box }}
+  code={`
 <Flex color="white">
   <Center w="100px" bg="green.500">
     <Text>Box 1</Text>
@@ -68,8 +64,8 @@ As an alternative to `Stack`, you can combine `Flex` and `Spacer` to create
 stackable and responsive layouts.
 
 <Playground
-scope={{ Flex, Box, Spacer }}
-code={`
+  scope={{ Flex, Box, Spacer }}
+  code={`
 <Flex>
   <Box p="4" bg="red.400">
     Box 1
@@ -95,8 +91,8 @@ different widths differently.
   container and also have equal spacing between them.
 
 <Playground
-scope={{ Box, Text, Flex, Spacer, Grid, HStack }}
-code={`
+  scope={{ Box, Text, Flex, Spacer, Grid, HStack }}
+  code={`
 <Box>
   <Text>Flex and Spacer: Full width, equal Spacing</Text>
   <Flex>
@@ -130,8 +126,8 @@ A good use case for `Spacer` is to create a navbar with a signup/login button
 aligned to the right.
 
 <Playground
-scope={{ Flex, Box, Heading, Spacer, Button }}
-code={`
+  scope={{ Flex, Box, Heading, Spacer, Button }}
+  code={`
 <Flex>
   <Box p="2">
     <Heading size="md">Chakra App</Heading>

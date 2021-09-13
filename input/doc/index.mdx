@@ -1,9 +1,15 @@
-import { PhoneIcon, CheckIcon } from "../src/index";
-import { Text } from "../src/index";
-import { Input } from "~/input";
-import { Stack } from "~/stack";
-import { Button } from "~/button";
-import { InputGroup, InputLeftAddon, InputRightAddon, InputLeftElement, InputRightElement} from "../src/index";
+import { PhoneIcon, CheckIcon } from '../src/index';
+import { Text } from '../src/index';
+import { Input } from '~/input';
+import { Stack } from '~/stack';
+import { Button } from '~/button';
+import {
+  InputGroup,
+  InputLeftAddon,
+  InputRightAddon,
+  InputLeftElement,
+  InputRightElement,
+} from '../src/index';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -11,19 +17,15 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Input
+# Input
 
 The `Input` component is a component that is used to get user input in a text
 field.
 
-
-
-
-
 ## Import
 
 ```js
-import { Input } from "@chakra-ui/react"
+import { Input } from '@chakra-ui/react';
 ```
 
 ## Usage
@@ -31,8 +33,8 @@ import { Input } from "@chakra-ui/react"
 Here's a basic usage example of the `Input` component:
 
 <Playground
-scope={{ Input }}
-code={`
+  scope={{ Input }}
+  code={`
 <Input placeholder="Basic usage" />
 `}
 />
@@ -47,8 +49,8 @@ The `Input` component comes in four sizes. The default is `md`.
 - `lg` (`48px`)
 
 <Playground
-scope={{ Stack, Input }}
-code={`
+  scope={{ Stack, Input }}
+  code={`
 <Stack spacing={3}>
   <Input placeholder="extra small size" size="xs" />
   <Input placeholder="small size" size="sm" />
@@ -64,8 +66,8 @@ The input component comes in 4 variants: `outline`, `unstyled`, `flushed`, and
 `filled`. Pass the `variant` prop and set it to one of these values.
 
 <Playground
-scope={{ Stack, Input }}
-code={`
+  scope={{ Stack, Input }}
+  code={`
 <Stack spacing={3}>
   <Input variant="outline" placeholder="Outline" />
   <Input variant="filled" placeholder="Filled" />
@@ -82,8 +84,8 @@ component. Chakra UI exports `InputGroup`, `InputLeftAddon`, and
 `InputRightAddon` to help with this use case.
 
 <Playground
-scope={{ Stack, InputGroup, InputLeftAddon, Input, InputRightAddon }}
-code={`
+  scope={{ Stack, InputGroup, InputLeftAddon, Input, InputRightAddon }}
+  code={`
 <Stack spacing={4}>
   <InputGroup>
     <InputLeftAddon children="+234" />
@@ -110,8 +112,16 @@ If the left or right is an icon or text, you can pass `pointerEvents="none"` to
 focused the input.
 
 <Playground
-scope={{ Stack, InputGroup, InputLeftElement, PhoneIcon, Input, InputRightElement, CheckIcon }}
-code={`
+  scope={{
+    Stack,
+    InputGroup,
+    InputLeftElement,
+    PhoneIcon,
+    Input,
+    InputRightElement,
+    CheckIcon,
+  }}
+  code={`
 <Stack spacing={4}>
   <InputGroup>
     <InputLeftElement
@@ -140,8 +150,8 @@ Let's use these components to create a password input with a show/hide password
 functionality:
 
 <Playground
-scope={{ InputGroup, Input, InputRightElement, Button }}
-code={`
+  scope={{ InputGroup, Input, InputRightElement, Button }}
+  code={`
 function PasswordInput() {
   const [show, setShow] = React.useState(false)
   const handleClick = () => setShow(!show)
@@ -166,8 +176,8 @@ function PasswordInput() {
 ### Controlled Input
 
 <Playground
-scope={{ Text, Input }}
-code={`
+  scope={{ Text, Input }}
+  code={`
 function Example() {
   const [value, setValue] = React.useState("")
   const handleChange = (event) => setValue(event.target.value)
@@ -194,8 +204,8 @@ The value can be set to a color in the theme object, like `teal.400`, or a raw
 CSS value.
 
 <Playground
-scope={{ Stack, Input }}
-code={`
+  scope={{ Stack, Input }}
+  code={`
 <Stack spacing={3}>
   <Input focusBorderColor="lime" placeholder="Here is a sample placeholder" />
   <Input

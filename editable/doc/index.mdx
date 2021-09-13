@@ -1,8 +1,14 @@
-import { CheckIcon, CloseIcon, EditIcon } from "../src/index";
-import { EditablePreview, EditableInput, useEditableControls, ButtonGroup, EditableControls } from "../src/index";
-import { Editable } from "~/editable";
-import { IconButton } from "~/icon-button";
-import { Flex } from "~/flex";
+import { CheckIcon, CloseIcon, EditIcon } from '../src/index';
+import {
+  EditablePreview,
+  EditableInput,
+  useEditableControls,
+  ButtonGroup,
+  EditableControls,
+} from '../src/index';
+import { Editable } from '~/editable';
+import { IconButton } from '~/icon-button';
+import { Flex } from '~/flex';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -10,15 +16,11 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Editable
+# Editable
 
 Editable Text is used for inline renaming of some text. It appears as normal UI
 text but transforms into a text input field when the user clicks on or focuses
 it.
-
-
-
-
 
 The text input inherits all font styling from its parent in order to make the
 edit and read view transition seamless.
@@ -33,14 +35,14 @@ Chakra UI exports 3 components to handle this functionality.
 - `EditablePreview`: The read-only view of the component.
 
 ```js
-import { Editable, EditableInput, EditablePreview } from "@chakra-ui/react"
+import { Editable, EditableInput, EditablePreview } from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ Editable, EditablePreview, EditableInput }}
-code={`
+  scope={{ Editable, EditablePreview, EditableInput }}
+  code={`
 // Click the text to edit
 <Editable defaultValue="Take some chakra">
   <EditablePreview />
@@ -56,8 +58,20 @@ mode. We use the render prop pattern to provide access to the internal state of
 the component.
 
 <Playground
-scope={{ useEditableControls, ButtonGroup, IconButton, CheckIcon, CloseIcon, Flex, EditIcon, Editable, EditablePreview, EditableInput, EditableControls }}
-code={`
+  scope={{
+    useEditableControls,
+    ButtonGroup,
+    IconButton,
+    CheckIcon,
+    CloseIcon,
+    Flex,
+    EditIcon,
+    Editable,
+    EditablePreview,
+    EditableInput,
+    EditableControls,
+  }}
+  code={`
 function CustomControlsExample() {
   /* Here's a custom control */
   function EditableControls() {

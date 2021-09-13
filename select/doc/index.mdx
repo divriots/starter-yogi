@@ -1,9 +1,7 @@
-import { MdArrowDropDown } from "react-icons/md";
-  
+import { MdArrowDropDown } from 'react-icons/md';
 
-
-import { Select } from "~/select";
-import { Stack } from "~/stack";
+import { Select } from '~/select';
+import { Stack } from '~/stack';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -11,20 +9,16 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Select
+# Select
 
 `Select` component is a component that allows users pick a value from predefined
 options. Ideally, it should be used when there are more than 5 options,
 otherwise you might consider using a radio group instead.
 
-
-
-
-
 ## Import
 
 ```js
-import { Select } from "@chakra-ui/react"
+import { Select } from '@chakra-ui/react';
 ```
 
 ## Usage
@@ -32,8 +26,8 @@ import { Select } from "@chakra-ui/react"
 Here's a basic usage of the `Select` component.
 
 <Playground
-scope={{ Select }}
-code={`
+  scope={{ Select }}
+  code={`
 <Select placeholder="Select option">
   <option value="option1">Option 1</option>
   <option value="option2">Option 2</option>
@@ -52,8 +46,8 @@ The `Select` component comes in four sizes. The default is `md`.
 - `lg` (`48px`)
 
 <Playground
-scope={{ Stack, Select }}
-code={`
+  scope={{ Stack, Select }}
+  code={`
 <Stack spacing={3}>
   <Select placeholder="extra small size" size="xs" />
   <Select placeholder="small size" size="sm" />
@@ -70,8 +64,8 @@ Just like the input component, `Select` comes in 4 variants, `outline`,
 either of these values.
 
 <Playground
-scope={{ Stack, Select }}
-code={`
+  scope={{ Stack, Select }}
+  code={`
 <Stack spacing={3}>
   <Select variant="outline" placeholder="Outline" />
   <Select variant="filled" placeholder="Filled" />
@@ -90,8 +84,8 @@ In case the custom icon size doesn't look right, you can pass the `iconSize`
 prop to change it.
 
 <Playground
-scope={{ Select, MdArrowDropDown }}
-code={`
+  scope={{ Select, MdArrowDropDown }}
+  code={`
 <Select icon={<MdArrowDropDown />} placeholder="Woohoo! A new icon" />
 `}
 />
@@ -102,8 +96,8 @@ Even though the select comes with predefined styles, you can override pretty
 much any property. Here we'll override the background color.
 
 <Playground
-scope={{ Select }}
-code={`
+  scope={{ Select }}
+  code={`
 <Select
   bg="tomato"
   borderColor="tomato"

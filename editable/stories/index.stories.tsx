@@ -1,18 +1,22 @@
-import { chakra } from "../src/index"
-import * as React from "react"
-import { useEditable } from "../src/index"
-import { Editable } from "../src/index"
-import { EditableInput, EditablePreview, useEditableControls } from "../src/index"
+import { chakra } from '../src/index';
+import * as React from 'react';
+import { useEditable } from '../src/index';
+import { Editable } from '../src/index';
+import {
+  EditableInput,
+  EditablePreview,
+  useEditableControls,
+} from '../src/index';
 
-import { themeDecorator } from "../../story-layout/src/index";
+import { themeDecorator } from '../../story-layout/src/index';
 
 export default {
-  title: "Editable",
+  title: 'Editable',
   decorators: [themeDecorator],
   parameters: {
     layout: 'centered',
   },
-}
+};
 
 export const UseEditableHook = () => {
   const {
@@ -24,16 +28,16 @@ export const UseEditableHook = () => {
     isEditing,
     onEdit,
   } = useEditable({
-    placeholder: "Title...",
+    placeholder: 'Title...',
     submitOnBlur: true,
-    onCancel: () => console.log("cancel"),
-    onSubmit: () => console.log("submit"),
-  })
+    onCancel: () => console.log('cancel'),
+    onSubmit: () => console.log('submit'),
+  });
 
   return (
     <>
       <input
-        style={{ width: "auto", background: "transparent" }}
+        style={{ width: 'auto', background: 'transparent' }}
         {...getInputProps()}
       />
       <span
@@ -50,8 +54,8 @@ export const UseEditableHook = () => {
         </>
       )}
     </>
-  )
-}
+  );
+};
 
 const EditableControls = () => {
   const {
@@ -59,7 +63,7 @@ const EditableControls = () => {
     getEditButtonProps,
     getSubmitButtonProps,
     getCancelButtonProps,
-  } = useEditableControls()
+  } = useEditableControls();
 
   return (
     <div>
@@ -72,8 +76,8 @@ const EditableControls = () => {
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
 export const Basic = () => (
   <Editable
@@ -88,7 +92,7 @@ export const Basic = () => (
     <EditableInput />
     <EditableControls />
   </Editable>
-)
+);
 
 export const CodeSandboxTopbar = () => {
   return (
@@ -96,9 +100,9 @@ export const CodeSandboxTopbar = () => {
       <chakra.p fontWeight="medium">My Sandboxes</chakra.p>
       <chakra.span mx="3">/</chakra.span>
       <Editable defaultValue="chakra-ui-demo">
-        <EditableInput _focus={{ boxShadow: "none" }} />
+        <EditableInput _focus={{ boxShadow: 'none' }} />
         <EditablePreview />
       </Editable>
     </chakra.div>
-  )
-}
+  );
+};

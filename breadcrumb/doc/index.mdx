@@ -1,6 +1,6 @@
-import { ChevronRightIcon } from "../src/index";
-import { BreadcrumbItem, BreadcrumbLink } from "../src/index";
-import { Breadcrumb } from "~/breadcrumb";
+import { ChevronRightIcon } from '../src/index';
+import { BreadcrumbItem, BreadcrumbLink } from '../src/index';
+import { Breadcrumb } from '~/breadcrumb';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -8,15 +8,11 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Breadcrumb
+# Breadcrumb
 
 Breadcrumbs, or a breadcrumb navigation, can help enhance how users navigate to
 previous page levels of a website, especially if that website has many pages or
 products.
-
-
-
-
 
 ## Import
 
@@ -34,7 +30,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 ```
 
 ## Usage
@@ -44,8 +40,8 @@ When this prop is present, the `BreadcrumbLink` renders a `span` with
 `aria-current` set to `page` instead of an anchor element.
 
 <Playground
-scope={{ Breadcrumb, BreadcrumbItem, BreadcrumbLink }}
-code={`
+  scope={{ Breadcrumb, BreadcrumbItem, BreadcrumbLink }}
+  code={`
 <Breadcrumb>
   <BreadcrumbItem>
     <BreadcrumbLink href="#">Home</BreadcrumbLink>
@@ -66,8 +62,8 @@ Change the separator used in the breadcrumb by passing a string, like `-` or an
 icon.
 
 <Playground
-scope={{ Breadcrumb, BreadcrumbItem, BreadcrumbLink }}
-code={`
+  scope={{ Breadcrumb, BreadcrumbItem, BreadcrumbLink }}
+  code={`
 <Breadcrumb separator="-">
   <BreadcrumbItem>
     <BreadcrumbLink href="#">Home</BreadcrumbLink>
@@ -85,8 +81,8 @@ code={`
 ### Using an icon as the separator
 
 <Playground
-scope={{ Breadcrumb, ChevronRightIcon, BreadcrumbItem, BreadcrumbLink }}
-code={`
+  scope={{ Breadcrumb, ChevronRightIcon, BreadcrumbItem, BreadcrumbLink }}
+  code={`
 <Breadcrumb spacing="8px" separator={<ChevronRightIcon color="gray.500" />}>
   <BreadcrumbItem>
     <BreadcrumbLink href="#">Home</BreadcrumbLink>
@@ -108,8 +104,8 @@ change the style of the breadcrumbs. Let's say we need to reduce the `fontSize`
 of the breadcrumbs.
 
 <Playground
-scope={{ Breadcrumb, BreadcrumbItem, BreadcrumbLink }}
-code={`
+  scope={{ Breadcrumb, BreadcrumbItem, BreadcrumbLink }}
+  code={`
 <Breadcrumb fontWeight="medium" fontSize="sm">
   <BreadcrumbItem>
     <BreadcrumbLink href="#">Home</BreadcrumbLink>

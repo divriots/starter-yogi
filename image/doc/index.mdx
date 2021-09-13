@@ -1,6 +1,6 @@
-import { Box } from "~/box";
-import { Image } from "~/image";
-import { Stack } from "~/stack";
+import { Box } from '~/box';
+import { Image } from '~/image';
+import { Stack } from '~/stack';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -8,28 +8,24 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Image
+# Image
 
 The `Image` component is used to display images.
 
 Image composes `Box` so you can use all the style props and add responsive
 styles as well.
 
-
-
-
-
 ## Import
 
 ```js
-import { Image } from "@chakra-ui/react"
+import { Image } from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ Box, Image }}
-code={`
+  scope={{ Box, Image }}
+  code={`
 <Box boxSize="sm">
   <Image src="https://bit.ly/sage-adebayo" alt="Segun Adebayo" />
 </Box>
@@ -41,8 +37,8 @@ code={`
 The size of the image can be adjusted using the `boxSize` prop.
 
 <Playground
-scope={{ Stack, Image }}
-code={`
+  scope={{ Stack, Image }}
+  code={`
 <Stack direction="row">
   <Image
     boxSize="100px"
@@ -64,8 +60,8 @@ code={`
 ## Image with border radius
 
 <Playground
-scope={{ Image }}
-code={`
+  scope={{ Image }}
+  code={`
 <Image
   borderRadius="full"
   boxSize="150px"
@@ -82,8 +78,8 @@ the image. You can also opt out of this behavior by passing the `ignoreFallback`
 prop.
 
 <Playground
-scope={{ Image }}
-code={`
+  scope={{ Image }}
+  code={`
 <Image src="gibbresh.png" fallbackSrc="https://via.placeholder.com/150" />
 `}
 />
@@ -101,7 +97,7 @@ code={`
 ## Usage with SSR
 
 ```js
-import { Img } from "@chakra-ui/react"
+import { Img } from '@chakra-ui/react';
 ```
 
 The `Img` Component provides a fallback for SSR applications which uses the

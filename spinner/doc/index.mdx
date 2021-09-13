@@ -1,5 +1,5 @@
-import { Spinner } from "~/spinner";
-import { Stack } from "~/stack";
+import { Spinner } from '~/spinner';
+import { Stack } from '~/stack';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -7,26 +7,22 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Spinner
+# Spinner
 
 Spinners provide a visual cue that an action is either processing, awaiting a
 course of change or a result.
 
-
-
-
-
 ## Import
 
 ```js
-import { Spinner } from "@chakra-ui/react"
+import { Spinner } from '@chakra-ui/react';
 ```
 
 ## Usage
 
 <Playground
-scope={{ Spinner }}
-code={`
+  scope={{ Spinner }}
+  code={`
 <Spinner />
 `}
 />
@@ -34,8 +30,8 @@ code={`
 ### Spinner with Color
 
 <Playground
-scope={{ Spinner }}
-code={`
+  scope={{ Spinner }}
+  code={`
 <Spinner color="red.500" />
 `}
 />
@@ -43,8 +39,8 @@ code={`
 ### Spinner with different size
 
 <Playground
-scope={{ Stack, Spinner }}
-code={`
+  scope={{ Stack, Spinner }}
+  code={`
 <Stack direction="row" spacing={4}>
   <Spinner size="xs" />
   <Spinner size="sm" />
@@ -58,8 +54,8 @@ code={`
 ### Spinner with empty area color
 
 <Playground
-scope={{ Spinner }}
-code={`
+  scope={{ Spinner }}
+  code={`
 <Spinner
   thickness="4px"
   speed="0.65s"

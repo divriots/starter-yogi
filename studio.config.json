@@ -75,48 +75,14 @@
           "tag"
         ]
       ],
-      [
-        "Media and Icons",
-        [
-          "avatar",
-          "icon",
-          "image"
-        ]
-      ],
-      [
-        "Navigation",
-        [
-          "breadcrumb",
-          "link",
-          "link-overlay"
-        ]
-      ],
-      [
-        "Disclosure",
-        [
-          "accordion",
-          "tabs",
-          "visually-hidden"
-        ]
-      ],
+      ["Media and Icons", ["avatar", "icon", "image"]],
+      ["Navigation", ["breadcrumb", "link", "link-overlay"]],
+      ["Disclosure", ["accordion", "tabs", "visually-hidden"]],
       [
         "Overlay",
-        [
-          "alert-dialog",
-          "drawer",
-          "menu",
-          "modal",
-          "popover",
-          "tooltip"
-        ]
+        ["alert-dialog", "drawer", "menu", "modal", "popover", "tooltip"]
       ],
-      [
-        "dockit",
-        [
-          "doc-layout",
-          "story-layout"
-        ]
-      ]
+      ["dockit", ["doc-layout", "story-layout"]]
     ]
   }
 }

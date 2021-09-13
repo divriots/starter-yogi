@@ -1,5 +1,5 @@
-import { SimpleGrid } from "~/simple-grid";
-import { Box } from "~/box";
+import { SimpleGrid } from '~/simple-grid';
+import { Box } from '~/box';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -7,15 +7,11 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  SimpleGrid
+# SimpleGrid
 
 If you're like me, you probably tend to check the
 [MDN docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) for
 anything CSS grid.
-
-
-
-
 
 SimpleGrid provides a friendly interface to create responsive grid layouts with
 ease. It renders a `div` element with `display: grid`.
@@ -23,7 +19,7 @@ ease. It renders a `div` element with `display: grid`.
 ## Import
 
 ```js
-import { SimpleGrid } from "@chakra-ui/react"
+import { SimpleGrid } from '@chakra-ui/react';
 ```
 
 ## Usage
@@ -31,8 +27,8 @@ import { SimpleGrid } from "@chakra-ui/react"
 Specifying the number of columns for the grid layout.
 
 <Playground
-scope={{ SimpleGrid, Box }}
-code={`
+  scope={{ SimpleGrid, Box }}
+  code={`
 <SimpleGrid columns={2} spacing={10}>
   <Box bg="tomato" height="80px"></Box>
   <Box bg="tomato" height="80px"></Box>
@@ -47,8 +43,8 @@ You can also make it responsive by passing array or object values into the
 `columns` prop.
 
 <Playground
-scope={{ SimpleGrid, Box }}
-code={`
+  scope={{ SimpleGrid, Box }}
+  code={`
 // Passing \`columns={[2, null, 3]}\` and \`columns={{sm: 2, md: 3}}\`
 // will have the same effect.
 <SimpleGrid columns={[2, null, 3]} spacing="40px">
@@ -70,8 +66,8 @@ have before adjusting the layout.
 This uses css grid `auto-fit` and `minmax()` internally.
 
 <Playground
-scope={{ SimpleGrid, Box }}
-code={`
+  scope={{ SimpleGrid, Box }}
+  code={`
 <SimpleGrid minChildWidth="120px" spacing="40px">
   <Box bg="tomato" height="80px"></Box>
   <Box bg="tomato" height="80px"></Box>
@@ -90,8 +86,8 @@ grid items. `SimpleGrid` also allows you pass `spacingX` and `spacingY` to
 define the space between columns and rows respectively.
 
 <Playground
-scope={{ SimpleGrid, Box }}
-code={`
+  scope={{ SimpleGrid, Box }}
+  code={`
 <SimpleGrid columns={2} spacingX="40px" spacingY="20px">
   <Box bg="tomato" height="80px"></Box>
   <Box bg="tomato" height="80px"></Box>

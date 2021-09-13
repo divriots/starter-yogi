@@ -1,7 +1,7 @@
-import { PhoneIcon } from "../src/index";
-import { HStack, Circle, Square } from "../src/index";
-import { Center } from "~/center";
-import { Box } from "~/box";
+import { PhoneIcon } from '../src/index';
+import { HStack, Circle, Square } from '../src/index';
+import { Center } from '~/center';
+import { Box } from '~/box';
 
 import React from 'react';
 import { mdx } from '@mdx-js/react';
@@ -9,18 +9,14 @@ import { Playground } from '@divriots/dockit-react/playground';
 import Layout from '~/doc-layout';
 export default Layout;
 
-#  Center
+# Center
 
 Center is a layout component that centers its child within itself.
-
-
-
-
 
 ## Import
 
 ```js
-import { Center, Square, Circle } from "@chakra-ui/react"
+import { Center, Square, Circle } from '@chakra-ui/react';
 ```
 
 - **Center:** centers its child given `width` and `height`
@@ -33,8 +29,8 @@ Put any child element inside it, give it any `width` or/and `height`, it'll
 ensure the child is centered.
 
 <Playground
-scope={{ Center }}
-code={`
+  scope={{ Center }}
+  code={`
 <Center bg="tomato" h="100px" color="white">
   This is the Center
 </Center>
@@ -46,8 +42,8 @@ code={`
 Center can be used to create frames around icons or numbers.
 
 <Playground
-scope={{ HStack, Center, PhoneIcon, Box }}
-code={`
+  scope={{ HStack, Center, PhoneIcon, Box }}
+  code={`
 <HStack>
   <Center w="40px" h="40px" bg="tomato" color="white">
     <PhoneIcon />
@@ -67,8 +63,8 @@ To reduce boilerplate, we've exported `Square` and `Circle` components that
 automatically centers its children given the `size`.
 
 <Playground
-scope={{ HStack, Circle, PhoneIcon, Square }}
-code={`
+  scope={{ HStack, Circle, PhoneIcon, Square }}
+  code={`
 <HStack>
   <Circle size="40px" bg="tomato" color="white">
     <PhoneIcon />
