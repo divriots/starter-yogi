@@ -5,11 +5,11 @@ import {
   PhoneIcon,
   SearchIcon,
 } from '../src/index';
-import { Container, HStack, Stack } from '../src/index';
+import { HStack, Stack } from '../src/index';
 import * as React from 'react';
 import { FaFacebook, FaTwitter } from 'react-icons/fa';
 import { MdBuild, MdCall } from 'react-icons/md';
-import { BeatLoader } from 'react-spinners';
+import { Spinner } from '~/spinner';
 import { Button } from '../src/index';
 import { ButtonGroup, IconButton } from '../src/index';
 
@@ -139,7 +139,7 @@ export const WithLoading = () => (
     <Button
       isLoading
       colorScheme="blue"
-      spinner={<BeatLoader size={8} color="white" />}
+      spinner={<Spinner size={8} color="white" />}
     >
       Click me
     </Button>

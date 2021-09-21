@@ -1,12 +1,4 @@
-import {
-  HStack,
-  VStack,
-  StackDivider,
-  Heading,
-  Text,
-  Feature,
-  StackEx,
-} from '../src/index';
+import { HStack, VStack, StackDivider, Heading, Text } from '../src/index';
 import { Box } from '~/box';
 import { Stack } from '~/stack';
 
@@ -111,7 +103,7 @@ element.
 ### Example
 
 <Playground
-  scope={{ Box, Heading, Text, Stack, Feature, StackEx }}
+  scope={{ Box, Heading, Text, Stack }}
   noInline={true}
   code={`
 function Feature({ title, desc, ...rest }) {
@@ -136,7 +128,7 @@ function StackEx() {
     </Stack>
   )
 }
-render(<StackEx />)
+return <StackEx />
 `}
 />
 
@@ -146,7 +138,7 @@ Pass the `direction` and set it to `row`. Optionally, you can use `align` and
 `justify` to adjust the alignment and distribution of the items.
 
 <Playground
-  scope={{ Box, Heading, Text, HStack, Feature, StackEx }}
+  scope={{ Box, Heading, Text, HStack }}
   noInline={true}
   code={`
 function Feature({ title, desc, ...rest }) {
@@ -178,7 +170,7 @@ function StackEx() {
     </HStack>
   )
 }
-render(<StackEx />)
+return <StackEx />
 `}
 />
 

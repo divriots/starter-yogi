@@ -8,9 +8,10 @@ export {
   NumberInputStepper,
   NumberIncrementStepper,
   NumberDecrementStepper,
-  FormControlOptions,
   FormErrorIcon,
   FormErrorMessage,
   useFormControl,
 } from '@chakra-ui/react';
-export { chakra, PropsOf, useMultiStyleConfig } from '@chakra-ui/system';
+export type { FormControlOptions } from '@chakra-ui/react';
+export { chakra, useMultiStyleConfig } from '@chakra-ui/system';
+export type { PropsOf } from '@chakra-ui/system';

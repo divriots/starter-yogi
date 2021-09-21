@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Avatar } from '../src/index';
 import { AvatarBadge, AvatarGroup } from '../src/index';
 import { Stack, Box } from '../src/index';
-import { PropsOf } from '../src/index';
+import type { PropsOf } from '../src/index';
 
 import { themeDecorator } from '../../story-layout/src/index';
 

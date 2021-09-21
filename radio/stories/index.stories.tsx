@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { chakra } from '../src/index';
-import { Stack, Wrap, SimpleGrid, Container, WrapItem } from '../src/index';
+import { Stack, Wrap, SimpleGrid, WrapItem } from '../src/index';
 import { Radio } from '../src/index';
 import {
   useRadio,

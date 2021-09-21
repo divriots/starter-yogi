@@ -7,7 +7,7 @@ import { Button } from '~/button';
 import { Stack } from '~/stack';
 import { IconButton } from '~/icon-button';
 import { Box } from '~/box';
-import { BeatLoader } from 'react-spinners';
+import { Spinner } from '~/spinner';
 import React from 'react';
 import { mdx } from '@mdx-js/react';
 import { Playground } from '@divriots/dockit-react/playground';
@@ -159,12 +159,12 @@ You can change the spinner element to use custom loaders as per your design
 requirements. Pass the `spinner` prop and set it to a custom react element.
 
 <Playground
-  scope={{ Button, BeatLoader }}
+  scope={{ Button, Spinner }}
   code={`
 <Button
   isLoading
   colorScheme="blue"
-  spinner={<BeatLoader size={8} color="white" />}
+  spinner={<Spinner size={8} color="white" />}
 >
   Click me
 </Button>
