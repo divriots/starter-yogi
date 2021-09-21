@@ -8,5 +8,5 @@ export {
   Td,
   Tfoot,
   TableContainer,
-  TableProps,
 } from '@chakra-ui/react';
+export type { TableProps } from '@chakra-ui/react';
