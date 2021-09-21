@@ -9,8 +9,6 @@ import './style.css';
 // extend default Chakra theme
 const fullTheme = extendTheme(theme);
 
-debugger;
-
 const ThemeProviderLayout = (props) => (
   <MDXProvider components={components}>
     <ChakraProvider theme={fullTheme}>
