@@ -1,4 +1,5 @@
 import React from 'react';
+import '@chakra-ui/react-utils';
 import { chakra } from '@chakra-ui/react';
 import { Alert } from '~/alert';
 import { Table } from '~/table';
