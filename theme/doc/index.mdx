@@ -1,0 +1,27 @@
+import { mdx } from '@mdx-js/react';
+import { theme } from '~/theme';
+import { SystemUIShowcases } from '@divriots/dockit-react/systemui-showcases';
+import Layout from '~/doc-layout';
+export default Layout;
+
+# Theme
+
+The `theme` tokens components is responsible to merge and exposes all the Yogi Design Token in one consistent object.
+
+This _complete theme_ is then ready to be injected in the [Chakra-UI's `extendTheme`](https://chakra-ui.com/docs/theming/customize-theme#customizing-theme-tokens) theming function:
+
+```jsx
+import React from 'react';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { theme } from '~/theme';
+
+// Extend default Chakra theme
+const fullTheme = extendTheme(theme);
+
+// Usage
+<ChakraProvider theme={fullTheme}>
+  {/***
+    Your components tree
+  */}
+</ChakraProvider>;
+```
