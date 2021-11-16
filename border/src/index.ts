@@ -1,5 +1,3 @@
-// TO FIX
-
 const borders = {
   none: 0,
   '1px': '1px solid',
@@ -8,4 +6,4 @@ const borders = {
   '8px': '8px solid',
 };
 
-export { borders };
+export default borders;

@@ -79,9 +79,9 @@ export const WithReactHookForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input name="name" placeholder="name" ref={register} />
+      <input placeholder="name" {...register('name', { required: true })} />
       {/* <input type="checkbox" name="boolean" ref={register} /> */}
-      <Switch name="boolean" ref={register} />
+      <Switch {...register('boolean', { required: true })} />
       <button type="submit">Submit</button>
     </form>
   );
