@@ -1,3 +1,3 @@
-import { theme } from './index';
+import { theme } from '../src/index';
 
 export const complete_theme = () => theme;
