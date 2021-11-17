@@ -30,9 +30,8 @@ const ColorModeSwitch = () => {
 
   return (
     <StylesheetSwitch
-      defaultColorScheme={colorMode}
+      colorScheme={colorMode as 'dark' | 'light'}
       onSwitch={() => toggleColorMode()}
-      stylesheets={{ dark: '', light: '' }}
     />
   );
 };
