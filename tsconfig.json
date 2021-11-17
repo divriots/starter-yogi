@@ -8,8 +8,12 @@
     "reactNamespace": "React",
     "module": "ESNext",
     "moduleResolution": "Node",
+    "baseUrl": ".",
+    "outDir": "./dist",
     "paths": {
-      "~/*": ["/*"]
+      "~/*": [
+        "*"
+      ]
     }
   }
 }
