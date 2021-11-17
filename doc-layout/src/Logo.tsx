@@ -18,11 +18,11 @@ export const Logo = () => {
     >
       <style type="text/css">
         {`
-	.st0{fill:${color};}
-	.st1{display:none;}
-	.st2{display:inline;fill:#FFFFFF;}
-	.st3{fill:#47C8C2;}
-  `}
+			.st0{fill:${color};}
+			.st1{display:none;}
+			.st2{display:inline;fill:#FFFFFF;}
+			.st3{fill:#47C8C2;}
+		`}
       </style>
       <g>
         <path

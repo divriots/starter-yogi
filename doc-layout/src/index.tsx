@@ -15,6 +15,7 @@ import { theme } from '~/theme';
 import { components } from './components';
 import './style.css';
 import { Logo } from './Logo';
+import { ColorScheme } from '@divriots/dockit-react/mdx-layout-core/dist/StylesheetSwitch';
 
 // extend default Chakra theme
 const config: ThemeConfig = {
@@ -29,31 +30,30 @@ const ColorModeSwitch = () => {
 
   return (
     <StylesheetSwitch
-      colorScheme={colorMode}
+      defaultColorScheme={colorMode}
       onSwitch={() => toggleColorMode()}
+      stylesheets={{ dark: '', light: '' }}
     />
   );
 };
 
-const ThemeProviderLayout = (props) => {
-  return (
-    <>
-      <ColorModeScript initialColorMode="system" />
-      <MDXProvider components={components}>
-        <ChakraProvider theme={fullTheme}>
-          <CoreLayout
-            stylesheetSwitch={<ColorModeSwitch />}
-            logo={
-              <div style={{ width: '8rem' }}>
-                <Logo />
-              </div>
-            }
-            {...props}
-          />
-        </ChakraProvider>
-      </MDXProvider>
-    </>
-  );
-};
+const ThemeProviderLayout = (props) => (
+  <>
+    <ColorModeScript initialColorMode="system" />
+    <MDXProvider components={components}>
+      <ChakraProvider theme={fullTheme}>
+        <CoreLayout
+          stylesheetSwitch={<ColorModeSwitch />}
+          logo={
+            <div style={{ width: '8rem' }}>
+              <Logo />
+            </div>
+          }
+          {...props}
+        />
+      </ChakraProvider>
+    </MDXProvider>
+  </>
+);
 
 export default ThemeProviderLayout;
