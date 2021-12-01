@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
+    "@divriots/dockit-react": "^0.0.77",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.0.0",
     "autoprefixer": "^10.2.5",
@@ -34,7 +35,6 @@
     "@chakra-ui/react-utils": "^1.1.2",
     "@chakra-ui/system": "^1.6.5",
     "@chakra-ui/utils": "^1.8.0",
-    "@divriots/dockit-react": "0.0.72",
     "@mdx-js/react": "^1.6.22",
     "deepmerge": "^4.2.2",
     "framer-motion": "^4.1.11",
