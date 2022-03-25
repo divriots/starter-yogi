@@ -3,6 +3,7 @@ import '@chakra-ui/react-utils';
 import { chakra } from '@chakra-ui/react';
 import { Alert } from '~/alert';
 import { Table } from '~/table';
+import { Props as PropsTable } from '@divriots/dockit-react/props';
 
 const components = {
   h1: (props) => <chakra.h1 apply="mdx.h1" {...props} />,
@@ -45,6 +46,7 @@ const components = {
       {...props}
     />
   ),
+  PropsTable,
 };
 
 export { components };
