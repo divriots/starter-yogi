@@ -1,7 +1,7 @@
 const colors = {
   transparent: 'transparent',
   current: 'currentColor',
-  black: '#000000',
+  black: '#3d3d3d',
   white: '#FFFFFF',
 
   whiteAlpha: {
